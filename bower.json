@@ -1,0 +1,36 @@
+{
+  "name": "Ionic Material",
+  "version": "0.0.0",
+  "authors": [
+    "Zach Fitzgerald"
+  ],
+  "description": "Ionic Material - Material Design for the Ionic Framework",
+  "main": "dist/ionic-material.min.js",
+  "keywords": [
+    "Ionic",
+    "Material",
+    "Material",
+    "Design",
+    "Ionic",
+    "Framework",
+    "Hybrid",
+    "Apps"
+  ],
+  "license": "MIT",
+  "homepage": "http://ionicmaterial.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Waves": "https://github.com/fians/Waves.git#~0.5.5",
+    "angular-animate": "1.2.12",
+    "angular-sanitize": "1.2.12",
+    "angular-ui-router": "0.2.7",
+    "ionic": "~0.9.27"
+  }
+}

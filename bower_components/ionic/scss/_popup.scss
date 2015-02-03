@@ -1,0 +1,138 @@
+
+/**
+ * Popups
+ * --------------------------------------------------
+ */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: $z-index-popup;
+
+  // Start hidden
+  visibility: hidden;
+
+  width: $popup-width;
+
+  border-radius: $popup-border-radius;
+  background-color: $popup-background-color;
+
+  &.popup-hidden {
+    @include animation-name(scaleOut);
+    @include animation-duration($popup-leave-animation-duration);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
+  }
+
+  &.popup-showing {
+    visibility: visible;
+  }
+
+  &.active {
+    @include animation-name(superScaleIn);
+    @include animation-duration($popup-enter-animation-duration);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
+  }
+}
+
+.popup-head {
+  padding: 15px 0px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.popup-title {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.popup-sub-title {
+  margin: 5px 0 0 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 11px;
+}
+.popup-body {
+  padding: 10px;
+}
+
+.popup-buttons {
+  &.row {
+    padding: 10px 10px;
+  }
+
+  .button {
+    margin: 0px 5px;
+    min-height: $popup-button-min-height;
+    border-radius: $popup-button-border-radius;
+    line-height: $popup-button-line-height;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.popup-backdrop {
+  @include animation-name(fadeIn);
+  @include animation-duration($popup-backdrop-fadein-duration);
+  @include animation-timing-function(linear);
+  @include animation-fill-mode(both);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-popup-backdrop;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.4);
+}
+
+.loading-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-popup-backdrop;
+
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+
+  &.active {
+    @include transition-delay(0s);
+    visibility: visible;
+  }
+}
+
+.loading-backdrop {
+  @include transition(visibility 0s linear 0.3s);
+  &.active {
+    background-color: rgba(0,0,0,0.7);
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.7);
+
+  color: #fff;
+
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 15px;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+}

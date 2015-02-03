@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/device.css">
+</head>
+<body>
+	<div class="links">
+		<a href="screens/activity-feed.html" target="screen">Activity Feed</a>
+		<a href="screens/categories.html" target="screen">Categories</a>
+		<a href="screens/feature.html" target="screen" class="active">Feature</a>
+		<a href="screens/gallery.html" target="screen">Gallery</a>
+		<a href="screens/list.html" target="screen">List</a>
+		<a href="screens/login.html" target="screen">Login</a>
+		<a href="screens/profile.html" target="screen">Profile</a>
+	</div>
+    <div class="device">
+    	<iframe name="screen" src="screens/feature.html"></iframe>
+    </div>
+    <script>
+    (function () {
+    	var links = document.querySelectorAll('.links a');
+    	for (var i = 0; i < links.length; i++) {
+    		links[i].addEventListener('click', function () {
+    			document.querySelector('.links a.active').className = '';
+    			this.className = 'active';
+    		});		
+    	}
+    })();
+    </script>
+</body>
+</html>
