@@ -1,0 +1,10 @@
+
+/* Button : Waves
+==================================*/
+
+.ionic .waves-button, .ionic .waves-circle {
+    -webkit-mask-image: none;
+}
+.ionic .waves-button, .ionic .waves-button:hover, .ionic .waves-button:visited, .ionic .waves-button-input {
+    line-height: inherit;
+}

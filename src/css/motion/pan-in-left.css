@@ -1,0 +1,9 @@
+
+
+/* Motion: Pan In Left
+==================================*/
+
+.ionic.animate-pan-in-left,
+.ionic .animate-pan-in-left {	
+    background-position: 0% 0%;
+}

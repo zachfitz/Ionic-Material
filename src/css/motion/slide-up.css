@@ -1,0 +1,25 @@
+
+/* Motion: Slide Up
+==================================*/
+
+.ionic.slide-up,
+.ionic .slide-up,
+.ionic .hero.slide-up {
+    height: 100%;
+    overflow: hidden;
+}
+.ionic.slide-up *,
+.ionic .slide-up *,
+.ionic .hero.slide-up * {
+    opacity: 0;
+}
+.ionic .hero.slide-up + .mid-bar,
+.ionic.slide-up + .mid-bar,
+.ionic .slide-up + .mid-bar {
+    height: 100%;
+    opacity: 0.7;
+    -moz-transform: translate3d(100%, -240px, 0);
+    -o-transform: translate3d(100%, -240px, 0);
+    -webkit-transform: translate3d(100%, -240px, 0);
+    transform: translate3d(100%, -240px, 0);
+}

@@ -1,0 +1,105 @@
+
+/* Motion: Slide / Fade In
+==================================*/
+
+.ionic.animate-fade-slide-in > *,
+.ionic .animate-fade-slide-in > * {
+    visibility: hidden;
+}
+.ionic.animate-fade-slide-in > *,
+.ionic .animate-fade-slide-in > * {
+    -moz-transform: scale3d(0.8, 0, 1);
+    -ms-transform: scale3d(0.8, 0, 1);
+    -webkit-transform: scale3d(0.8, 0, 1);
+    transform: scale3d(0.8, 0, 1);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: -o-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.ionic.animate-fade-slide-in .item-bg-image > img.background,
+.ionic .animate-fade-slide-in .item-bg-image > img.background {
+    box-shadow: none;
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.ionic.animate-fade-slide-in > .in,
+.ionic.animate-fade-slide-in.done > *,
+.ionic .animate-fade-slide-in > .in,
+.ionic .animate-fade-slide-in.done > * {
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.ionic.animate-fade-slide-in > .in,
+.ionic.animate-fade-slide-in.done > *,
+.ionic .animate-fade-slide-in > .in,
+.ionic .animate-fade-slide-in.done > * {
+    visibility: visible;
+}
+.ionic.list .item.item-bg-image,
+.ionic .list .item.item-bg-image {
+    max-height: 150px;
+}
+.ionic.animate-fade-slide-in > *,
+.ionic .animate-fade-slide-in > * {
+    visibility: hidden;
+}
+.ionic.animate-fade-slide-in > *,
+.ionic .animate-fade-slide-in > * {
+    -moz-transform: translate3d(-250px, 250px, 0);
+    -ms-transform: translate3d(-250px, 250px, 0);
+    -webkit-transform: translate3d(-250px, 250px, 0);
+    transform: translate3d(-250px, 250px, 0);
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: -o-transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    opacity: 0;
+}
+.ionic.animate-fade-slide-in > .in,
+.ionic.animate-fade-slide-in.done,
+.ionic .animate-fade-slide-in > .in,
+.ionic .animate-fade-slide-in.done {
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+}
+.ionic.animate-fade-slide-in > .in,
+.ionic.animate-fade-slide-in.done,
+.ionic .animate-fade-slide-in > .in,
+.ionic .animate-fade-slide-in.done {
+    visibility: visible;
+}
+.ionic.animate-fade-slide-in.done > .in,
+.ionic .animate-fade-slide-in.done > .in {
+    opacity: 1;
+}
+.ionic.animate-fade-slide-in .has-mask-reverse:after,
+.ionic .animate-fade-slide-in .has-mask-reverse:after {
+    opacity: 0;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.ionic.animate-fade-slide-in.done .has-mask-reverse:after,
+.ionic .animate-fade-slide-in.done .has-mask-reverse:after {
+    opacity: 1;
+}
+.ionic.animate-fade-slide-in > .out,
+.ionic .animate-fade-slide-in > .out {
+    -moz-transform: scale3d(0, 0, 1);
+    -ms-transform: scale3d(0, 0, 1);
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+}

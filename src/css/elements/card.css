@@ -1,0 +1,50 @@
+
+/* Card
+==================================*/
+
+.ionic .card {
+    margin: 8px 8px 12px;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+    padding: 0;
+}
+.ionic .card .image {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.ionic .card img {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+    display: block;
+    max-height: initial;
+    max-width: 180px;
+    position: static;
+}
+.ionic .card.card-gallery img {
+    border: solid 1px #ccc;
+    box-shadow: none;
+    display: block;
+    max-width: 180px;
+}
+.ionic .card .card-footer {
+    font-size: 90%;
+    opacity: 0.8;
+    padding-top: 10px;
+}
+.ionic .card > .item {
+    border: none;
+}
+.ionic .card.card-gallery > .item {
+    background: inherit;
+}
+.ionic .card .icon + .icon {
+    padding-left: 1rem;
+}
+.ionic .card.animate-fade-in {
+    opacity: 0;
+    -webkit-transform: translate3d(-30px, 1px, 0);
+    -webkit-transition: all 1s ease-in-out;
+}
+.ionic .card.animate-fade-in.done {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+}

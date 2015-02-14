@@ -1,0 +1,24 @@
+
+/* Bar
+==================================*/
+
+.ionic .bar {
+    z-index: 2;
+    font-size: 1.3em;
+    width: 100%;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.ionic .bar .button {
+    min-width: 38px;
+    z-index: 3;
+}
+.ionic .bar .title sup {
+    opacity: 0.7;
+}
+
+.ionic .bar.bar-header .button + .title {
+    text-align: left;
+    left: 50px;
+    position: absolute;
+}

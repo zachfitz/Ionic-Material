@@ -1,0 +1,135 @@
+/* Motion: Blinds
+==================================*/
+
+.ionic.animate-blinds > *,
+.ionic .animate-blinds > * {
+    visibility: hidden;
+}
+.ionic.animate-blinds > *,
+.ionic .animate-blinds > * {
+    -moz-transform: scale3d(0.8, 0, 1);
+    -ms-transform: scale3d(0.8, 0, 1);
+    -webkit-transform: scale3d(0.8, 0, 1);
+    transform: scale3d(0.8, 0, 1);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: -o-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.ionic.animate-blinds .item-bg-image > img.background,
+.ionic .animate-blinds .item-bg-image > img.background {
+    box-shadow: none;
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.ionic.animate-blinds > .in, .ionic .animate-blinds.done,
+.ionic .animate-blinds > .in, .ionic .animate-blinds.done {
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.ionic.animate-blinds > .in, .ionic .animate-blinds.done,
+.ionic .animate-blinds > .in, .ionic .animate-blinds.done {
+    visibility: visible;
+}
+.ionic.animate-blinds > .out,
+.ionic .animate-blinds > .out {
+    -moz-transform: scale3d(0, 0, 1);
+    -ms-transform: scale3d(0, 0, 1);
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+}
+.ionic.animate-blinds > *,
+.ionic .animate-blinds > * {
+    visibility: hidden;
+}
+.ionic.animate-blinds > *,
+.ionic .animate-blinds > * {
+    -moz-transform: scale3d(0.8, 0, 1);
+    -ms-transform: scale3d(0.8, 0, 1);
+    -webkit-transform: scale3d(0.8, 0, 1);
+    transform: scale3d(0.8, 0, 1);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: -o-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+/* Uncomment if you want images to fade in after the card
+
+  .ionic.animate-blinds > .in .item-bg-image > img:last-child,
+  .ionic .animate-blinds > .in .item-bg-image > img:last-child { 
+    opacity: 0;
+  }
+
+    .ionic.animate-blinds.done .item-bg-image > img:last-child,
+    .ionic .animate-blinds.done .item-bg-image > img:last-child {
+    opacity: 1;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    }
+
+    .ionic.animate-blinds .item-bg-image > img:last-child,
+  .ionic .animate-blinds .item-bg-image > img:last-child {
+    box-shadow: none;
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  .ionic.animate-blinds > .in .item-bg-image > img:last-child,
+  .ionic .animate-blinds > .in .item-bg-image > img:last-child { 
+    opacity: 0;
+  }
+
+.ionic.animate-blinds.done .item-bg-image > img:last-child,
+.ionic .animate-blinds.done .item-bg-image > img:last-child {
+  opacity: 1;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.ionic.animate-blinds > .in,
+.ionic .animate-blinds > .in {
+    opacity: 0.6;
+}
+*/
+
+.ionic.animate-blinds > .in, .ionic.animate-blinds.done, .ionic .animate-blinds > .in, .ionic .animate-blinds.done {
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.ionic.animate-blinds > .in, .ionic.animate-blinds.done, .ionic .animate-blinds > .in, .ionic .animate-blinds.done {
+    visibility: visible;
+}
+.ionic.animate-blinds.done > .in, .ionic .animate-blinds.done > .in {
+    opacity: 1;
+}
+.ionic.animate-blinds .has-mask-reverse:after, .ionic .animate-blinds .has-mask-reverse:after {
+    opacity: 0;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.ionic.animate-blinds.done .has-mask-reverse:after, .ionic .animate-blinds.done .has-mask-reverse:after {
+    opacity: 1;
+}
+.ionic.animate-blinds > .out, .ionic .animate-blinds > .out {
+    -moz-transform: scale3d(0, 0, 1);
+    -ms-transform: scale3d(0, 0, 1);
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+}

@@ -1,0 +1,123 @@
+
+/* Ionic Overrides
+==================================*/
+
+.ionic .rounded {
+    border-radius: 4px;
+}
+.ionic .light, .ionic a.light {
+    color: #fff;
+}
+.ionic .light-bg {
+    background-color: #fff;
+}
+.ionic .light-border {
+    border-color: #ddd;
+}
+.ionic .stable, .ionic a.stable {
+    color: #f8f8f8;
+}
+.ionic .stable-bg {
+    background-color: #f8f8f8;
+}
+.ionic .stable-border {
+    border-color: #b2b2b2;
+}
+.ionic .positive, .ionic a.positive {
+    color: #4a87ee;
+}
+.ionic .positive-bg {
+    background-color: #4a87ee;
+}
+.ionic .positive-border {
+    border-color: #145fd7;
+}
+.ionic .calm, .ionic a.calm {
+    color: #43cee6;
+}
+.ionic .calm-bg {
+    background-color: #43cee6;
+}
+.ionic .calm-border {
+    border-color: #1aacc3;
+}
+.ionic .assertive, .ionic a.assertive {
+    color: #ef4e3a;
+}
+.ionic .assertive-bg {
+    background-color: #ef4e3a;
+}
+.ionic .assertive-border {
+    border-color: #cc2311;
+}
+.ionic .balanced, .ionic a.balanced {
+    color: #66cc33;
+}
+.ionic .balanced-bg {
+    background-color: #66cc33;
+}
+.ionic .balanced-border {
+    border-color: #498f24;
+}
+.ionic .energized, .ionic a.energized {
+    color: #f0b840;
+}
+.ionic .energized-bg {
+    background-color: #f0b840;
+}
+.ionic .energized-border {
+    border-color: #d39211;
+}
+.ionic .royal, .ionic a.royal {
+    color: #8a6de9;
+}
+.ionic .royal-bg {
+    background-color: #8a6de9;
+}
+.ionic .royal-border {
+    border-color: #552bdf;
+}
+.ionic .dark, .ionic a.dark {
+    color: #444;
+}
+.ionic .dark-bg {
+    background-color: #444;
+}
+.ionic .dark-border {
+    border-color: #111;
+}
+.ionic .navbar-default .navbar-nav > li > a {
+    margin: 0;
+    padding-right: 26px !important;
+    padding-left: 26px !important;
+    border-top: 3px solid transparent;
+    color: #BFD5C9;
+    opacity: 1;
+}
+.ionic .mid-bar {
+    padding: 16px;
+}
+.ionic .mid-bar h1, .ionic .mid-bar h2, .ionic .mid-bar h3, .ionic .mid-bar h4, .ionic .mid-bar h5, .ionic .mid-bar h6 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+.ionic .mid-bar p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+}
+.ionic .item-avatar, .ionic .item-avatar .item-content, .ionic .item-avatar-left, .ionic .item-avatar-left .item-content, .ionic .card > .item-avatar {
+    padding-left: 95px;
+}
+.ionic .dark-bg h2,
+.ionic .item.dark-bg h2 {
+    color: #fff;
+}
+.ionic .item h2 {
+    color: #353535;
+}
+.ionic .item p {
+    color: #929292;
+}
+.ionic .tabs-striped .tabs {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+}

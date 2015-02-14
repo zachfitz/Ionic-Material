@@ -1,0 +1,14 @@
+
+/* Button Bar
+==================================*/
+
+.ionic .button-bar {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+.ionic .button-bar > .button {
+	box-shadow: none;
+    line-height: 44px;
+}
+.ionic .button-bar>.button .icon:before, .ionic .button-bar>.button:before {
+    line-height: initial;
+}

@@ -1,0 +1,17 @@
+
+/* Item
+==================================*/
+
+.ionic .item {
+    font-size: 14px;
+    width: 100%;
+}
+.ionic .item-icon-left .icon {
+    left: 16px;
+}
+.ionic .item-icon-right .icon {
+    right: 16px;
+}
+.ionic .list .item.item-icon-right {
+    padding-right: 60px;
+}

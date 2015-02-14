@@ -1,0 +1,30 @@
+
+/* Layouts: Login
+==================================*/
+
+.ionic.login {
+    background-position: 25% 25%;
+    background-size: 180% 180%;
+    height: 100%;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    -webkit-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+.ionic.login .item {
+    margin: 0 12px;
+    padding-left: 0;
+    padding-right: 0;
+    width: initial;
+}
+.ionic.login .button-bar {
+    bottom: 0;
+    margin: 28px 12px 0;
+    width: initial;
+}
+.ionic.login .light-bg {
+    background-color: #fff;
+}
+.ionic .icon.hero-icon:before {
+    line-height: 130px;
+}

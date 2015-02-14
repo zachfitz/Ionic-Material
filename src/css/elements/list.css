@@ -1,0 +1,128 @@
+
+/* List
+==================================*/
+
+.ionic .list {
+    padding-top: 25px;
+}
+.ionic .list.half {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+.ionic .list.half:first-child .card.card-gallery {
+    margin: 0 6px 12px 12px;
+}
+.ionic .list.half:last-child .card.card-gallery {
+    margin: 0 12px 12px 6px;
+}
+.ionic .list.condensed-space > .card, .ionic .list.condensed-space > .item {
+    margin: 0px 0px 2px;
+}
+.ionic .content + .list {
+    padding-top: 0;
+}
+.ionic .list .item {
+    border: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+}
+.ionic .list .item.tabs {
+    padding: initial;
+}
+.ionic .list .item.item-bg-image {
+    max-height: 150px;
+    min-height: 150px;
+}
+.ionic .list .item.item-bg-image > img {
+    height: 100%;
+    left: 0;
+    max-width: initial;
+    opacity: 0.65;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.ionic .list a.item {
+    opacity: 1;
+}
+.ionic .list .item.item-bg-image h1, .ionic .list .item.item-bg-image h2, .ionic .list .item.item-bg-image h3, .ionic .list .item.item-bg-image h4, .ionic .list .item.item-bg-image h5, .ionic .list .item.item-bg-image h6 {
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.95);
+    z-index: 1;
+}
+.ionic .list .item.item-bg-image h2 {
+    font-size: 24px;
+}
+.ionic .list .item.item-bg-image h2 {
+    font-size: 24px;
+}
+.ionic .list .item.item-bg-image p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 17px;
+    position: relative;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.95);
+    z-index: 1;
+}
+.ionic .item-avatar, .ionic .item-avatar .item-content, .ionic .item-avatar-left, .ionic .item-avatar-left .item-content {
+    min-height: 88px;
+}
+
+/* List: Thumbnails
+==================================*/
+
+.ionic .item-thumbnail-left, .ionic .card > .item.item-thumbnail-left, .ionic .item-thumbnail-left .item-content {
+    padding-left: 106px;
+}
+.ionic .item-thumbnail-right, .ionic .card > .item.item-thumbnail-right, .ionic .item-thumbnail-right .item-content {
+    padding-right: 106px;
+}
+
+
+/* List: Avatar
+==================================*/
+
+.ionic .item-avatar > img:first-child, .ionic .item-avatar .item-image, .ionic .item-avatar .item-content > img:first-child, .ionic .item-avatar .item-content .item-image, .ionic .item-avatar-left > img:first-child, .ionic .item-avatar-left .item-image, .ionic .item-avatar-left .item-content > img:first-child, .ionic .item-avatar-left .item-content .item-image {
+    border-radius: 50%;
+    left: 16px;
+    max-height: 56px;
+    max-width: 56px;
+}
+.ionic .item-avatar, .ionic .list .item-avatar {
+    padding-left: 100px;
+}
+.ionic .avatar, .ionic .item-avatar .avatar {
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    height: 56px;
+    left: 16px;
+    position: absolute;
+    width: 56px;
+}
+
+
+/* List: Gallery
+==================================*/
+
+.ionic .list .card.card-gallery {
+    display: block;
+    float: left;
+    margin: 0 0 0 13px;
+    padding: 0;
+    width: auto;
+}
+.ionic .list .card.card-gallery.item h2 {
+    padding: 12px;
+}
+.ionic .list .item.item-gallery {} .ionic .list .item.item-gallery img {
+    width: 100%;
+}
+

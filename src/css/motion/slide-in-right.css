@@ -1,0 +1,101 @@
+
+/* Motion: Slide In Right
+==================================*/
+
+.ionic.animate-fade-slide-in-right > *,
+.ionic .animate-fade-slide-in-right > * {
+    visibility: hidden;
+}
+.ionic.animate-fade-slide-in-right > *,
+.ionic .animate-fade-slide-in-right > * {
+    -moz-transform: scale3d(0.8, 0, 1);
+    -ms-transform: scale3d(0.8, 0, 1);
+    -webkit-transform: scale3d(0.8, 0, 1);
+    transform: scale3d(0.8, 0, 1);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: -o-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.ionic.animate-fade-slide-in-right .item-bg-image > img.background,
+.ionic .animate-fade-slide-in-right .item-bg-image > img.background {
+    box-shadow: none;
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.ionic.animate-fade-slide-in-right > .in,
+.ionic.animate-fade-slide-in-right.done > *,
+.ionic .animate-fade-slide-in-right > .in,
+.ionic .animate-fade-slide-in-right.done > * {
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.ionic.animate-fade-slide-in-right > .in,
+.ionic.animate-fade-slide-in-right.done > *,
+.ionic .animate-fade-slide-in-right > .in,
+.ionic .animate-fade-slide-in-right.done > * {
+    visibility: visible;
+}
+.ionic.animate-fade-slide-in-right > *,
+.ionic .animate-fade-slide-in-right > * {
+    visibility: hidden;
+}
+.ionic.animate-fade-slide-in-right > *,
+.ionic .animate-fade-slide-in-right > *  {
+    -moz-transform: translate3d(250px, 250px, 0);
+    -ms-transform: translate3d(250px, 250px, 0);
+    -webkit-transform: translate3d(250px, 250px, 0);
+    transform: translate3d(250px, 250px, 0);
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: -o-transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    opacity: 0;
+}
+.ionic.animate-fade-slide-in-right > .in,
+.ionic.animate-fade-slide-in-right.done,
+.ionic .animate-fade-slide-in-right > .in,
+.ionic .animate-fade-slide-in-right.done {
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+.ionic.animate-fade-slide-in-right > .in,
+.ionic.animate-fade-slide-in-right.done,
+.ionic .animate-fade-slide-in-right > .in,
+.ionic .animate-fade-slide-in-right.done {
+    visibility: visible;
+}
+.ionic.animate-fade-slide-in-right.done > .in,
+.ionic .animate-fade-slide-in-right.done > .in {
+    opacity: 1;
+}
+.ionic.animate-fade-slide-in-right .has-mask-reverse:after,
+.ionic .animate-fade-slide-in-right .has-mask-reverse:after {
+    opacity: 0;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.ionic.animate-fade-slide-in-right.done .has-mask-reverse:after,
+.ionic .animate-fade-slide-in-right.done .has-mask-reverse:after {
+    opacity: 1;
+}
+.ionic.animate-fade-slide-in-right > .out,
+.ionic .animate-fade-slide-in-right > .out {
+    -moz-transform: scale3d(0, 0, 1);
+    -ms-transform: scale3d(0, 0, 1);
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+}

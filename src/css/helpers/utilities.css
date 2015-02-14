@@ -1,0 +1,62 @@
+
+/* Utilities
+==================================*/
+
+.ionic .pull-left {
+    float: left;
+}
+.ionic .pull-right {
+    float: right;
+}
+.ionic .double-padding, .ionic .ionic-content.double-padding {
+    padding: 16px;
+}
+.ionic .double-padding-x {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.ionic .double-padding-y {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.ionic .outline {
+    border-style: solid;
+    border-width: 1px;
+}
+.ionic .circle {
+    border-radius: 50%;
+}
+.ionic .no-padding, .ionic .list.no-padding, .ionic .bar.no-padding, .ionic .button-bar.no-padding, .ionic .card.no-padding, .ionic .button.no-padding, .ionic .item.no-padding {
+    padding: 0;
+}
+.ionic .flat, .ionic .flat.tabs, .ionic .flat.button, .ionic .flat.button.icon, .ionic .flat.hero {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+/* Utilities : Depth
+==================================*/
+
+.ionic .z1 {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+
+/* Utilities : Color
+==================================*/
+
+.ionic .bar.bar-positive.darker {
+    background-color: #164FAB;
+}
+/* TODO: Expand to other colors */
+.ionic .bar.bar-positive.dark-positive-bg {
+    background-color: #2C5CAD;
+}
+/* TODO: Expand to other colors */
+.ionic .muted {
+    color: #C3C3C3;
+}
+.ionic .clear-bg {
+    background: transparent;
+}

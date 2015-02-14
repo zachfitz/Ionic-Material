@@ -1,0 +1,137 @@
+
+/* Button
+==================================*/
+
+.ionic .button, .ionic .button.button-large, .ionic .button.button-flat, .ionic .bar .button, .ionic .bar .button.button-large, .ionic .bar .button.button-flat {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    height: 36px;
+    margin-bottom: 15px;
+    padding: 0 2rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-clip: padding-box;
+    line-height: 36px;
+    text-transform: uppercase;
+    border: none;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.ionic .button.disabled, .ionic .button.disabled.button-large, .ionic .button.button-floating.disabled, .ionic .button.button-large.disabled, .ionic .button.button:disabled, .ionic .button.button-large:disabled, .ionic .button.button-large:disabled, .ionic .button.button-floating:disabled, .ionic .bar .button.disabled, .ionic .bar .button.disabled.button-large, .ionic .bar .button.button-floating.disabled, .ionic .bar .button.button-large.disabled, .ionic .bar .button.button:disabled, .ionic .bar .button.button-large:disabled, .ionic .bar .button.button-large:disabled, .ionic .bar .button.button-floating:disabled {
+    background-color: #DFDFDF;
+    box-shadow: none;
+    color: #9F9F9F;
+}
+.ionic .button.disabled:hover, .ionic .button.disabled.button-large:hover, .ionic .button.button-floating.disabled:hover, .ionic .button.button-large.disabled:hover, .ionic .button.button:disabled:hover, .ionic .button.button-large:disabled:hover, .ionic .button.button-large:disabled:hover, .ionic .button.button-floating:disabled:hover, .ionic .bar .button.disabled:hover, .ionic .bar .button.disabled.button-large:hover, .ionic .bar .button.button-floating.disabled:hover, .ionic .bar .button.button-large.disabled:hover, .ionic .bar .button.button:disabled:hover, .ionic .bar .button.button-large:disabled:hover, .ionic .bar .button.button-large:disabled:hover, .ionic .bar .button.button-floating:disabled:hover {
+    background-color: #DFDFDF;
+    color: #9F9F9F;
+}
+.ionic .button-large .icon:before, .ionic .button-large.icon:before, .ionic .button-large.icon-left:before, .ionic .button-large.icon-right:before {
+    line-height: 56px;
+}
+.ionic .button.button-small,
+.ionic .button.button-small:before,
+.ionic .button.button-small:after {
+    line-height: 22px;
+}
+.ionic .button i, .ionic .button.button-large i, .ionic .button.button-floating i, .ionic .button.button-large i, .ionic .button.button-flat i, .ionic .bar .button i, .ionic .bar .button.button-large i, .ionic .bar .button.button-floating i, .ionic .bar .button.button-large i, .ionic .bar .button.button-flat i {
+    font-size: 1.3rem;
+    line-height: inherit;
+}
+.ionic .button-bar .button {
+    border-radius: 0;
+}
+.ionic .button, .ionic .button-large, .ionic .bar .button, .ionic .bar .button-large {
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 0.5px;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+.ionic .button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    outline: none;
+    padding: 6px;
+    margin: 0;
+    /* background: transparent; */
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: inherit;
+    font-variant: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.ionic .button:focus {
+    outline: none;
+}
+.ionic .button.ng-hide {
+    -webkit-transition: none;
+    transition: none;
+}
+.ionic .button.cornered {
+    border-radius: 0;
+}
+.ionic .button.icon {
+    padding: 0;
+}
+.ionic .button.raised {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.ionic .button-outline, .ionic .button-outline:hover, .ionic .button-outline:active {
+    border-style: solid;
+    border-width: 1px;
+}
+.ionic .button.button-outline.button-assertive, .ionic .button.button-outline.button-balanced, .ionic .button.button-outline.button-calm, .ionic .button.button-outline.button-dark, .ionic .button.button-outline.button-energized, .ionic .button.button-outline.button-light, .ionic .button.button-outline.button-positive, .ionic .button.button-outline.button-royal, .ionic .button.button-outline.button-stable, .ionic .button.button-outline {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+.ionic .button-flat, .ionic .bar .button-flat {
+    box-shadow: none;
+    background-color: transparent;
+    color: #343434;
+    cursor: pointer;
+}
+.ionic .button.button-flat.disabled, .ionic .bar .button.button-flat.disabled {
+    color: #b3b3b3;
+}
+.ionic .button.button-large, .ionic .bar .button.button-large {
+    height: 54px;
+    line-height: 56px;
+}
+.ionic .button.button-large i, .ionic .bar .button.button-large i {
+    font-size: 1.6rem;
+}
+.ionic .button-pin-header.button-floating {
+    position: absolute;
+    z-index: 1000;
+}
+.ionic .button-pin-header.button-pin-left {
+    left: 24px;
+    top: -24px;
+}
+.ionic .button-pin-header.button-pin-right {
+    right: 24px;
+    top: -24px;
+}
+.ionic .button:not([disabled]).raised:focus, .ionic .button:not([disabled]).raised:hover, .ionic .button:not([disabled]).floating:focus, .ionic .button:not([disabled]).floating:hover {
+    -webkit-transform: translate3d(0, -1px, 0);
+    transform: translate3d(0, -1px, 0);
+}

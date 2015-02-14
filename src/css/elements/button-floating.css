@@ -1,0 +1,39 @@
+
+/* Button : Floating
+==================================*/
+
+.ionic .button.button-floating, .ionic .bar .button.button-floating {
+    display: inline-block;
+    color: #FFF;
+    position: relative;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.ionic .button.button-floating i, .ionic .bar .button.button-floating i {
+    width: inherit;
+    display: inline-block;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.6rem;
+    line-height: 37px;
+}
+.ionic .button.button-floating.button-large, .ionic .bar .button.button-floating.button-large {
+    width: 55.5px;
+    height: 55.5px;
+}
+.ionic .button.button-floating.button-large i, .ionic .bar .button.button-floating.button-large i {
+    line-height: 55.5px;
+}
