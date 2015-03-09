@@ -19,6 +19,6 @@
 
 .ionic .bar.bar-header .button + .title {
     text-align: left;
-    left: 50px;
-    position: absolute;
+    left: 35px;
+    line-height: 46px;
 }
