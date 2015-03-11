@@ -1,5 +1,5 @@
 html, body {
-	background: #999;
+	background: #333;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -27,7 +27,7 @@ html, body {
 	background: rgba(255, 255, 255, 0.2);
   	border: solid 2px rgba(255, 255, 255, 0.1);
   	border-radius: 6px;
-} 
+}
 
 .device {
 	background: url('../img/device.png');
@@ -44,6 +44,6 @@ html, body {
   height: 580px;
   left: 34px;
   position: absolute;
-  top: 85px;
+  top: 112px;
   width: 332px;
 }
