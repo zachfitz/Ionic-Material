@@ -10,14 +10,15 @@
     "Ionic",
     "Material",
     "Design",
-    "Ionic",
+    "AngularJS",
     "Framework",
     "Hybrid",
     "Apps"
+    "Mobile"
   ],
   "license": "MIT",
   "homepage": "http://ionicmaterial.com",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
