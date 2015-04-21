@@ -59,17 +59,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         }
     })
-
-    .state('app.setup', {
-        url: '/setup',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/setup.html',
-                controller: 'SetupCtrl'
-            }
-        }
-    })
-
+    
     .state('app.components', {
         url: '/components',
         views: {
