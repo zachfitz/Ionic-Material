@@ -1,6 +1,9 @@
 *Alpha version released April 21, 2015*
 *Ask to be a collaborator.*
 
+# API and Demo App (in-browser simulation)
+http://ionicmaterial.com/demo/ (Use the ☰ menu for API sections)
+
 # Installation
 Install via bower:
 **bower install ionic-material**
