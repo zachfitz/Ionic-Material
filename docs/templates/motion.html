@@ -1,0 +1,47 @@
+<ion-view view-title="Motion Elements">
+    <ion-content>
+        <div class="im-wrapper">
+            <h4>Hardware Accelerated Motion</h4>
+            <p>"Motion is meaningful and appropriate, serving to focus attention and maintain continuity." &mdash; Google</p>
+            
+            <div class="button-bar">
+                <button class="button" ng-click="motionFab('flip');">.flip</button>
+                <button class="button" ng-click="motionFab('flap');">.flap</button>
+            </div>
+            <div class="button-bar">
+                <button class="button" ng-click="motionFab('spiral');">.spiral</button>
+                <button class="button" ng-click="motionFab('spiral-back');">.spiral-back</button>
+            </div>
+            <div class="button-bar">
+                <button class="button" ng-click="motionFab('drop');">.drop</button>
+                <button class="button" ng-click="motionFab('spin');">.spin</button>
+                <button class="button" ng-click="motionFab('spin-back');">.spin-back</button>
+            </div>
+            <br /><br />
+            <button class="button" ng-click="motionFab('fade');">.fade</button>
+            <br /><br />
+            <p>Add .motion to element you want to animate. Toggle the class
+                <br /> e.g. document.getElementById('my-id').classList.toggleClass('spiral-back');
+            </p>
+            <p>.fade + motion</p>
+            <p>Fabs should hold the primary action for the screen. Use motion, color, and location to gain attraction to the fab with Ionic Material.</p>
+            <p>
+                <strong>Transition from corner</strong>
+            </p>
+            <div class="button-bar directions">
+                <button class="button button-positive icon ion-arrow-right-c top-left" ng-click="moveFab('top-left'); motionFab('motion');"></button>
+                <button class="button button-positive icon ion-arrow-right-c top-right" ng-click="moveFab('top-right'); motionFab('motion');"></button>
+            </div>
+            <div class="button-bar directions">
+                <button class="button button-positive icon ion-arrow-right-c bottom-left" ng-click="moveFab('bottom-left'); motionFab('motion');"></button>
+                <button class="button button-positive icon ion-arrow-right-c bottom-right" ng-click="moveFab('bottom-right'); motionFab('motion');"></button>
+            </div>
+            <br /><br />
+            <p>
+                Remove .motion to a pin to a corner without the transition
+            </p>
+            <br /><br />
+            <br /><br />
+        </div>
+    </ion-content>
+</ion-view>

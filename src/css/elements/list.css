@@ -2,42 +2,25 @@
 /* List
 ==================================*/
 
-.ionic .list {
-    padding-top: 25px;
-}
-.ionic .list.half {
-    display: inline-block;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 50%;
-}
-.ionic .list.half:first-child .card.card-gallery {
-    margin: 0 6px 12px 12px;
-}
-.ionic .list.half:last-child .card.card-gallery {
-    margin: 0 12px 12px 6px;
-}
-.ionic .list.condensed-space > .card, .ionic .list.condensed-space > .item {
-    margin: 0px 0px 2px;
-}
-.ionic .content + .list {
+.content + .list {
     padding-top: 0;
 }
-.ionic .list .item {
+.list .item {
     border: none;
+    /*
     padding-left: 16px;
     padding-right: 16px;
+    */
     text-align: left;
 }
-.ionic .list .item.tabs {
+.list .item.tabs {
     padding: initial;
 }
-.ionic .list .item.item-bg-image {
+.list .item.item-bg-image {
     max-height: 150px;
     min-height: 150px;
 }
-.ionic .list .item.item-bg-image > img {
+.list .item.item-bg-image > img {
     height: 100%;
     left: 0;
     max-width: initial;
@@ -47,40 +30,40 @@
     width: 100%;
     z-index: 0;
 }
-.ionic .list a.item {
+.list a.item {
     opacity: 1;
 }
-.ionic .list .item.item-bg-image h1, .ionic .list .item.item-bg-image h2, .ionic .list .item.item-bg-image h3, .ionic .list .item.item-bg-image h4, .ionic .list .item.item-bg-image h5, .ionic .list .item.item-bg-image h6 {
+.list .item.item-bg-image h1, .list .item.item-bg-image h2, .list .item.item-bg-image h3, .list .item.item-bg-image h4, .list .item.item-bg-image h5, .list .item.item-bg-image h6 {
     color: #fff;
     font-weight: bold;
     position: relative;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.95);
     z-index: 1;
 }
-.ionic .list .item.item-bg-image h2 {
+.list .item.item-bg-image h2 {
     font-size: 24px;
 }
-.ionic .list .item.item-bg-image h2 {
+.list .item.item-bg-image h2 {
     font-size: 24px;
 }
-.ionic .list .item.item-bg-image p {
+.list .item.item-bg-image p {
     color: rgba(255, 255, 255, 1);
     font-size: 17px;
     position: relative;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.95);
     z-index: 1;
 }
-.ionic .item-avatar, .ionic .item-avatar .item-content, .ionic .item-avatar-left, .ionic .item-avatar-left .item-content {
-    min-height: 88px;
+.item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content {
+    min-height: 80px;
 }
 
 /* List: Thumbnails
 ==================================*/
 
-.ionic .item-thumbnail-left, .ionic .card > .item.item-thumbnail-left, .ionic .item-thumbnail-left .item-content {
+.item-thumbnail-left, .card > .item.item-thumbnail-left, .item-thumbnail-left .item-content {
     padding-left: 106px;
 }
-.ionic .item-thumbnail-right, .ionic .card > .item.item-thumbnail-right, .ionic .item-thumbnail-right .item-content {
+.item-thumbnail-right, .card > .item.item-thumbnail-right, .item-thumbnail-right .item-content {
     padding-right: 106px;
 }
 
@@ -88,16 +71,18 @@
 /* List: Avatar
 ==================================*/
 
-.ionic .item-avatar > img:first-child, .ionic .item-avatar .item-image, .ionic .item-avatar .item-content > img:first-child, .ionic .item-avatar .item-content .item-image, .ionic .item-avatar-left > img:first-child, .ionic .item-avatar-left .item-image, .ionic .item-avatar-left .item-content > img:first-child, .ionic .item-avatar-left .item-content .item-image {
+.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
     border-radius: 50%;
     left: 16px;
-    max-height: 56px;
-    max-width: 56px;
+    max-height: 40px;
+    max-width: 40px;
 }
-.ionic .item-avatar, .ionic .list .item-avatar {
+/*
+.item-avatar, .list .item-avatar {
     padding-left: 100px;
 }
-.ionic .avatar, .ionic .item-avatar .avatar {
+*/
+.avatar, .item-avatar .avatar {
     background-position: center;
     background-size: cover;
     border-radius: 50%;
@@ -112,17 +97,78 @@
 /* List: Gallery
 ==================================*/
 
-.ionic .list .card.card-gallery {
+.list.half {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+.list.half:first-child {
+    padding: 16px 8px 16px 16px;
+}
+.list.half:last-child {
+    padding: 16px 16px 16px 8px;
+}
+
+.list.half:first-child .card.card-gallery {
+    margin-left: 0;
+    margin-right: 0;
+}
+.list.half:last-child .card.card-gallery {
+    margin-left: 0;
+    margin-right: 0;
+}
+.list.condensed-space > .card, .list.condensed-space > .item {
+    margin: 0px 0px 2px;
+}
+.list .card.card-gallery {
     display: block;
     float: left;
     margin: 0 0 0 13px;
     padding: 0;
     width: auto;
 }
-.ionic .list .card.card-gallery.item h2 {
+.list.half .item {
+    width: 100%;
+}
+.list.half .item.card {
+    margin-bottom: 16px;
+}
+.list .card.card-gallery.item h2 {
     padding: 12px;
 }
-.ionic .list .item.item-gallery {} .ionic .list .item.item-gallery img {
+.list .item.item-gallery {} .list .item.item-gallery img {
     width: 100%;
 }
 
+
+.item.item-divider {
+    border-bottom: solid 1px #414141;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+
+.item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content, .card > .item-avatar {
+  padding-left: 72px;
+}
+
+
+
+.item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated {
+    background-color: transparent;
+}
+
+.list-inset {
+  margin: 20px 30px;
+  border-left: solid 1px #ccc;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.list .item.item-floating-label,
+.item-floating-label {
+  border-bottom: solid 1px #ccc;
+}

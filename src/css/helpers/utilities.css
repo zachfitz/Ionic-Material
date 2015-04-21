@@ -2,43 +2,96 @@
 /* Utilities
 ==================================*/
 
-.ionic .pull-left {
+.bold {
+    font-weight: bold;
+}
+.static {
+    position: static;
+}
+.pull-left {
     float: left;
 }
-.ionic .pull-right {
+.pull-right {
     float: right;
 }
-.ionic .double-padding, .ionic .ionic-content.double-padding {
+.double-padding, .ionic-content.double-padding {
     padding: 16px;
 }
-.ionic .double-padding-x {
+.double-padding-x {
     padding-left: 16px;
     padding-right: 16px;
 }
-.ionic .double-padding-y {
+.double-padding-y {
     padding-top: 16px;
     padding-bottom: 16px;
 }
-.ionic .outline {
+.outline {
     border-style: solid;
     border-width: 1px;
 }
-.ionic .circle {
+.border-top {
+    border-top: solid 1px #ccc;
+    padding-top: 30px;
+}
+.no-border {
+    border: none;
+}
+.circle {
     border-radius: 50%;
 }
-.ionic .no-padding, .ionic .list.no-padding, .ionic .bar.no-padding, .ionic .button-bar.no-padding, .ionic .card.no-padding, .ionic .button.no-padding, .ionic .item.no-padding {
+.no-padding, .list.no-padding, .bar.no-padding, .button-bar.no-padding, .card.no-padding, .button.no-padding, .item.no-padding {
     padding: 0;
 }
-.ionic .flat, .ionic .flat.tabs, .ionic .flat.button, .ionic .flat.button.icon, .ionic .flat.hero {
+.flat, .flat.tabs, .flat.button, .flat.button.icon, .flat.hero {
     box-shadow: none;
     -webkit-box-shadow: none;
+}
+
+
+/* Utilities : Padding
+==================================*/
+
+.im-wrapper, .padding {
+    padding: 16px !important;
+}
+
+.padding-bottom {
+    padding-bottom: 16px !important;
+}
+
+.padding-top {
+    padding-top: 16px !important;
+}
+
+.padding-left {
+    padding-left: 16px !important;
+}
+
+.padding-right {
+    padding-right: 16px !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
 }
 
 
 /* Utilities : Depth
 ==================================*/
 
-.ionic .z1 {
+.z1 {
     box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
@@ -46,17 +99,17 @@
 /* Utilities : Color
 ==================================*/
 
-.ionic .bar.bar-positive.darker {
+.bar.bar-positive.darker {
     background-color: #164FAB;
 }
 /* TODO: Expand to other colors */
-.ionic .bar.bar-positive.dark-positive-bg {
+.bar.bar-positive.dark-positive-bg {
     background-color: #2C5CAD;
 }
 /* TODO: Expand to other colors */
-.ionic .muted {
+.muted {
     color: #C3C3C3;
 }
-.ionic .clear-bg {
+.clear-bg {
     background: transparent;
 }

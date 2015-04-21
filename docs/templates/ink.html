@@ -1,0 +1,66 @@
+<ion-view view-title="Get Ink'd">
+    <ion-content class="im-wrapper">
+        <h4>Ink Defaults</h4>
+        <p>
+            Invoke <strong class="balanced-900 bold balanced-100-bg">ionic.material.ink.displayEffect();</strong> in a directive or controller to activate all ink-elements on the screen.
+        </p>
+        <p>
+            Once the displayEffect() has been called, elements containing the following classes will automatically contain ink when tapped: <strong>.button-fab</strong>, <strong>.button-flat</strong>, <strong>.button-raised</strong>, <strong>.button-clear</strong>, and <strong>.tab-item</strong>.
+        </p>
+        <h5 class="underline">Material Buttons Have Ink by Default</h5>
+        <p>
+            <button class="button button-flat button-calm">-flat</button>
+            <button class="button button-assertive button-clear">-clear</button>
+            <button class="button button-raised button-royal">-raised</button>
+            <br />
+            <br />
+            <button class="button button-fab button-balanced">-fab</button>
+        </p>
+        <h5 class="underline">...So do tabs!</h5>
+        <p>
+            <div class="tabs tabs-positive tabs-icon-only" style="position: static; margin-bottom: 15px;">
+                <a class="tab-item active">
+                    <i class="icon ion-home"></i>
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-star"></i>
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-gear-a"></i>
+                </a>
+            </div>
+        </p>
+        <h4>To Add Ink To Non-Defaults</h4>
+        <p>
+            Add the <strong>.ink</strong> class to non-inline elements.
+            <br />
+            <span style="display: inline-block; padding: 1rem;" class="ink" data-ink-color="#0066CC" data-ink-opacity=".6">
+                <i class="icon ion-waterdrop"></i>
+                Touch to see my ripples
+            </span>
+            <br />
+            <strong>Pro tip:</strong> Only use ink on elements that provide action.
+        </p>
+        <h4>For Dark Ink</h4>
+        <p>
+            Ink is by default, 40% opacity white. Add the <strong>.ink-dark</strong> class to change to 20% opacity black ink.
+        </p>
+        <button class="button button-raised button-assertive icon ion-flash ink-dark">Unleash the Dark Side</button>
+        <br />
+        <br />
+        <div class="code">&lt;button class="button button-fab button-balanced icon ion-leaf <strong class="balanced-900 bold balanced-100-bg">ink-dark</strong>"&gt;&lt;/button&gt;</div>
+        <br />
+        <h4>Any Colored Ink</h4>
+        <p>
+            Use <strong>data-ink-color</strong> with a hexadecimal color value and <strong>data-ink-opacity</strong> with a decimal for opacity.
+        </p>
+        <p>
+            <button class="button button-royal button-raised icon-right ion-ios-color-wand" data-ink-color="#CD3385" data-ink-opacity=".8">Activate Unicorn Juice</button>
+            <br />
+            <div class="code">&lt;button class="button button-royal button-raised icon-right ion-ios-color-wand" <strong class="balanced-900 bold balanced-100-bg">data-ink-color="#CD3385" data-ink-opacity=".8"</strong>&gt;&lt;/button&gt;</div>
+            <br />
+        </p>
+        <br />
+        <br />
+    </ion-content>
+</ion-view>

@@ -1,62 +1,191 @@
-
 /* Button : FAB
 ==================================*/
 
-.ionic .button.button-fab {
+.button.button-fab,
+.bar .button.button-fab {
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    z-index: 20;
+    z-index: 9999;
     width: 56px;
     height: 56px;
+    max-height: initial;
+    max-width: initial;
     border-radius: 50%;
     border-radius: 50%;
     overflow: hidden;
     padding: 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    -webkit-transition: 0.2s linear;
-    transition: 0.2s linear;
+    -webkit-transition: 0.3s fade-in-out;
+    transition: 0.3s fade-in-out;
     -webkit-transition-property: -webkit-transform, box-shadow;
     transition-property: transform, box-shadow;
 }
-.ionic .button.button-fab.button-fab-bottom-right {
+
+.button.button-fab.button-fab-bottom-right,
+.bar .button.button-fab.button-fab-bottom-right {
     top: auto;
     right: 16px;
     bottom: 16px;
     left: auto;
     position: absolute;
 }
-.ionic .button.button-fab.button-fab-bottom-left {
+
+.button.button-fab.button-fab-bottom-left,
+.bar .button.button-fab.button-fab-bottom-left {
     top: auto;
     right: auto;
     bottom: 16px;
     left: 16px;
     position: absolute;
 }
-.ionic .button.button-fab.button-fab-top-right {
-    top: -16px;
+
+.button.button-fab.button-fab-top-right,
+.bar .button.button-fab.button-fab-top-right {
+    top: 32px;
     right: 16px;
     bottom: auto;
     left: auto;
     position: absolute;
 }
-.ionic .button.button-fab.button-fab-top-left {
-    top: -16px;
+
+.button.button-fab.button-fab-top-left,
+.bar .button.button-fab.button-fab-top-left {
+    top: 32px;
     right: auto;
     bottom: auto;
     left: 16px;
     position: absolute;
 }
-.ionic .button.button-fab i {
+.button.button-fab.button-fab-top-left.expanded,
+.button.button-fab.button-fab-top-right.expanded,
+.bar .button.button-fab.button-fab-top-left.expanded,
+.bar .button.button-fab.button-fab-top-right.expanded {
+    top: 48px;
+}
+
+.button.button-fab i,
+.bar .button.button-fab i {
     font-size: 2.5rem;
-    line-height: 56px;
     margin-top: 0;
 }
-.ionic .button.button-fab.mini {
+
+.button.button-fab.mini,
+.bar .button.button-fab.mini {
     width: 40px;
     height: 40px;
 }
-.ionic .button.button-fab.mini i {
+
+.button.button-fab.mini i,
+.bar .button.button-fab.mini i {
     font-size: 2rem;
+}
+
+
+/* Motion */
+.motion {
+    transition: all 0.5s ease-out;
+}
+.fade {
+    opacity: 0;
+    backface-visibility: hidden !important;
+    transition: all 0.1s ease-out !important;
+}
+
+
+
+
+
+
+
+.spin-back {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotate(360deg) scale(0) !important;
+    transition: all 0.1s ease-out !important;
+}
+.spiral {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotate(-360deg) scale(0) translate(-120px) !important;
+    transition: all 0.1s ease-out !important;
+}
+.spiral-back {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotate(360deg) scale(0) translate(120px) !important;
+    transition: all 0.1s ease-out !important;
+}
+.menu-open .avatar {
+    opacity: 1;
+    transform: translateZ(0) rotate(0) scale(1) !important;
+    transition: all 0.3s ease-out !important;
+}
+
+.button.button-fab.button-fab-top-left.motion {
+    backface-visibility: hidden;
+    transform: translate3d(-120px, 60px, 0);
+    transition: all 0.1s ease-out;
+}
+.button.button-fab.button-fab-top-right.motion {
+    backface-visibility: hidden;
+    transform: translate3d(120px, 60px, 0);
+    transition: all 0.1s ease-out;
+}
+.button.button-fab.button-fab-bottom-left.motion {
+    backface-visibility: hidden;
+    transform: translate3d(-120px, 60px, 0);
+    transition: all 0.1s ease-out;
+}
+.button.button-fab.button-fab-bottom-right.motion {
+    backface-visibility: hidden;
+    transform: translate3d(120px, 60px, 0);
+    transition: all 0.1s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spin {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotate(0) scale(0) !important;
+    transition: all 0.3s ease-out !important;
+}
+.spin.on {
+    transform: translateZ(0) rotate(-360deg) scale(1) !important;
+}
+.flap {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotateX(0) scale(0) translate(-120px) !important;
+    transition: all 0.5s ease-out !important;
+}
+.flap.on {
+    transform: translateZ(0) rotateX(-720deg) scale(1) translate(0) !important;
+    transition: all 0.5s ease-out !important;
+}
+.drop {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) scale(3) !important;
+    transition: all 0.5s ease-out !important;
+}
+.drop.on {
+    transform: translateZ(0) scale(1) !important;
+    transition: all 0.5s ease-out !important;
+}
+.flip {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotateY(0) scale(0) !important;
+    transition: all 0.5s ease-out !important;
+}
+.flip.on {
+    transform: translateZ(0) rotateY(-720deg) scale(1) !important;
+    transition: all 0.5s ease-out !important;
 }

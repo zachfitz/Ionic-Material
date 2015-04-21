@@ -1,6 +1,6 @@
 {
   "name": "Ionic Material",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Zach Fitzgerald"
   ],
@@ -20,17 +20,18 @@
   "homepage": "http://ionicmaterial.com",
   "private": false,
   "ignore": [
-    "**/.*",
-    "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "bower.json",
+    "demo",
+    "docs",
+    "Gulpfile.js",
+    "index.html",
+    "node_modules",
+    "package.json",
+    "README.md",
+    "src"
   ],
   "dependencies": {
-    "Waves": "https://github.com/fians/Waves.git#~0.5.5",
-    "angular-animate": "1.2.12",
-    "angular-sanitize": "1.2.12",
-    "angular-ui-router": "0.2.7",
-    "ionic": "~0.9.27"
+    "ionic": "~1.0.0"
   }
 }

@@ -1,0 +1,606 @@
+<ion-view view-title="Ionic Components+">
+    <ion-content>
+        <div class="bar bar-subheader bar-stable static text-center">
+            <strong class="title">All Ionic, Materialized</strong>
+        </div>
+        <div class="im-wrapper">
+            <!-- Ionic Components -->
+            <h4 class="border-top">
+                <i class="icon ion-ionic"></i>
+                Ionic + Material Expansion
+            </h4>
+            <p>No need to add new styling! Ionic Material includes <strong>all</strong> <a href="http://ionicframework.com/docs/components/" target="_blank" class="link">Ionic components</a> out of the box, closely themed to the Google Material Design spec.</p>
+            <p>View the <a href="../demo/www/index.html"><strong>DEMO APP</strong></a> "Thronester" in /demo/www/ to see how things can be pieced together (notice: it does push the limits on Android).</p>
+            <p>
+                <em>Ionic Material aims to provide Ionic with the "...visual language [that] synthesizes the classic principles of good design with the innovation and possibility of technology and science."</em>
+            </p>
+            <h4 class="border-top"><i class="icon ion-android-color-palette"></i> More Color</h4>
+            <p>Ionic Material builds on Ionic's color naming conventions, and provides 3 variations based off <a href="http://www.google.com/design/spec/style/color.html#" target="_blank" class="link">Google's color style guide</a> (900, 500, 100 - respectively). These can, of course, be overridden to fit your needs.</p>
+            <div class="button-bar">
+                <a class="button button-positive-900">-900</a>
+                <a class="button button-positive">Positive</a>
+                <a class="button button-positive-100">-100</a>
+            </div>
+            <div class="button-bar">
+                <a class="button button-calm-900">-900</a>
+                <a class="button button-calm">Calm</a>
+                <a class="button button-calm-100">-100</a>
+            </div>
+            <div class="button-bar">
+                <a class="button button-royal-900">-900</a>
+                <a class="button button-royal">Royal</a>
+                <a class="button button-royal-100">-100</a>
+            </div>
+            <div class="button-bar">
+                <a class="button button-balanced-900">-900</a>
+                <a class="button button-balanced">Balanced</a>
+                <a class="button button-balanced-100">-100</a>
+            </div>
+            <div class="button-bar">
+                <a class="button button-energized-900">-900</a>
+                <a class="button button-energized">Energized</a>
+                <a class="button button-energized-100">-100</a>
+            </div>
+            <div class="button-bar">
+                <a class="button button-assertive-900">-900</a>
+                <a class="button button-assertive">Assertive</a>
+                <a class="button button-assertive-100">-100</a>
+            </div>
+            <div class="button-bar">
+                <a class="button button-dark">Dark</a>
+                <a class="button button-stable">Stable</a>
+                <a class="button button-light">Light</a>
+            </div>
+            <br />
+            <p>
+                <strong>Add -900 (darker) or -100 (lighter) to Ionic's color classes to use the extended scheme colors</strong>
+            </p>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="tabs tabs-balanced<span class="balanced-900 bold balanced-100-bg">-900"</span>&gt; &lt;div class="tab"&gt; My Dark Green Tabs &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Material Buttons -->
+            <h4 class="border-top"><i class="icon ion-waterdrop"></i> Material Buttons</h4>
+            <p>Materials buttons work like regular Ionic buttons, but they <strong>contain ink</strong> by default.</p>
+            <h5>FAB:</h5>
+            <button class="button button-fab button-balanced icon ion-leaf"></button>
+            <button class="button button-fab button-assertive icon ion-bug"></button>
+            <button class="button button-fab ink-dark button-calm icon ion-tshirt"></button>
+            <button class="button button-fab button-dark icon ion-heart" data-ink-color="#ff0000" data-ink-opacity=".8"></button>
+            <br />
+            <br /><strong>*</strong> Check out the <a href="#/app/ink" class="link">ink API</a> or using <a href="#/app/motion" class="link">motion</a> with FAB
+            <br />
+            <br />
+            <h5>RAISED:</h5>
+            <button class="button button-raised button-stable ink-dark">Risen Up</button>
+            <br />
+            <br />
+            <h5>FLAT:</h5>
+            <button class="button button-flat button-positive icon-left ion-outlet">Outlets = Emojis</button>
+            <br />
+            <br />
+            <h5>CLEAR:</h5>
+            <button class="button button-clear button-assertive">Clearly Awesome</button>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;strong&gt;FAB:&lt;/strong&gt;&lt;br /&gt; &lt;button class="button button-fab button-balanced icon ion-leaf"&gt;&lt;/button&gt; &lt;button class="button button-fab button-assertive icon ion-bug"&gt;&lt;/button&gt; &lt;button class="button button-fab ink-dark button-calm icon ion-tshirt"&gt;&lt;/button&gt; &lt;button class="button button-fab button-dark icon ion-heart" data-ink-color="#ff0000" data-ink-opacity=".8"&gt;&lt;/button&gt;&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;RAISED:&lt;/strong&gt;&lt;br /&gt; &lt;button class="button button-raised button-stable ink-dark"&gt;High Rider&lt;/button&gt;&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;FLAT:&lt;/strong&gt; &lt;br /&gt;&lt;button class="button button-flat button-positive icon-left ion-outlet"&gt;Outlets = Emojis&lt;/button&gt; &lt;strong&gt;FLAT:&lt;/strong&gt; &lt;br /&gt;&lt;button class="button button-flat button-assertive"&gt;Clearly Awesome&lt;/button&gt;
+                </div>
+            </div>
+            <!-- Ionic Buttons -->
+            <h4 class="border-top"><i class="icon ion-checkmark-circled"></i> Ionic Buttons</h4>
+            <p>Ionic buttons have been altered to resemble Material Design guidelines. They can have ink too, but all except -clear require adding <a href="#/app/ink" class="link">.ink</a> class to inkify.</p>
+            <button class="button button-small button-royal">
+                Small
+            </button>
+            <button class="button button-positive">
+                Button
+            </button>
+            <button class="button button-large button-dark">
+                Large
+            </button>
+            <br />
+            <button class="button button-outline button-assertive">
+                Outline Button
+            </button>
+            <br />
+            <br />
+            <button class="button button-clear button-dark">
+                Clear Button
+            </button>
+            <br />
+            <button class="button button-block button-calm">
+                Block / Full Button
+            </button>
+            <br />
+            <button class="button icon-left ion-home button-balanced">Icon Left</button>
+            <button class="button icon-right ion-star button-energized">Icon Right</button>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;button class="button button-large button-dark"&gt; Large Button &lt;/button&gt; &lt;button class="button button-positive"&gt; Button &lt;/button&gt; &lt;button class="button button-small button-royal"&gt; Small &lt;/button&gt; &lt;br /&gt; &lt;button class="button button-outline button-assertive"&gt; Outlined Button &lt;/button&gt; &lt;br /&gt; &lt;button class="button button-clear button-dark"&gt; Clear Button &lt;/button&gt; &lt;br /&gt; &lt;button class="button button-block button-calm"&gt; Block / Full Button &lt;/button&gt; &lt;br /&gt; &lt;button class="button icon-left ion-home button-balanced"&gt;Icon Left&lt;/button&gt; &lt;button class="button icon-right ion-star button-energized"&gt;Icon Right&lt;/button&gt;</div>
+            </div>
+            <!-- Headers -->
+            <h4 class="border-top"><i class="icon ion-chevron-up"></i> Headers</h4>
+            <p>Headers come in a variety of default color options, and can contain left/right buttons. View Ionic Header Docs. Material Design usually suggests left-aligning the title.
+            </p>
+            <!-- Header Icon + Fab -->
+            <div class="bar bar-header bar-calm-900" style="position: static;">
+                <div class="buttons buttons-left header-item">
+                    <span class="left-buttons">
+                        <button class="button button-icon button-clear ion-navicon">
+                        </button>
+                    </span>
+                </div>
+                <div class="h1 title title-left light">Header Icons + Fab</div>
+                <div class="buttons buttons-right header-item">
+                    <span class="right-buttons">
+                        <button class="button button-balanced button-fab">
+                            <i class="icon ion-star"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="bar bar-header bar-calm-900"&gt; &lt;div class="buttons buttons-left header-item"&gt; &lt;span class="left-buttons"&gt; &lt;button class="button button-icon button-clear ion-navicon"&gt; &lt;/button&gt; &lt;/span&gt; &lt;/div&gt; &lt;div class="h1 title title-left light"&gt;Header Icons + Fab&lt;/div&gt; &lt;div class="buttons buttons-right header-item"&gt; &lt;span class="right-buttons"&gt; &lt;button class="button button-balanced <strong class="balanced-900 bold balanced-100-bg">button-fab</strong>"&gt; &lt;i class="icon ion-star"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/span&gt; &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Header Fab Left -->
+            <div class="bar bar-header bar-dark" style="position: static; margin-bottom: 25px;">
+                <div class="buttons buttons-left header-item">
+                    <span class="left-buttons">
+                        <button class="button button-energized-900 button-fab">
+                            <i class="icon ion-star"></i>
+                        </button>
+                    </span>
+                </div>
+                <div class="h1 title title-left fab-left light">Header Fab Left</div>
+                <div class="buttons buttons-right header-item">
+                    <span class="right-buttons">
+                        <button class="button button-icon button-clear ion-android-more-vertical">
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="bar bar-header bar-dark"&gt; &lt;div class="buttons buttons-left header-item"&gt; &lt;span class="left-buttons"&gt; &lt;button class="button button-energized-900 <strong class="balanced-900 bold balanced-100-bg">button-fab</strong>"&gt; &lt;i class="icon ion-star"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/span&gt; &lt;/div&gt; &lt;div class="h1 title title-left <strong class="balanced-900 bold balanced-100-bg">fab-left</strong> light"&gt;Header Fab Left&lt;/div&gt; &lt;div class="buttons buttons-right header-item"&gt; &lt;span class="right-buttons"&gt; &lt;button class="button button-icon button-clear ion-android-more-vertical"&gt; &lt;/button&gt; &lt;/span&gt; &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Normal Header -->
+            <div class="bar bar-header bar-assertive" style="position: static;">
+                <div class="buttons buttons-left header-item">
+                    <span class="left-buttons">
+                        <button class="button button-icon button-clear ion-navicon">
+                        </button>
+                    </span>
+                </div>
+                <div class="h1 title">Normal Header</div>
+                <div class="buttons buttons-right header-item">
+                    <span class="right-buttons">
+                        <button class="button button-icon button-clear ion-android-more-vertical">
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="bar bar-header bar-assertive"&gt; &lt;div class="buttons buttons-left header-item"&gt; &lt;span class="left-buttons"&gt; &lt;button class="button button-icon button-clear ion-navicon"&gt; &lt;/button&gt; &lt;/span&gt; &lt;/div&gt; &lt;div class="h1 title title-left light"&gt;Normal Header&lt;/div&gt; &lt;div class="buttons buttons-right header-item"&gt; &lt;span class="right-buttons"&gt; &lt;button class="button button-icon button-clear ion-android-more-vertical"&gt; &lt;/button&gt; &lt;/span&gt; &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Footer - Fab Right -->
+            <h4 class="border-top"><i class="icon ion-chevron-down"></i> Footers</h4>
+            <div class="bar bar-footer bar-energized-100" style="position: static;">
+                <div class="title">Footer - Fab Right</div>
+                <div class="buttons buttons-right">
+                    <button class="button button-energized-900 button-fab">
+                        <i class="icon ion-code light"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="bar bar-footer bar-energized-100"&gt; &lt;div class="title"&gt;Footer&lt;/div&gt; &lt;div class="buttons buttons-right"&gt; &lt;button class="button button-energized-900 <strong class="balanced-900 bold balanced-100-bg">button-fab</strong>"&gt; &lt;i class="icon ion-code light"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Footer - Fab Left -->
+            <div class="bar bar-footer bar-royal-900" style="position: static;">
+                <div class="buttons buttons-left">
+                    <button class="button button-royal-100 button-fab">
+                        <i class="icon ion-code royal"></i>
+                    </button>
+                </div>
+                <div class="title">Footer - Fab Left</div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="bar bar-footer bar-royal-100"&gt; &lt;div class="title"&gt;Footer - Fab Left&lt;/div&gt; &lt;div class="buttons buttons-left"&gt; &lt;button class="button button-royal-100 <strong class="balanced-900 bold balanced-100-bg">button-fab</strong>"&gt; &lt;i class="icon ion-code royal"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Tabs -->
+            <h4 class="border-top"><i class="icon ion-stop"></i> Tabs</h4>
+            <p>Supports all ionic tabs</p>
+            <!-- Normal Tabs -->
+            <div class="tabs tabs-dark" style="position: static; margin-bottom: 15px;">
+                <a class="tab-item">
+                Home
+            </a>
+                <a class="tab-item">
+                Favorites
+            </a>
+                <a class="tab-item">
+                Settings
+            </a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="tabs tabs-dark"&gt; &lt;a class="tab-item"&gt; Home &lt;/a&gt; &lt;a class="tab-item"&gt; Favorites &lt;/a&gt; &lt;a class="tab-item"&gt; Settings &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Tab Icons -->
+            <div class="tabs tabs-positive tabs-icon-only" style="position: static; margin-bottom: 15px;">
+                <a class="tab-item active">
+                    <i class="icon ion-home"></i>
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-star"></i>
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-gear-a"></i>
+                </a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="tabs tabs-positive"&gt; &lt;a class="tab-item active"&gt; &lt;i class="icon ion-home"&gt;&lt;/i&gt; &lt;/a&gt; &lt;a class="tab-item"&gt; &lt;i class="icon ion-star"&gt;&lt;/i&gt; &lt;/a&gt; &lt;a class="tab-item"&gt; &lt;i class="icon ion-gear-a"&gt;&lt;/i&gt; &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Tabs Icons Top -->
+            <div class="tabs tabs-balanced tabs-icon-top" style="position: static; margin-bottom: 15px;">
+                <a class="tab-item">
+                    <i class="icon ion-home"></i> Home
+                </a>
+                <a class="tab-item active">
+                    <i class="icon ion-star"></i> Favorites
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-gear-a"></i> Settings
+                </a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="tabs tabs-balanced tabs-icon-top"&gt; &lt;a class="tab-item"&gt; &lt;i class="icon ion-home"&gt;&lt;/i&gt; Home &lt;/a&gt; &lt;a class="tab-item active"&gt; &lt;i class="icon ion-star"&gt;&lt;/i&gt; Favorites &lt;/a&gt; &lt;a class="tab-item"&gt; &lt;i class="icon ion-gear-a"&gt;&lt;/i&gt; Settings &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Tabs Icons Left -->
+            <div class="tabs tabs-royal tabs-icon-left" style="position: static; margin-bottom: 15px;">
+                <a class="tab-item">
+                    <i class="icon ion-home"></i> Home
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-star"></i> Favorites
+                </a>
+                <a class="tab-item active">
+                    <i class="icon ion-gear-a"></i> Settings
+                </a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="tabs tabs-royal tabs-icon-left"&gt; &lt;a class="tab-item"&gt; &lt;i class="icon ion-home"&gt;&lt;/i&gt; Home &lt;/a&gt; &lt;a class="tab-item"&gt; &lt;i class="icon ion-star"&gt;&lt;/i&gt; Favorites &lt;/a&gt; &lt;a class="tab-item active"&gt; &lt;i class="icon ion-gear-a"&gt;&lt;/i&gt; Settings &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Tabs Striped -->
+            <div class="tabs-striped tabs-color-assertive" style="position: static; margin-bottom: 15px;">
+                <div class="tabs" style="position: static;">
+                    <a class="tab-item active" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-home"></i> Test
+                    </a>
+                    <a class="tab-item" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-star"></i> Favorites
+                    </a>
+                    <a class="tab-item" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-gear-a"></i> Settings
+                    </a>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="tabs-striped tabs-color-assertive"&gt; &lt;a class="tab-item active" data-ink-color="#ef473a" data-ink-opacity=".35"&gt; &lt;i class="icon ion-home"&gt;&lt;/i&gt; Home &lt;/a&gt; &lt;a class="tab-item" data-ink-color="#ef473a" data-ink-opacity=".35"&gt; &lt;i class="icon ion-star"&gt;&lt;/i&gt; Favorites &lt;/a&gt; &lt;a class="tab-item" data-ink-color="#ef473a" data-ink-opacity=".35"&gt; &lt;i class="icon ion-gear-a"&gt;&lt;/i&gt; Settings &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Button Bars -->
+            <h4 class="border-top"><i class="icon ion-minus"></i> Button Bars</h4>
+            <div class="button-bar">
+                <a class="button button-raised ink-dark">1</a>
+                <a class="button button-raised ink-dark">2</a>
+                <a class="button button-raised ink-dark">3</a>
+                <a class="button button-raised ink-dark">4</a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="button-bar"&gt; &lt;a class="button button-raised ink-dark"&gt;1&lt;/a&gt; &lt;a class="button button-raised ink-dark"&gt;2&lt;/a&gt; &lt;a class="button button-raised ink-dark"&gt;3&lt;/a&gt; &lt;a class="button button-raised ink-dark"&gt;4&lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <div class="button-bar bar-balanced">
+                <a class="button button-raised">1</a>
+                <a class="button button-raised">2</a>
+                <a class="button button-raised">3</a>
+                <a class="button button-raised">4</a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="button-bar bar-balanced"&gt; &lt;a class="button button-raised"&gt;1&lt;/a&gt; &lt;a class="button button-raised"&gt;2&lt;/a&gt; &lt;a class="button button-raised"&gt;3&lt;/a&gt; &lt;a class="button button-raised"&gt;4&lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <div class="button-bar bar-positive">
+                <a class="button button-raised ink-dark">1</a>
+                <a class="button button-raised ink-dark">2</a>
+                <a class="button button-raised ink-dark">3</a>
+                <a class="button button-raised ink-dark">4</a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="button-bar bar-positive"&gt; &lt;a class="button button-raised ink-dark"&gt;1&lt;/a&gt; &lt;a class="button button-raised ink-dark"&gt;2&lt;/a&gt; &lt;a class="button button-raised ink-dark"&gt;3&lt;/a&gt; &lt;a class="button button-raised ink-dark"&gt;4&lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Plain List -->
+            <h4 class="border-top"><i class="icon ion-navicon-round"></i> Plain List</h4>
+            <div class="list">
+                <div class="item item-divider">
+                    Candy Bars
+                </div>
+                <a class="item">
+                    Butterfinger
+                </a>
+                <a class="item">
+                    Kit Kat
+                </a>
+                <a class="item">
+                    Snickers
+                </a>
+                <div class="item item-divider">
+                    Hard Candy
+                </div>
+                <a class="item">
+                    Jolly Rancher
+                </a>
+                <a class="item">
+                    Skittles
+                </a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="list"&gt; &lt;div class="item item-divider"&gt; Candy Bars &lt;/div&gt; &lt;a class="item"&gt; Butterfinger &lt;/a&gt; &lt;a class="item"&gt; Kit Kat &lt;/a&gt; &lt;a class="item"&gt; Snickers &lt;/a&gt; &lt;div class="item item-divider"&gt; Hard Candy &lt;/div&gt; &lt;a class="item"&gt; Jolly Rancher &lt;/a&gt; &lt;a class="item"&gt; Skittles &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Icon List -->
+            <h4 class="border-top"><i class="icon ion-nuclear"></i> Icon List</h4>
+            <div class="list">
+                <a class="item item-icon-left">
+                    <i class="icon ion-email"></i> Check mail
+                </a>
+                <a class="item item-icon-left">
+                    <i class="icon ion-mic-a"></i> Record album
+                    <span class="item-note">
+                        Grammy
+                    </span>
+                </a>
+                <a class="item item-icon-left">
+                    <i class="icon ion-person-stalker"></i> Friends
+                    <span class="badge badge-assertive">0</span>
+                </a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="list"&gt; &lt;a class="item item-icon-left" &gt; &lt;i class="icon ion-email"&gt;&lt;/i&gt; Check mail &lt;/a&gt; &lt;a class="item item-icon-left" &gt; &lt;i class="icon ion-mic-a"&gt;&lt;/i&gt; Record album &lt;span class="item-note"&gt; Grammy &lt;/span&gt; &lt;/a&gt; &lt;a class="item item-icon-left" &gt; &lt;i class="icon ion-person-stalker"&gt;&lt;/i&gt; Friends &lt;span class="badge badge-assertive"&gt;0&lt;/span&gt; &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Button List -->
+            <h4 class="border-top"><i class="icon ion-ios-list-outline"></i> Button List</h4>
+            <div class="list">
+                <div class="item item-button-right">
+                    Mom
+                    <button class="button button-balanced ink">
+                        <i class="icon ion-ios-telephone"></i>
+                    </button>
+                </div>
+                <div class="item item-button-right">
+                    Dad
+                    <button class="button button-balanced ink">
+                        <i class="icon ion-ios-telephone"></i>
+                    </button>
+                </div>
+                <div class="item item-button-right">
+                    Sis
+                    <button class="button button-balanced ink">
+                        <i class="icon ion-ios-telephone"></i>
+                    </button>
+                </div>
+                <div class="item item-button-right">
+                    Bro
+                    <button class="button button-balanced ink">
+                        <i class="icon ion-ios-telephone"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="list"&gt; &lt;div class="item item-button-right"&gt; Mom &lt;button class="button button-balanced ink"&gt; &lt;i class="icon ion-ios-telephone"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/div&gt; &lt;div class="item item-button-right"&gt; Dad &lt;button class="button button-balanced ink"&gt; &lt;i class="icon ion-ios-telephone"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/div&gt; &lt;div class="item item-button-right"&gt; Sis &lt;button class="button button-balanced ink"&gt; &lt;i class="icon ion-ios-telephone"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/div&gt; &lt;div class="item item-button-right"&gt; Bro &lt;button class="button button-balanced ink"&gt; &lt;i class="icon ion-ios-telephone"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Avatar List -->
+            <h4 class="border-top"><i class="icon ion-android-happy"></i> Avatar List</h4>
+            <div class="list">
+                <a class="item item-avatar">
+                    <img src="img/material1.jpg">
+                    <h2>Material</h2>
+                    <p>Sheets of paper</p>
+                </a>
+                <a class="item item-avatar">
+                    <img src="img/material2.jpg">
+                    <h2>Motion</h2>
+                    <p>Accent and bring attention</p>
+                </a>
+                <a class="item item-avatar">
+                    <img src="img/material3.jpg">
+                    <h2>Ink</h2>
+                    <p>Fluidity</p>
+                </a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="list"&gt; &lt;a class="item item-avatar"&gt; &lt;img src="img/material1.jpg"&gt; &lt;h2&gt;Material&lt;/h2&gt; &lt;p&gt;Sheets of paper&lt;/p&gt; &lt;/a&gt; &lt;a class="item item-avatar"&gt; &lt;img src="img/material2.jpg"&gt; &lt;h2&gt;Motion&lt;/h2&gt; &lt;p&gt;Accent and bring attention&lt;/p&gt; &lt;/a&gt; &lt;a class="item item-avatar"&gt; &lt;img src="img/material3.jpg"&gt; &lt;h2&gt;Ink&lt;/h2&gt; &lt;p&gt;Fluidity&lt;/p&gt; &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Thumbnail List -->
+            <h4 class="border-top"><i class="icon ion-images"></i> Thumbnail List</h4>
+            <div class="list">
+                <a class="item item-thumbnail-left">
+                    <img src="img/ionic.png">
+                    <h2>Ionic Framework</h2>
+                    <p>A mobile development revolution</p>
+                </a>
+                <a class="item item-thumbnail-left">
+                    <img src="img/google-material.png">
+                    <h2>Material Design</h2>
+                    <p>A visual language of design &amp; innovation</p>
+                </a>
+                <a class="item item-thumbnail-left">
+                    <img src="img/logo.png">
+                    <h2>Ionic Material</h2>
+                    <p>Their love-child</p>
+                </a>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="list"&gt; &lt;a class="item item-thumbnail-left"&gt; &lt;img src="img/ionic.png"&gt; &lt;h2&gt;Ionic Framework&lt;/h2&gt; &lt;p&gt;A mobile development revolution&lt;/p&gt; &lt;/a&gt; &lt;a class="item item-thumbnail-left"&gt; &lt;img src="img/google-material.png"&gt; &lt;h2&gt;Material Design&lt;/h2&gt; &lt;p&gt;A visual language of design &amp; innovation&lt;/p&gt; &lt;/a&gt; &lt;a class="item item-thumbnail-left"&gt; &lt;img src="img/logo.png"&gt; &lt;h2&gt;Ionic Material&lt;/h2&gt; &lt;p&gt;Their love-child&lt;/p&gt; &lt;/a&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Inset List -->
+            <h4 class="border-top"><i class="icon ion-arrow-shrink"></i> Inset List</h4>
+            <div class="list list-inset">
+                <div class="item">
+                    I'm not crazy
+                </div>
+                <div class="item">
+                    I'm just...
+                </div>
+                <div class="item">
+                    A little inset
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="list list-inset"&gt; &lt;div class="item"&gt; I'm not down &lt;/div&gt; &lt;div class="item"&gt; I'm not upset &lt;/div&gt; &lt;div class="item"&gt; I'm just inset &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Cards -->
+            <h4 class="border-top"><i class="icon ion-arrow-shrink"></i> Cards</h4>
+            <div class="list card stable-bg">
+                <div class="item item-avatar">
+                    <img src="img/arya.jpg">
+                    <h2>Arya Stark</h2>
+                    <p>"Joffrey. Cersei. Ilyn Payne. Hound. Polliver. The Mountain."</p>
+                </div>
+                <div class="item item-body">
+                    The quickest way to a man's heart is through Arya's needle. She has two speeds: Walk and Kill, and is the reason why Waldo is still hiding.
+                    <p>
+                        <a class="subdued">1 Like</a>
+                        <a class="subdued">5 Comments</a>
+                    </p>
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5">
+                        <i class="icon ion-thumbsup"></i> Like
+                    </a>
+                    <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5">
+                        <i class="icon ion-chatbox"></i> Comment
+                    </a>
+                    <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5">
+                        <i class="icon ion-share"></i> Share
+                    </a>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="list card stable-bg"&gt; &lt;div class="item item-avatar"&gt; &lt;img src="img/arya.jpg"&gt; &lt;h2&gt;Arya Stark&lt;/h2&gt; &lt;p&gt;"Joffrey. Cersei. Ilyn Payne. Hound. Polliver. The Mountain."&lt;/p&gt; &lt;/div&gt; &lt;div class="item item-body"&gt; The quickest way to a man's heart is through Arya's needle. She has two speeds: Walk and Kill, and is the reason why Waldo is still hiding. &lt;p&gt; &lt;a class="subdued"&gt;1 Like&lt;/a&gt; &lt;a class="subdued"&gt;5 Comments&lt;/a&gt; &lt;/p&gt; &lt;/div&gt; &lt;div class="item tabs tabs-secondary tabs-icon-left"&gt; &lt;a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"&gt; &lt;i class="icon ion-thumbsup"&gt;&lt;/i&gt; Like &lt;/a&gt; &lt;a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"&gt; &lt;i class="icon ion-chatbox"&gt;&lt;/i&gt; Comment &lt;/a&gt; &lt;a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"&gt; &lt;i class="icon ion-share"&gt;&lt;/i&gt; Share &lt;/a&gt; &lt;/div&gt; &lt;/div&gt;
+                </div>
+            </div>
+            <!-- Forms -->
+            <h4 class="border-top"><i class="icon ion-edit"></i> Forms</h4>
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" placeholder="First Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" placeholder="Last Name">
+                </label>
+                <br />
+                <div class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                    </label>
+                    I read the terms &amp; conditions.
+                </div>
+                <div class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                    </label>
+                    Haha, you liar. There are no T&amp;Cs.
+                </div>
+                <br />
+                <label class="item item-radio">
+                    <input type="radio" name="group">
+                    <div class="item-content">
+                        Tap Me
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <label class="item item-radio">
+                    <input type="radio" name="group">
+                    <div class="item-content">
+                        Or Tap Me
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <label class="item item-radio">
+                    <input type="radio" name="group">
+                    <div class="item-content">
+                        Or Tap Me
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <div class="item range range-positive">
+                    <i class="icon ion-ios-sunny-outline"></i>
+                    <input type="range" name="volume" min="0" max="100" value="33">
+                    <i class="icon ion-ios-sunny"></i>
+                </div>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Most Influential Teletubby
+                    </div>
+                    <select>
+                        <option>Laa-Laa</option>
+                        <option selected>Tinky Winky</option>
+                        <option>Dipsy</option>
+                        <option>Po</option>
+                        <option>Noo-noo</option>
+                    </select>
+                </label>
+                <button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1">
+                    Submit
+                </button>
+            </div>
+            <div class="code-wrapper code-wrapper-last">
+                <a class="toggle">View Code</a>
+                <div class="code">&lt;div class="list"&gt; &lt;label class="item item-input item-floating-label"&gt; &lt;span class="input-label"&gt;First Name&lt;/span&gt; &lt;input type="text" placeholder="First Name"&gt; &lt;/label&gt; &lt;label class="item item-input item-floating-label"&gt; &lt;span class="input-label"&gt;Last Name&lt;/span&gt; &lt;input type="text" placeholder="Last Name"&gt; &lt;/label&gt; &lt;br /&gt; &lt;div class="item item-checkbox"&gt; &lt;label class="checkbox"&gt; &lt;input type="checkbox"&gt; &lt;/label&gt; I read the terms &amp; conditions &lt;/div&gt; &lt;div class="item item-checkbox"&gt; &lt;label class="checkbox"&gt; &lt;input type="checkbox"&gt; &lt;/label&gt; Haha, you liar. There are no T&amp;C's &lt;/div&gt; &lt;br /&gt; &lt;label class="item item-radio"&gt; &lt;input type="radio" name="group"&gt; &lt;div class="item-content"&gt; Tap Me &lt;/div&gt; &lt;i class="radio-icon ion-checkmark"&gt;&lt;/i&gt; &lt;/label&gt; &lt;label class="item item-radio"&gt; &lt;input type="radio" name="group"&gt; &lt;div class="item-content"&gt; Or Tap Me &lt;/div&gt; &lt;i class="radio-icon ion-checkmark"&gt;&lt;/i&gt; &lt;/label&gt; &lt;label class="item item-radio"&gt; &lt;input type="radio" name="group"&gt; &lt;div class="item-content"&gt; Or Tap Me &lt;/div&gt; &lt;i class="radio-icon ion-checkmark"&gt;&lt;/i&gt; &lt;/label&gt; &lt;div class="item range range-positive"&gt; &lt;i class="icon ion-ios-sunny-outline"&gt;&lt;/i&gt; &lt;input type="range" name="volume" min="0" max="100" value="33"&gt; &lt;i class="icon ion-ios-sunny"&gt;&lt;/i&gt; &lt;/div&gt; &lt;label class="item item-input item-select"&gt; &lt;div class="input-label"&gt; Most Influential Teletubby &lt;/div&gt; &lt;select&gt; &lt;option&gt;Laa-Laa&lt;/option&gt; &lt;option selected&gt;Tinky Winky&lt;/option&gt; &lt;option&gt;Dipsy&lt;/option&gt; &lt;option&gt;Po&lt;/option&gt; &lt;option&gt;Noo-noo&lt;/option&gt; &lt;/select&gt; &lt;/label&gt; &lt;button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1"&gt; Submit &lt;/button&gt; &lt;/div&gt;
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+    </ion-content>
+</ion-view>

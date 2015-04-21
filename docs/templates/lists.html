@@ -1,0 +1,83 @@
+<ion-view view-title="Motion Lists">
+    <ion-content>
+        <div class="bar bar-subheader bar-stable static text-center">
+            <strong class="title">100% Hardware Accelerated</strong>
+        </div>
+        <div class="im-wrapper">
+            <h4 class="no-border no-padding-bottom">List Motions</h4>
+            <strong>Tap an item</strong>
+        </div>
+        <ion-list class="animate-ripple">
+            <ion-item nav-clear menu-close class="item-icon-right item-avatar" ng-click="blinds();">
+                <img src="img/material4.jpg">
+                <h2>.animate-blinds</h2>
+                <p>ionic.material.motion.blinds();</p>
+                <i class="icon ion-chatbubble muted"></i>
+            </ion-item>
+            <ion-item nav-clear menu-close class="item-icon-right item-avatar" ng-click="ripple();">
+                <img src="img/material2.jpg">
+                <h2>.animate-ripple</h2>
+                <p>ionic.material.motion.ripple();</p>
+                <i class="icon ion-chatbubble muted"></i>
+            </ion-item>
+            <ion-item nav-clear menu-close class="item-icon-right item-avatar" ng-click="fadeSlideIn();">
+                <img src="img/material3.jpg">
+                <h2>.animate-fade-slide-in</h2>
+                <p>ionic.material.motion.fadeSlideIn();</p>
+                <i class="icon ion-chatbubble muted"></i>
+            </ion-item>
+            <ion-item nav-clear menu-close class="item-icon-right item-avatar" ng-click="fadeSlideInRight();">
+                <img src="img/material1.jpg">
+                <h2>.animate-fade-slide-in-right</h2>
+                <p>ionic.material.motion.fadeSlideInRight();</p>
+                <i class="icon ion-chatbubble muted"></i>
+            </ion-item>
+        </ion-list>
+        <div class="im-wrapper">
+        <h4 class="no-padding-bottom">HTML</h4>
+        <strong>Add an animation class to your &lt;ion-list&gt;</strong>
+        <div class="code">
+&lt;ion-list <span class="balanced-900 bold balanced-100-bg">class="animate-ripple"</span>&gt;
+    &lt;ion-item nav-clear menu-close class="item-icon-right item-avatar"&gt;
+        &lt;img src="img/material4.jpg"&gt;
+        &lt;h2&gt;List title&lt;/h2&gt;
+        &lt;p&gt;List description&lt;/p&gt;
+        &lt;i class="icon ion-chatbubble muted"&gt;&lt;/i&gt;
+    &lt;/ion-item&gt;
+    (...)
+&lt;/ion-list&gt;
+        </div>
+        <p><strong>Animation classes:</strong> animate-blinds, animate-ripple, animate-fade-slide-in, animate-fade-slide-in-right</p>
+        <h4 class="no-padding-bottom">JS</h4>
+        <strong>Invoke after your list has been added to the DOM</strong>
+        
+        <br />(e.g. in your controller)
+        <br /><br />
+        <div class="code energized-900 bold energized-100-bg">ionic.material.motion.ripple();</div>
+        <br />
+        <p><strong>Motion methods:</strong> .blinds(), .ripple(), .fadeSlideIn(), .fadeSlideInRight()</p>
+        <h4 class="no-padding-bottom">API Options</h4>
+        <strong>Each animation can be customized</strong>
+        <p>Use a configuration object to tune the animation.</p>
+        <div class="code calm-900 calm-100-bg"><strong>var config = {
+    finishDelayThrottle: 2,
+    finishSpeedPercent: 0.5,
+    leftOffsetPercentage: 0.8,
+    selector: '#my-list',
+    startVelocity: 1100
+};</strong>
+
+ionic.material.motion.ripple(<strong>config</strong>);
+</div>
+<br />
+        <h4 class="no-padding-bottom">Tips</h4>
+        <strong>Light as a feather</strong>
+        <p>...flows much better. If you run into performance problems, watch out for unnecessary nesting, css shadows/gradients, or larger-resolution-than-needed images.</p>
+        <strong>Use as an accent, not a distration</strong>
+        <p>"A critical aspect of motion for material design is to retain the feeling of physicality without sacrificing elegance, simplicity, beauty, and the magic of a seamless user experience." - Google</p>
+        </div>
+        <br />
+        <br />
+        <br />
+    </ion-content>
+</ion-view>

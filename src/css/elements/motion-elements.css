@@ -1,0 +1,63 @@
+.motion {
+    transition: all 0.5s ease-out;
+}
+.fade {
+    opacity: 0;
+    backface-visibility: hidden !important;
+    transition: all 0.1s ease-out !important;
+}
+.spin-back {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotate(360deg) scale(0) !important;
+    transition: all 0.1s ease-out !important;
+}
+.spiral {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotate(-360deg) scale(0) translate(-120px) !important;
+    transition: all 0.1s ease-out !important;
+}
+.spiral-back {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotate(360deg) scale(0) translate(120px) !important;
+    transition: all 0.1s ease-out !important;
+}
+.menu-open .avatar {
+    opacity: 1;
+    transform: translateZ(0) rotate(0) scale(1) !important;
+    transition: all 0.3s ease-out !important;
+}
+.spin {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotate(0) scale(0) !important;
+    transition: all 0.3s ease-out !important;
+}
+.spin.on {
+    transform: translateZ(0) rotate(-360deg) scale(1) !important;
+}
+.flap {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotateX(0) scale(0) translate(-120px) !important;
+    transition: all 0.5s ease-out !important;
+}
+.flap.on {
+    transform: translateZ(0) rotateX(-720deg) scale(1) translate(0) !important;
+    transition: all 0.5s ease-out !important;
+}
+.drop {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) scale(3) !important;
+    transition: all 0.5s ease-out !important;
+}
+.drop.on {
+    transform: translateZ(0) scale(1) !important;
+    transition: all 0.5s ease-out !important;
+}
+.flip {
+    backface-visibility: hidden !important;
+    transform: translateZ(0) rotateY(0) scale(0) !important;
+    transition: all 0.5s ease-out !important;
+}
+.flip.on {
+    transform: translateZ(0) rotateY(-720deg) scale(1) !important;
+    transition: all 0.5s ease-out !important;
+}

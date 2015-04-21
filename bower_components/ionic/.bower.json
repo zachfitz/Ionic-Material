@@ -1,0 +1,65 @@
+{
+  "name": "ionic",
+  "version": "1.0.0-rc.3",
+  "codename": "radium-raccoon",
+  "homepage": "https://github.com/driftyco/ionic",
+  "authors": [
+    "Max Lynch <max@drifty.com>",
+    "Adam Bradley <adam@drifty.com>",
+    "Ben Sperry <ben@drifty.com>"
+  ],
+  "description": "Advanced HTML5 hybrid mobile app development framework.",
+  "main": [
+    "release/css/ionic.css",
+    "release/fonts/*",
+    "release/js/ionic.js",
+    "release/js/ionic-angular.js"
+  ],
+  "keywords": [
+    "mobile",
+    "html5",
+    "ionic",
+    "cordova",
+    "phonegap",
+    "trigger",
+    "triggerio",
+    "angularjs",
+    "angular"
+  ],
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "CONTRIBUTING.md",
+    "Gruntfile.js",
+    "component.json",
+    "config",
+    "examples",
+    "package.json",
+    "release/js/angular",
+    "release/js/angular-ui",
+    "scripts",
+    "test",
+    "js/controllers",
+    "js/ext",
+    "js/utils",
+    "js/views",
+    "js/_license.js",
+    "js/ionic.js"
+  ],
+  "dependencies": {
+    "angular": "1.3.13",
+    "angular-animate": "1.3.13",
+    "angular-sanitize": "1.3.13",
+    "angular-ui-router": "0.2.13"
+  },
+  "_release": "1.0.0-rc.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0-rc.3",
+    "commit": "cc5ed7bced4862e90211f84f1d0ac346059ca0c6"
+  },
+  "_source": "git://github.com/driftyco/ionic.git",
+  "_target": "~1.0.0",
+  "_originalSource": "ionic"
+}

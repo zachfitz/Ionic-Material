@@ -1,0 +1,40 @@
+{
+  "name": "Ionic-Material",
+  "version": "0.0.1",
+  "authors": [
+    "Zach Fitzgerald"
+  ],
+  "description": "Ionic Material - Material Design for the Ionic Framework",
+  "main": "dist/ionic-material.min.js",
+  "keywords": [
+    "Ionic",
+    "Material",
+    "Design",
+    "Angular",
+    "Framework",
+    "Hybrid",
+    "Apps",
+    "Mobile"
+  ],
+  "license": "MIT",
+  "homepage": "http://ionicmaterial.com",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/zachsoft/Ionic-Material/issues"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gulp": "^3.7.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.1.0",
+    "gulp-concat": "^2.1.7",
+    "gulp-uglify": "^0.2.1",
+    "gulp-livereload": "^3.0.0"
+  }
+}

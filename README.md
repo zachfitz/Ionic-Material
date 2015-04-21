@@ -1,21 +1,31 @@
-*With the big increase of interest in this project, I can confirm there will be a major update to this project soon. Please hang tight while we finish writing the directives, API, and complete testing. The goal is for the first version (alpha) to be released in April. With some help, we can speed it along.*
+*Alpha version released April 21, 2015*
+*Ask to be a collaborator.*
 
 # Installation
 Install via bower:
 **bower install ionic-material**
 
-Preview:
-bower_components/ionic-material/preview/index.html
-
-# Where You Can Help
-
-We're in the process of simplifying the API, creating directives, adding granular control the start/stop of animation sequences, and adding more layouts. The aim is "materializing" Ionic apps as seamless and as easily as possible for Ionic devs. Pitching in to help in any of these areas is encouraged. Please contact fitzgerald.zachary@gmail.com for more details if you are interested in contributing, or if you have ideas on how we can accomplish this library's objectives.
-
-# About Ionic Material
-
-Ionic material is currently an experimental extension library for the Ionic Framework, meaning you won't change the way you develop your Ionic hybrid apps to have them materialized. Ionic Material aims to integrate the best representations of Material Design into a single add-on library for Ionic Developers. With the Polymer Project, ngMaterial, and other open source projects arising, we aim to be actively engaged and aligned with these, and other, related projects.
-
-As a 100% free open-source project, developer participation is encouraged, as much or little as possible.
+# Sample App
+Install via bower:
+**bower install ionic-material-sample**
 
 # Website
 http://ionicmaterial.com/
+
+# Where We're Going
+
+1. Full UI Kit w/ dozens of templates for rapid application development. Inspired by amazing kits like: https://ui8.net/product/material-ui-kit.
+
+2. Increase animation performance. We're really stretching the limits of hybrid app animations - if **you** have ideas on performance adjustments, we're all ears and would love the insight.
+
+3. Port animate.js with bezier curve adjustments to match "authentic motion" spec of Material Design.
+
+4. Bug fixes
+
+I devote as much time as I can, but my full-time position will always rank first. This means community help is needed to guarantee the maturation of this project. You guys are awesome, and I am grateful for all the help/support. 
+
+# About Ionic Material
+
+Ionic material is aimed at being an extension library for the Ionic Framework, meaning you won't change the way you develop your Ionic hybrid apps to have them materialized. Ionic Material aims to integrate the best representations of Material Design into a single add-on library for Ionic Developers. With the Polymer Project, ngMaterial, and other open source projects arising, we aim to be actively engaged and aligned with these, and other, related projects.
+
+As a 100% free open-source project, **developer participation is encouraged**, as much or little as possible.
