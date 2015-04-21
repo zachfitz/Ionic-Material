@@ -6,8 +6,7 @@ Install via bower:
 **bower install ionic-material**
 
 # Sample App
-Install via bower:
-**bower install ionic-material-sample**
+Ionic demo app "Thronester" is found within './demo' - You can also run 'index.html' locally to view in a webkit browser on a computer.
 
 # Website
 http://ionicmaterial.com/
