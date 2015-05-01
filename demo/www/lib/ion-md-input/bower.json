@@ -1,0 +1,24 @@
+{
+    "name": "ion-md-input",
+    "version": "0.0.2",
+    "authors": [
+        "mhartington <mikehartington@gmail.com>"
+    ],
+    "description": "A material design inspired text input for Ionic Framework",
+    "main": "ion-md-input.js",
+    "keywords": [
+        "ionic",
+        "angular",
+        "material",
+        "design"
+    ],
+    "license": "MIT",
+    "homepage": "github.com/mhartington/ion-md-input",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
