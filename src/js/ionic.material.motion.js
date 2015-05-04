@@ -21,6 +21,16 @@ ionic.material.motion = (function Motion() {
         return domNode.getBoundingClientRect;
     }
 
+    function showNotAnimatedElements(elements, total) {
+        // Load the elements without effect
+        for (var i = 0; i < total; i++) {
+            var child = elements[i];
+            child.className += ' in';
+          child.className += ' done';
+        }
+    }
+
+
 
     /*============================================================================*/
     /* MOTION (EXPORT)
@@ -72,16 +82,17 @@ ionic.material.motion = (function Motion() {
         }
 
         var animateBlindsDom = document.querySelectorAll(options.selector);
+        var elementsCount = animateBlindsDom.length;
         var elementAnimationCount = 0;
 
         // Count the elements within the starting viewport so we're not exacting
         // more effort than required...
-        // 
+        //
         // We use css visiblity: hidden instead of display: none so the elements
         // maintain their DOM flow
 
         var viewportHeight = getViewportHeight();
-        for (var i = 0; i < animateBlindsDom.length; i++) {
+        for (var i = 0; i < elementsCount; i++) {
             if (animateBlindsDom[i].offsetTop < viewportHeight) {
                 elementAnimationCount += 1;
                 continue;
@@ -115,6 +126,9 @@ ionic.material.motion = (function Motion() {
             }
 
         }, speed * options.finishSpeedPercent);
+
+        // Load the elements without effect
+        showNotAnimatedElements(animateBlindsDom, elementsCount);
     }
 
     function fadeSlideIn(options) {
@@ -151,17 +165,17 @@ ionic.material.motion = (function Motion() {
         }
 
         var animateFadeSlideInDom = document.querySelectorAll(options.selector);
-
+        var elementsCount = animateFadeSlideInDom.length;
         var elementAnimationCount = 0;
 
         // Count the elements within the starting viewport so we're not exacting
         // more effort than required...
-        // 
+        //
         // We use css visiblity: hidden instead of display: none so the elements
         // maintain their DOM flow
 
         var viewportHeight = getViewportHeight();
-        for (var i = 0; i < animateFadeSlideInDom.length; i++) {
+        for (var i = 0; i < elementsCount; i++) {
             if (animateFadeSlideInDom[i].offsetTop < viewportHeight) {
                 elementAnimationCount += 1;
                 continue;
@@ -193,6 +207,9 @@ ionic.material.motion = (function Motion() {
             animateFadeSlideInDom[0].className += ' done';
 
         }, speed * options.finishSpeedPercent);
+
+        // Load the elements without effect
+        showNotAnimatedElements(animateFadeSlideInDom, elementsCount);
     }
 
     function fadeSlideInRight(options) {
@@ -229,16 +246,17 @@ ionic.material.motion = (function Motion() {
         }
 
         var animateSlideInRightDom = document.querySelectorAll(options.selector);
+        var elementsCount = animateSlideInRightDom.length;
         var elementAnimationCount = 0;
 
         // Count the elements within the starting viewport so we're not
         // exacting more effort than required...
-        // 
+        //
         // We use css visiblity: hidden instead of display: none so the
         // elements maintain their DOM flow
 
         var viewportHeight = getViewportHeight();
-        for (var i = 0; i < animateSlideInRightDom.length; i++) {
+        for (var i = 0; i < elementsCount; i++) {
             if (animateSlideInRightDom[i].offsetTop < viewportHeight) {
                 elementAnimationCount += 1;
                 continue;
@@ -270,6 +288,10 @@ ionic.material.motion = (function Motion() {
             animateSlideInRightDom[0].className += ' done';
 
         }, speed * options.finishSpeedPercent);
+
+        // Load the elements without effect
+        showNotAnimatedElements(animateSlideInRightDom, elementsCount);
+
     }
 
     function ripple(options) {
@@ -306,11 +328,12 @@ ionic.material.motion = (function Motion() {
         }
 
         var animateRippleDom = document.querySelectorAll(options.selector);
+        var elementsCount = animateRippleDom.length;
         var elementAnimationCount = 0;
 
         // Count the elements within the starting viewport so we're not
         // exacting more effort than required...
-        // 
+        //
         // We use css visiblity: hidden instead of display: none so the
         // elements maintain their DOM flow
 
@@ -347,6 +370,9 @@ ionic.material.motion = (function Motion() {
             animateRippleDom[0].className += ' done';
 
         }, speed * options.finishSpeedPercent);
+
+        // Load the elements without effect
+        showNotAnimatedElements(animateRippleDom, elementsCount);
     }
 
     function panInLeft(options) {
