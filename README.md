@@ -8,6 +8,35 @@ http://ionicmaterial.com/demo/ (Use the ☰ menu for API sections)
 Install via bower:
 **bower install ionic-material**
 
+# Quick start
+
+1) Go to your `ionic` project
+
+```
+ cd myIonicProject
+ ```
+
+2) install `ionicmaterial`
+
+```
+ bower install ionic-material
+```
+
+3) Add `ionic.material.min.css` and `ionic.material.min.js` in your `index.html` (see the sample index.html below)
+   * add google font `RobotoDraft`
+
+```
+ <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+ <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+ <link href="lib/ionic-material/ionic.material.min.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+
+ <script src="lib/ionic/js/ionic.bundle.js"></script>
+ <script src="lib/ionic-material/ionic.material.min.js"></script>
+```
+
+4) you are all set to go... :thumbsup:
+
 # Sample App
 Ionic demo app "Thronester" is found within './demo' - You can also run 'index.html' locally to view in a webkit browser on a computer.
 
