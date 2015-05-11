@@ -11,14 +11,9 @@
     height: 37px;
     line-height: 37px;
     padding: 0;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     background-clip: padding-box;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    -ms-transition: 0.3s;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -27,6 +22,7 @@
     display: inline-block;
     text-align: center;
     color: #FFF;
+    font-size: 25px;
     font-size: 1.6rem;
     line-height: 37px;
 }

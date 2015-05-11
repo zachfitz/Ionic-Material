@@ -7,14 +7,11 @@
 .bar .button,
 .bar .button.button-large,
 .bar .button.button-flat {
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     display: inline-block;
     height: 36px;
+    padding: 0 32px;
     padding: 0 2rem;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
     border-radius: 2px;
     background-clip: padding-box;
     text-transform: uppercase;
@@ -74,6 +71,7 @@
 .bar .button.button-floating i,
 .bar .button.button-large i,
 .bar .button.button-flat i {
+    font-size: 20px;
     font-size: 1.3rem;
 }
 
@@ -89,9 +87,6 @@
     text-align: center;
     letter-spacing: 0.5px;
     -webkit-transition: 0.2s ease-out;
-    -moz-transition: 0.2s ease-out;
-    -o-transition: 0.2s ease-out;
-    -ms-transition: 0.2s ease-out;
     transition: 0.2s ease-out;
     cursor: pointer;
 }
@@ -104,7 +99,7 @@
     position: relative;
     outline: none;
     margin: 0;
-    /* background: transparent; */    
+    /* background: transparent; */
     white-space: nowrap;
     text-align: center;
     text-transform: uppercase;
@@ -172,6 +167,7 @@
 
 .button.button-large i,
 .bar .button.button-large i {
+    font-size: 25px;
     font-size: 1.6rem;
 }
 
@@ -201,7 +197,7 @@
 .button.button-flat {
     box-shadow: none;
     /* background: transparent; */
-    
+
     color: inherit;
 }
 

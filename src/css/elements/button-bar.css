@@ -7,7 +7,7 @@
 
 .button-bar > .button {
     box-shadow: none;
-/*    line-height: initial; */
+    /*    line-height: initial; */
 }
 
 .button-bar>.button .icon:before,
