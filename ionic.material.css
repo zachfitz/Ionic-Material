@@ -29,7 +29,6 @@
     background-color: rgba(0, 0, 0, 0.6);
     bottom: 0;
     color: #fff;
-    letter-spacing: 4px;
     letter-spacing: 0.25rem;
     padding: 20px 10px;
     position: relative;
@@ -75,7 +74,6 @@
     background: #444;
 }
 .item-md-label .input-label {
-    letter-spacing: 4px;
     letter-spacing: 0.25rem;
     padding: 0 10px;
 }
@@ -324,7 +322,6 @@
 
 .button.button-fab i,
 .bar .button.button-fab i {
-    font-size: 40px;
     font-size: 2.5rem;
     margin-top: 0;
 }
@@ -337,7 +334,6 @@
 
 .button.button-fab.mini i,
 .bar .button.button-fab.mini i {
-    font-size: 32px;
     font-size: 2rem;
 }
 
@@ -520,7 +516,6 @@
     display: inline-block;
     text-align: center;
     color: #FFF;
-    font-size: 25px;
     font-size: 1.6rem;
     line-height: 37px;
 }
@@ -544,7 +539,6 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     display: inline-block;
     height: 36px;
-    padding: 0 32px;
     padding: 0 2rem;
     border-radius: 2px;
     background-clip: padding-box;
@@ -605,7 +599,6 @@
 .bar .button.button-floating i,
 .bar .button.button-large i,
 .bar .button.button-flat i {
-    font-size: 20px;
     font-size: 1.3rem;
 }
 
@@ -701,7 +694,6 @@
 
 .button.button-large i,
 .bar .button.button-large i {
-    font-size: 25px;
     font-size: 1.6rem;
 }
 
@@ -808,7 +800,6 @@
     background: inherit;
 }
 .card .icon + .icon {
-    padding-left: 16px;
     padding-left: 1rem;
 }
 .card.animate-fade-in {
@@ -917,7 +908,6 @@
 }
 .hero .hero-icon + h1 {
     color: rgb(255, 255, 255);
-    letter-spacing: 2px;
     letter-spacing: 0.15rem;
 }
 .hero .button, .hero .button.button-large, .hero .button.button-flat {

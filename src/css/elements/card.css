@@ -49,7 +49,6 @@
     background: inherit;
 }
 .card .icon + .icon {
-    padding-left: 16px;
     padding-left: 1rem;
 }
 .card.animate-fade-in {

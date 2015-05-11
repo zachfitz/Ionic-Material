@@ -29,7 +29,6 @@
     background-color: rgba(0, 0, 0, 0.6);
     bottom: 0;
     color: #fff;
-    letter-spacing: 4px;
     letter-spacing: 0.25rem;
     padding: 20px 10px;
     position: relative;
@@ -75,7 +74,6 @@
     background: #444;
 }
 .item-md-label .input-label {
-    letter-spacing: 4px;
     letter-spacing: 0.25rem;
     padding: 0 10px;
 }

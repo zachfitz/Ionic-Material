@@ -10,7 +10,6 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     display: inline-block;
     height: 36px;
-    padding: 0 32px;
     padding: 0 2rem;
     border-radius: 2px;
     background-clip: padding-box;
@@ -71,7 +70,6 @@
 .bar .button.button-floating i,
 .bar .button.button-large i,
 .bar .button.button-flat i {
-    font-size: 20px;
     font-size: 1.3rem;
 }
 
@@ -167,7 +165,6 @@
 
 .button.button-large i,
 .bar .button.button-large i {
-    font-size: 25px;
     font-size: 1.6rem;
 }
 

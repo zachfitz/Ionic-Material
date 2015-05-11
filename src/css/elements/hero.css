@@ -89,7 +89,6 @@
 }
 .hero .hero-icon + h1 {
     color: rgb(255, 255, 255);
-    letter-spacing: 2px;
     letter-spacing: 0.15rem;
 }
 .hero .button, .hero .button.button-large, .hero .button.button-flat {
