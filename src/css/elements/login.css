@@ -6,8 +6,6 @@
     background-position: 25% 25%;
     background-size: 180% 180%;
     height: 100%;
-    -moz-transition: all 1.5s ease-in-out;
-    -o-transition: all 1.5s ease-in-out;
     -webkit-transition: all 1.5s ease-in-out;
     transition: all 1.5s ease-in-out;
 }

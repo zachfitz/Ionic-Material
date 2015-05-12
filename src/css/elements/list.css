@@ -25,6 +25,7 @@
     left: 0;
     max-width: initial;
     opacity: 0.65;
+    filter: alpha(opacity=65);
     position: absolute;
     top: 0;
     width: 100%;
@@ -32,6 +33,7 @@
 }
 .list a.item {
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 .list .item.item-bg-image h1, .list .item.item-bg-image h2, .list .item.item-bg-image h3, .list .item.item-bg-image h4, .list .item.item-bg-image h5, .list .item.item-bg-image h6 {
     color: #fff;
@@ -139,8 +141,8 @@
     padding: 12px;
 }
 .list .item.item-gallery {} .list .item.item-gallery img {
-    width: 100%;
-}
+                                width: 100%;
+                            }
 
 
 .item.item-divider {
@@ -152,7 +154,7 @@
 
 
 .item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content, .card > .item-avatar {
-  padding-left: 72px;
+    padding-left: 72px;
 }
 
 
@@ -162,13 +164,13 @@
 }
 
 .list-inset {
-  margin: 20px 30px;
-  border-left: solid 1px #ccc;
-  border-radius: 0;
-  background-color: #fff;
+    margin: 20px 30px;
+    border-left: solid 1px #ccc;
+    border-radius: 0;
+    background-color: #fff;
 }
 
 .list .item.item-floating-label,
 .item-floating-label {
-  border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
 }
