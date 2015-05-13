@@ -57,19 +57,19 @@ gulp.task('styles', function () {
 
     var scss = gulp.src(src)
         .pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(rename('ionic.material.css'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(distPath));
+        .pipe(sass().on('error', sass.logError))
+        .pipe(rename('ionic.material.css'));
 
 
     if (minify) {
-        scss.pipe(rename({
+        scss.pipe(gulp.dest(distPath)).pipe(rename({
             suffix: '.min'
         }))
             .pipe(minifycss())
             .pipe(rename('ionic.material.min.css'))
-            .pipe(gulp.dest(distPath));
+            .pipe(sourcemaps.write()).pipe(gulp.dest(distPath));
+    } else {
+        scss.pipe(sourcemaps.write()).pipe(gulp.dest(distPath));
     }
 
     return scss;
