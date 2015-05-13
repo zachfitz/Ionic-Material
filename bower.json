@@ -1,15 +1,15 @@
 {
   "name": "Ionic Material",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "authors": [
     "Zach Fitzgerald"
   ],
   "description": "Ionic Material - Material Design for the Ionic Framework",
   "main": [
-    "./ionic.material.css",
-    "./ionic.material.min.css",
-    "./ionic.material.js",
-    "./ionic.material.min.js"
+    "./dist/ionic.material.css",
+    "./dist/ionic.material.min.css",
+    "./dist/ionic.material.js",
+    "./dist/ionic.material.min.js"
   ],
   "keywords": [
     "Ionic",

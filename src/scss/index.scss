@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// Ionic Material
+// scss version
+
+@import
+    // directives
+        "directives/md-label.scss",
+
+    // elements
+        "elements/bar-header-expanded.scss",
+        "elements/bar.scss",
+        "elements/button-bar.scss",
+        "elements/button-fab.scss",
+        "elements/button-floating.scss",
+        "elements/button.scss",
+        "elements/card.scss",
+        "elements/hero.scss",
+        "elements/item.scss",
+        "elements/list.scss",
+        "elements/loading.scss",
+        "elements/login.scss",
+        "elements/mask.scss",
+        "elements/menu.scss",
+        "elements/motion-elements.scss",
+
+    // helpers
+        "helpers/utilities.scss",
+
+    // motion
+        "motion/blinds.scss",
+        "motion/pan-in-left.scss",
+        "motion/ripple.scss",
+        "motion/slide-fade-in.scss",
+        "motion/slide-in-right.scss",
+        "motion/slide-up.scss",
+
+    // overrides
+        "overrides/ink.scss",
+        "overrides/ionic.scss";
