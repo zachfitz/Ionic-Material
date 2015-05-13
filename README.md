@@ -40,6 +40,13 @@ Install via bower:
 # Sample App
 Ionic demo app "Thronester" is found within './demo' - You can also run 'index.html' locally to view in a webkit browser on a computer.
 
+# Builds
+Instructions:
+- `npm install`
+- `gulp style`
+
+Look at `gulpfile.js` for how the process works.
+
 # Website
 http://ionicmaterial.com/
 
