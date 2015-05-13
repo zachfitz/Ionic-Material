@@ -1,0 +1,115 @@
+
+/* Utilities
+==================================*/
+
+.bold {
+    font-weight: bold;
+}
+.static {
+    position: static;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.double-padding, .ionic-content.double-padding {
+    padding: 16px;
+}
+.double-padding-x {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.double-padding-y {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.outline {
+    border-style: solid;
+    border-width: 1px;
+}
+.border-top {
+    border-top: solid 1px #ccc;
+    padding-top: 30px;
+}
+.no-border {
+    border: none;
+}
+.circle {
+    border-radius: 50%;
+}
+.no-padding, .list.no-padding, .bar.no-padding, .button-bar.no-padding, .card.no-padding, .button.no-padding, .item.no-padding {
+    padding: 0;
+}
+.flat, .flat.tabs, .flat.button, .flat.button.icon, .flat.hero {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+/* Utilities : Padding
+==================================*/
+
+.im-wrapper, .padding {
+    padding: 16px !important;
+}
+
+.padding-bottom {
+    padding-bottom: 16px !important;
+}
+
+.padding-top {
+    padding-top: 16px !important;
+}
+
+.padding-left {
+    padding-left: 16px !important;
+}
+
+.padding-right {
+    padding-right: 16px !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+
+/* Utilities : Depth
+==================================*/
+
+.z1 {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+
+/* Utilities : Color
+==================================*/
+
+.bar.bar-positive.darker {
+    background-color: #164FAB;
+}
+/* TODO: Expand to other colors */
+.bar.bar-positive.dark-positive-bg {
+    background-color: #2C5CAD;
+}
+/* TODO: Expand to other colors */
+.muted {
+    color: #C3C3C3;
+}
+.clear-bg {
+    background: transparent;
+}
