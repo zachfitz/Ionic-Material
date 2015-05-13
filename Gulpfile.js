@@ -1,9 +1,12 @@
+/* jshint esnext: true, asi: true */
 const gulp = require('gulp');
 const minifycss = require('gulp-minify-css');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const livereload = require('gulp-livereload');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 
 const distPath = './';
 var minify = false;
@@ -33,6 +36,25 @@ gulp.task('styles', function() {
     './src/css/motion/*.css',
     './src/css/overrides/*.css'
   ];
+  var css = gulp.src(src)
+    .pipe(concat('ionic.material.css'))
+    .pipe(gulp.dest(distPath))
+
+  if (minify) {
+    css.pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(minifycss())
+    .pipe(rename('ionic.material.min.css'))
+    .pipe(gulp.dest(distPath));
+  }
+
+  return css;
+});
+
+gulp.task('scss', function() {
+  var src = './src/scss/index.scss';
+  var scss = gulp
   var css = gulp.src(src)
     .pipe(concat('ionic.material.css'))
     .pipe(gulp.dest(distPath))
