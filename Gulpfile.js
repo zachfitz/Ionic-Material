@@ -8,7 +8,7 @@ const livereload = require('gulp-livereload');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 
-const distPath = './';
+const distPath = './dist/';
 var minify = false;
 
 gulp.task('js', function() {
@@ -54,7 +54,7 @@ gulp.task('styles', function() {
 
 gulp.task('scss', function() {
   var src = './src/scss/index.scss';
-  var scss = gulp
+  var scss = gulp.src(src).pipe(sourcemaps.init()).pipe(sass()).pipe(rename(''))
   var css = gulp.src(src)
     .pipe(concat('ionic.material.css'))
     .pipe(gulp.dest(distPath))
