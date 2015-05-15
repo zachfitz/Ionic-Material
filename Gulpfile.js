@@ -28,30 +28,6 @@ gulp.task('js', function () {
     return js;
 });
 
-//gulp.task('styles', function () {
-//    var src = [
-//        './src/css/directives/*.css',
-//        './src/css/elements/*.css',
-//        './src/css/helpers/*.css',
-//        './src/css/motion/*.css',
-//        './src/css/overrides/*.css'
-//    ];
-//    var css = gulp.src(src)
-//        .pipe(concat('ionic.material.css'))
-//        .pipe(gulp.dest(distPath))
-//
-//    if (minify) {
-//        css.pipe(rename({
-//            suffix: '.min'
-//        }))
-//            .pipe(minifycss())
-//            .pipe(rename('ionic.material.min.css'))
-//            .pipe(gulp.dest(distPath));
-//    }
-//
-//    return css;
-//});
-
 gulp.task('styles', function () {
     var src = './src/scss/index.scss';
 
