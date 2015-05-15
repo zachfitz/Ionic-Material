@@ -1,17 +1,17 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout, $document) {
     // Form data for the login modal
     $scope.loginData = {};
 
-    var navIcons = document.getElementsByClassName('ion-navicon');
+    var navIcons = $document.getElementsByClassName('ion-navicon');
     for (var i = 0; i < navIcons.length; i++) {
-        navIcons.addEventListener('click', function() {
+        navIcons[i].addEventListener('click', function() {
             this.classList.toggle('active');
         });
     }
 
-    var fab = document.getElementById('fab');
+    var fab = $document.getElementById('fab');
     fab.addEventListener('click', function() {
         location.href = 'https://twitter.com/ZachFitzgerald';
     });
@@ -42,11 +42,11 @@ angular.module('starter.controllers', [])
     ionic.material.ink.displayEffect();
 })
 
-.controller('ComponentsCtrl', function($scope, $stateParams) {
+.controller('ComponentsCtrl', function($scope, $stateParams, $document) {
     ionic.material.ink.displayEffect();
 
     // Toggle Code Wrapper
-    var code = document.getElementsByClassName('code-wrapper');
+    var code = $document.getElementsByClassName('code-wrapper');
     for (var i = 0; i < code.length; i++) {
         code[i].addEventListener('click', function() {
             this.classList.toggle('active');
@@ -54,31 +54,31 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('ListsCtrl', function($scope, $stateParams) {
+.controller('ListsCtrl', function($scope, $stateParams, $document) {
 
     var reset = function() {
-        var inClass = document.querySelectorAll('.in');
+        var inClass = $document.querySelectorAll('.in');
         for (var i = 0; i < inClass.length; i++) {
             inClass[i].classList.remove('in');
             inClass[i].removeAttribute('style');
         }
-        var done = document.querySelectorAll('.done');
-        for (var i = 0; i < done.length; i++) {
-            done[i].classList.remove('done');
-            done[i].removeAttribute('style');
+        var done = $document.querySelectorAll('.done');
+        for (var j = 0; j < done.length; j++) {
+            done[j].classList.remove('done');
+            done[j].removeAttribute('style');
         }
-        var ionList = document.getElementsByTagName('ion-list');
-        for (var i = 0; i < ionList.length; i++) {
-            var toRemove = ionList[i].className;
+        var ionList = $document.getElementsByTagName('ion-list');
+        for (var k = 0; k < ionList.length; k++) {
+            var toRemove = ionList[k].className;
             if (/animate-/.test(toRemove)) {
-                ionList[i].className = ionList[i].className.replace(/(?:^|\s)animate-\S*(?:$|\s)/, '');
+                ionList[k].className = ionList[k].className.replace(/(?:^|\s)animate-\S*(?:$|\s)/, '');
             }
         }
     };
 
     $scope.ripple = function() {
         reset();
-        document.getElementsByTagName('ion-list')[0].className += ' animate-ripple';
+        $document.getElementsByTagName('ion-list')[0].className += ' animate-ripple';
         setTimeout(function() {
             ionic.material.motion.ripple();
         }, 500);
@@ -86,7 +86,7 @@ angular.module('starter.controllers', [])
 
     $scope.fadeSlideInRight = function() {
         reset();
-        document.getElementsByTagName('ion-list')[0].className += ' animate-fade-slide-in-right';
+        $document.getElementsByTagName('ion-list')[0].className += ' animate-fade-slide-in-right';
         setTimeout(function() {
             ionic.material.motion.fadeSlideInRight();
         }, 500);
@@ -94,7 +94,7 @@ angular.module('starter.controllers', [])
 
     $scope.fadeSlideIn = function() {
         reset();
-        document.getElementsByTagName('ion-list')[0].className += ' animate-fade-slide-in';
+        $document.getElementsByTagName('ion-list')[0].className += ' animate-fade-slide-in';
         setTimeout(function() {
             ionic.material.motion.fadeSlideIn();
         }, 500);
@@ -102,7 +102,7 @@ angular.module('starter.controllers', [])
 
     $scope.blinds = function() {
         reset();
-        document.getElementsByTagName('ion-list')[0].className += ' animate-blinds';
+        $document.getElementsByTagName('ion-list')[0].className += ' animate-blinds';
         setTimeout(function() {
             ionic.material.motion.blinds();
         }, 500);
@@ -119,7 +119,7 @@ angular.module('starter.controllers', [])
     */
 })
 
-.controller('ExtensionsCtrl', function($scope, $stateParams, $ionicActionSheet, $timeout, $ionicLoading, $ionicModal, $ionicPopup) {
+.controller('ExtensionsCtrl', function($scope, $stateParams, $ionicActionSheet, $timeout, $ionicLoading, $ionicModal, $ionicPopup, $document) {
 
     // Triggered on a button click, or some other target
     $scope.actionSheet = function() {
@@ -199,7 +199,7 @@ angular.module('starter.controllers', [])
     };
 
     // Toggle Code Wrapper
-    var code = document.getElementsByClassName('code-wrapper');
+    var code = $document.getElementsByClassName('code-wrapper');
     for (var i = 0; i < code.length; i++) {
         code[i].addEventListener('click', function() {
             this.classList.toggle('active');
@@ -207,8 +207,8 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('MotionCtrl', function($scope, $stateParams, $timeout) {
-    var fab = document.getElementById('fab');
+.controller('MotionCtrl', function($scope, $stateParams, $timeout, $document) {
+    var fab = $document.getElementById('fab');
 
     $scope.moveFab = function(dir) {
         fab.style.display = 'none';
@@ -225,42 +225,46 @@ angular.module('starter.controllers', [])
     $scope.motionFab = function(type) {
         var shouldAnimate = false;
         var classes = type instanceof Array ? type : [type];
+
+        function toggleMotionClass (theClass) {
+            $timeout(function() {
+                fab.classList.toggle(theClass);
+            }, 300);
+        }
+
         for (var i = 0; i < classes.length; i++) {
             fab.classList.toggle(classes[i]);
+
             shouldAnimate = fab.classList.contains(classes[i]);
             if (shouldAnimate) {
-                (function(theClass) {
-                    $timeout(function() {
-                        fab.classList.toggle(theClass);
-                    }, 300);
-                })(classes[i]);
+                (toggleMotionClass)(classes[i]);
             }
         }
     };
 
     var reset = function() {
-        var inClass = document.querySelectorAll('.in');
+        var inClass = $document.querySelectorAll('.in');
         for (var i = 0; i < inClass.length; i++) {
             inClass[i].classList.remove('in');
             inClass[i].removeAttribute('style');
         }
-        var done = document.querySelectorAll('.done');
-        for (var i = 0; i < done.length; i++) {
-            done[i].classList.remove('done');
-            done[i].removeAttribute('style');
+        var done = $document.querySelectorAll('.done');
+        for (var j = 0; j < done.length; j++) {
+            done[j].classList.remove('done');
+            done[j].removeAttribute('style');
         }
-        var ionList = document.getElementsByTagName('ion-list');
-        for (var i = 0; i < ionList.length; i++) {
-            var toRemove = ionList[i].className;
+        var ionList = $document.getElementsByTagName('ion-list');
+        for (var k = 0; k < ionList.length; k++) {
+            var toRemove = ionList[k].className;
             if (/animate-/.test(toRemove)) {
-                ionList[i].className = ionList[i].className.replace(/(?:^|\s)animate-\S*(?:$|\s)/, '');
+                ionList[k].className = ionList[k].className.replace(/(?:^|\s)animate-\S*(?:$|\s)/, '');
             }
         }
     };
 
     $scope.ripple = function() {
         reset();
-        document.getElementsByTagName('ion-list')[0].className += ' animate-ripple';
+        $document.getElementsByTagName('ion-list')[0].className += ' animate-ripple';
         setTimeout(function() {
             ionic.material.motion.ripple();
         }, 500);
@@ -268,7 +272,7 @@ angular.module('starter.controllers', [])
 
     $scope.fadeSlideInRight = function() {
         reset();
-        document.getElementsByTagName('ion-list')[0].className += ' animate-fade-slide-in-right';
+        $document.getElementsByTagName('ion-list')[0].className += ' animate-fade-slide-in-right';
         setTimeout(function() {
             ionic.material.motion.fadeSlideInRight();
         }, 500);
@@ -276,7 +280,7 @@ angular.module('starter.controllers', [])
 
     $scope.fadeSlideIn = function() {
         reset();
-        document.getElementsByTagName('ion-list')[0].className += ' animate-fade-slide-in';
+        $document.getElementsByTagName('ion-list')[0].className += ' animate-fade-slide-in';
         setTimeout(function() {
             ionic.material.motion.fadeSlideIn();
         }, 500);
@@ -284,7 +288,7 @@ angular.module('starter.controllers', [])
 
     $scope.blinds = function() {
         reset();
-        document.getElementsByTagName('ion-list')[0].className += ' animate-blinds';
+        $document.getElementsByTagName('ion-list')[0].className += ' animate-blinds';
         setTimeout(function() {
             ionic.material.motion.blinds();
         }, 500);
