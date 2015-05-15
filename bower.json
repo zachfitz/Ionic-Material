@@ -1,6 +1,6 @@
 {
   "name": "ionic-material",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "authors": [
     "Zach Fitzgerald"
   ],
@@ -26,15 +26,11 @@
   "private": false,
   "ignore": [
     "bower_components",
-    "bower.json",
     "demo",
     "docs",
     "Gulpfile.js",
     "index.html",
-    "node_modules",
-    "package.json",
-    "README.md",
-    "src"
+    "node_modules"
   ],
   "dependencies": {
     "ionic": "~1.0.0"

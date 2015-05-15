@@ -467,15 +467,14 @@ ionic.material.motion = (function Motion() {
  *
  * Waves v0.5.4
  * http://fian.my.id/Waves
- * 
- * Copyright 2014 Alfiana E. Sibuea and other contributors 
  *
- * Released under the MIT license 
- * https://github.com/fians/Waves/blob/master/LICENSE 
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ *
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
  *
  */
 
-;
 var ionic = ionic || {};
 ionic.material = ionic.material || {};
 
@@ -483,7 +482,83 @@ ionic.material.ink = (function() {
     'use strict';
 
     var Ink = Ink || {};
-    var $$ = document.querySelectorAll.bind(document);
+
+    // all DOM nodes
+    var $$;
+
+    // phantomJS throws an error when you try to use document.querySelectorAll.bind
+    if(document && document.querySelectorAll && document.querySelectorAll.bind){
+        try{
+            // all DOM nodes
+            $$ = document.querySelectorAll.bind(document);
+
+        } catch(e){}
+    } else if (window && window.angular && window.angular.element) {
+        // we can use angular.element instead
+        $$ = window.angular.element;
+    } else {
+
+
+            /**
+             * mout.js 0.11.0 bind and slice polyfills (substitutes?)
+             * TODO: pull out mout.js bind and slice molyfills and inject into material.ink
+             */
+
+            /**
+             * Create slice of source array or array-like object
+             */
+            var slicePolyfill = function moutslicePolyfill(arr, start, end){
+                var len = arr.length;
+                /*jshint eqnull:true */
+                if (start == null) {
+                    start = 0;
+                } else if (start < 0) {
+                    start = Math.max(len + start, 0);
+                } else {
+                    start = Math.min(start, len);
+                }
+
+
+                if (end == null) {
+
+                    end = len;
+                } else if (end < 0) {
+                    end = Math.max(len + end, 0);
+                } else {
+                    end = Math.min(end, len);
+                }
+
+                var result = [];
+                while (start < end) {
+                    result.push(arr[start++]);
+                }
+
+                return result;
+            };
+
+
+
+            /**
+             * Return a function that will execute in the given context, optionally adding any additional supplied parameters to the beginning of the arguments collection.
+             * @param {Function} fn  Function.
+             * @param {object} context   Execution context.
+             * @param {rest} args    Arguments (0...n arguments).
+             * @return {Function} Wrapped Function.
+             */
+            var bindPolyfill = function moutBind(fn, context, args){
+                var argsArr = slicePolyfill(arguments, 2); //curried args
+                return function(){
+                    return fn.apply(context, argsArr.concat(slicePolyfill(arguments)));
+                };
+            };
+
+            $$ = bind(document.querySelectorAll, document);
+            /*jshint ignore:end */
+    }
+
+    if (!$$){
+        throw new Error('ionic material ink module could not create reference of DOM nodes');
+    }
 
     // Find exact position of element
     function isWindow(obj) {
