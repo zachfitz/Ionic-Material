@@ -1,0 +1,56 @@
+.item-md-label {
+  display: block;
+  background-color: transparent;
+  box-shadow: none;
+  padding-top: 30px;
+  padding-bottom: 0; }
+  .item-md-label .input-label {
+    position: absolute;
+    padding: 5px 0 0;
+    z-index: 2;
+    -webkit-transform: translate3d(0, -30px, 0) scale(1);
+    transform: translate3d(0, -30px, 0) scale(1);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #444;
+    opacity: 0.5;
+    transform-origin: 0; }
+  .item-md-label input {
+    z-index: 1;
+    position: relative;
+    bottom: 0; }
+  .item-md-label .hightlight {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease; }
+  .item-md-label .hightlight-light {
+    background: #fff; }
+  .item-md-label .hightlight-stable {
+    background: #f8f8f8; }
+  .item-md-label .hightlight-positive {
+    background: #387ef5; }
+  .item-md-label .hightlight-calm {
+    background: #11c1f3; }
+  .item-md-label .hightlight-balanced {
+    background: #33cd5f; }
+  .item-md-label .hightlight-energized {
+    background: #ffc900; }
+  .item-md-label .hightlight-assertive {
+    background: #ef473a; }
+  .item-md-label .hightlight-royal {
+    background: #886aea; }
+  .item-md-label .hightlight-dark {
+    background: #444; }
+  .item-md-label input:focus ~ .input-label, .item-md-label input.used ~ .input-label {
+    -webkit-transform: translate3d(0, -60px, 0) scale(0.9);
+    transform: translate3d(0, -60px, 0) scale(0.9);
+    opacity: 1; }
+  .item-md-label input:focus ~ .hightlight {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
