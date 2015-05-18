@@ -1,3 +1,6 @@
+@import "../helpers/colors";
+@import "../helpers/sizes";
+
 
 /* List
 ==================================*/
@@ -11,6 +14,8 @@
     padding-left: 16px;
     padding-right: 16px;
     */
+    min-height: $item-tile-height;
+    // height: $item-tile-height;
     text-align: left;
 }
 .list .item.tabs {
@@ -146,10 +151,16 @@
 
 
 .item.item-divider {
-    border-bottom: solid 1px #414141;
-    font-size: 14px;
+    &:first-child{
+        border: none;
+    }
+    border-top: solid 1px rgba(0,0,0,0.12);
+    font-size: $material-base-font-size;
     font-weight: bold;
-    padding-bottom: 2px;
+    height: 48px;
+    line-height: 48px;
+    color: $material-light-bg-dark-text-secondary;
+    // padding-bottom: 2px;
 }
 
 
