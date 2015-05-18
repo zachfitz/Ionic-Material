@@ -154,4 +154,6 @@ test/temp
 
 # Build
 .tmp
+
+*.sublime-project
 ####################################
