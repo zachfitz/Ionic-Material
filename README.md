@@ -1,12 +1,11 @@
 # Ionic Material 
-*Alpha version released April 21, 2015*
-*Ask to be a collaborator.*
+#### NOTE: all versions pre-1.0 are intended as a work in progress 'Alpha'
+[![GitHub version](https://badge.fury.io/gh/zachsoft%2Fionic-material.svg)](http://badge.fury.io/gh/zachsoft%2Fionic-material)
 
-## API and Demo App (in-browser simulation)
-http://ionicmaterial.com/demo/ (Use the ☰ menu for API sections)
+See our [releases](https://github.com/zachsoft/ionic-material/releases) and other [versions](https://github.com/zachsoft/ionic-material/tags)
 
-Install via bower:
-**bower install ionic-material**
+## Documentation and Demo App (in-browser simulation)
+[Documentation Application @ ionicmaterial.com](http://ionicmaterial.com/demo/) (Use the ☰ menu for Documentation sections)
 
 # Quick Start
 ## Step 1: Install using [Bower](http://bower.io) 
@@ -50,7 +49,7 @@ $RobotoDraftFontVersion: "1.0.0";
 ```
 **NB**: the above assumes you are using bower
 
-4) you are all set to go! :thumbsup:
+**You are all set to go!** :thumbsup:
 
 ## Sample App
 Ionic demo app "Thronester" is found within './demo' - You can also run 'index.html' locally to view in a webkit browser on a computer.
@@ -71,8 +70,26 @@ See our [CONTRIBUTING INSTRUCTIONS](./CONTRIBUTING.md)
 ## Website
 [http://ionicmaterial.com/](http://ionicmaterial.com/)
 
-## Where We're Going
+## FAQ
+### What is Ionic Material?
+Ionic material is aimed at being an extension library for the Ionic Framework, meaning you won't change the way you develop your Ionic hybrid apps to have them materialized. Ionic Material aims to integrate the best representations of Material Design into a single add-on library for Ionic Developers. With the Polymer Project, ngMaterial, and other open source projects arising, we aim to be actively engaged and aligned with these, and other, related projects.
 
+As a 100% free open-source project, **developer participation is encouraged**, as much or little as possible.
+
+### Can I use Ionic and Angular Material together?
+*Ionic* and *Angular Material* are fairly incompatible (you can add them to the same project, but the styling will be extremely inconsistent and none of the UI components will work cross-framework, eg. an ionic side menu with material tabs). Ionic is 1.0 and angular material is still pre-1.0. 
+
+**Ionic Material** is best explained as a "material extension" to Ionic, rather than to Angular as a whole. The difference isn't just semantics - Ionic Material extends the actual ionic framework namespace (in JS), renders material styles on the ionic elements (following ionic's conventions), and will aim to follow the releases of Ionic, and support material theming, ink, and motion for any new Ionic release.
+
+Ionic Material will pull in the best ideas of Angular Material, Paper/Polymer, etc. and by the same tune, Ionic Material will also abstract the parts of the framework that would be beneficial outside of ionic apps (like animations, motions) into their standalone git projects so they can be adopted for use in -any- web project that uses material design.
+
+### How can I contribute?
+Please see our [contribution guidelines](CONTRIBUTING.md)
+
+Want to become an official collaborator? Please contact @zachsoft
+
+
+## Roadmap and the Future 
 1. Full UI Kit w/ dozens of templates for rapid application development. Inspired by amazing kits like: https://ui8.net/product/material-ui-kit.
 
 2. Increase animation performance. We're really stretching the limits of hybrid app animations - if **you** have ideas on performance adjustments, we're all ears and would love the insight.
@@ -80,11 +97,3 @@ See our [CONTRIBUTING INSTRUCTIONS](./CONTRIBUTING.md)
 3. Port animate.js with bezier curve adjustments to match "authentic motion" spec of Material Design.
 
 4. Bug fixes
-
-I devote as much time as I can, but my full-time position will always rank first. This means community help is needed to guarantee the maturation of this project. You guys are awesome, and I am grateful for all the help/support. 
-
-## About Ionic Material
-
-Ionic material is aimed at being an extension library for the Ionic Framework, meaning you won't change the way you develop your Ionic hybrid apps to have them materialized. Ionic Material aims to integrate the best representations of Material Design into a single add-on library for Ionic Developers. With the Polymer Project, ngMaterial, and other open source projects arising, we aim to be actively engaged and aligned with these, and other, related projects.
-
-As a 100% free open-source project, **developer participation is encouraged**, as much or little as possible.
