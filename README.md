@@ -1,19 +1,47 @@
-# Ionic Material 
-#### NOTE: all versions pre-1.0 are intended as a work in progress 'Alpha'
+# Ionic Material
+Ionic Framework ♥ Material Design
+
+#### NB: all versions pre-1.0 are intended as a work in progress 'Alpha'
 [![GitHub version](https://badge.fury.io/gh/zachsoft%2Fionic-material.svg)](http://badge.fury.io/gh/zachsoft%2Fionic-material)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 See our [releases](https://github.com/zachsoft/ionic-material/releases) and other [versions](https://github.com/zachsoft/ionic-material/tags)
 
 ## Documentation and Demo App (in-browser simulation)
-[Documentation Application @ ionicmaterial.com](http://ionicmaterial.com/demo/) (Use the ☰ menu for Documentation sections)
+[Documentation Application @ ionicmaterial.com](http://ionicmaterial.com/demo/) 
+(Use the ☰ menu for Documentation sections)
 
 # Quick Start
 ## Step 1: Install using [Bower](http://bower.io) 
 
 ```shell
- cd PROJECT_DIRECTORY_HERE
+ cd /PATH/TO/YOUR/PROJECT
  bower install ionic-material
 ```
+
+### Step 2: Add `RobotoDraft` font (by **Google**)
+#### Via CDN:
+```html
+ <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+```
+
+#### via Bower 
+Check out [RobotoDraft by RaiButera on Github](https://github.com/raibutera/robotodraft) 
+
+```shell
+bower install robotodraft 
+```
+
+**using Sass?** instructions for [raibutera/robotodraft](https://github.com/raibutera/robotodraft) + scss:
+
+```scss
+$RobotoDraftFontPath: "../fonts"; // REMINDER: edit as appropriate!
+$RobotoDraftFontName: "RobotoDraft";
+$RobotoDraftFontVersion: "1.0.0";
+
+@import "/PATH/TO/YOUR/PROJECT/bower_components/robotodraft/sass/robotodraft.scss";    // REMINDER: edit as appropriate!
+```
+**NB**: the above assumes you are using [Bower](http://bower.io)
 
 ### Step 3: Add Ionic Material stylesheets and scripts
 Add `ionic.material.min.css` and `ionic.material.min.js` to your `index.html`
@@ -26,28 +54,6 @@ Add `ionic.material.min.css` and `ionic.material.min.js` to your `index.html`
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/ionic-material/ionic.material.min.js"></script>
 ```
-
-### Step 2: Add `RobotoDraft` font (by **Google**)
-CDN version:
-```html
- <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
-```
-
-Using bower? check out [RobotoDraft by RaiButera on Github](https://github.com/raibutera/robotodraft) 
-
-```shell
-bower install robotodraft 
-```
-
-**using Sass?** instructions for [raibutera/robotodraft](https://github.com/raibutera/robotodraft) + scss:
-```scss
-$RobotoDraftFontPath: "../fonts"; // REMINDER: edit as appropriate!
-$RobotoDraftFontName: "RobotoDraft";
-$RobotoDraftFontVersion: "1.0.0";
-
-@import "/PATH/TO/YOUR/PROJECT'S/bower_components/robotodraft/sass/robotodraft.scss";    // REMINDER: edit as appropriate!
-```
-**NB**: the above assumes you are using bower
 
 **You are all set to go!** :thumbsup:
 
@@ -90,6 +96,11 @@ Want to become an official collaborator? Please contact @zachsoft
 
 
 ## Roadmap and the Future 
+See [Milestones](https://github.com/zachsoft/ionic-material/milestones)
+
+### Rough Ideas
+0. Complete implementation of Material Design specification.
+
 1. Full UI Kit w/ dozens of templates for rapid application development. Inspired by amazing kits like: https://ui8.net/product/material-ui-kit.
 
 2. Increase animation performance. We're really stretching the limits of hybrid app animations - if **you** have ideas on performance adjustments, we're all ears and would love the insight.
