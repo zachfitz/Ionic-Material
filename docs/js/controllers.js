@@ -4,14 +4,14 @@ angular.module('starter.controllers', [])
     // Form data for the login modal
     $scope.loginData = {};
 
-    var navIcons = $document.getElementsByClassName('ion-navicon');
+    var navIcons = document.getElementsByClassName('ion-navicon');
     for (var i = 0; i < navIcons.length; i++) {
         navIcons[i].addEventListener('click', function() {
             this.classList.toggle('active');
         });
     }
 
-    var fab = $document.getElementById('fab');
+    var fab = document.getElementById('fab');
     fab.addEventListener('click', function() {
         location.href = 'https://twitter.com/ZachFitzgerald';
     });
@@ -46,7 +46,7 @@ angular.module('starter.controllers', [])
     ionic.material.ink.displayEffect();
 
     // Toggle Code Wrapper
-    var code = $document.getElementsByClassName('code-wrapper');
+    var code = document.getElementsByClassName('code-wrapper');
     for (var i = 0; i < code.length; i++) {
         code[i].addEventListener('click', function() {
             this.classList.toggle('active');
@@ -199,7 +199,7 @@ angular.module('starter.controllers', [])
     };
 
     // Toggle Code Wrapper
-    var code = $document.getElementsByClassName('code-wrapper');
+    var code = document.getElementsByClassName('code-wrapper');
     for (var i = 0; i < code.length; i++) {
         code[i].addEventListener('click', function() {
             this.classList.toggle('active');
@@ -208,7 +208,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('MotionCtrl', function($scope, $stateParams, $timeout, $document) {
-    var fab = $document.getElementById('fab');
+    var fab = document.getElementById('fab');
 
     $scope.moveFab = function(dir) {
         fab.style.display = 'none';
