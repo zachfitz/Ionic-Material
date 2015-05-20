@@ -1,3 +1,6 @@
+/* global angular, document, window */
+'use strict';
+
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout) {
@@ -84,15 +87,15 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('LoginCtrl', function($scope, $timeout, $stateParams) {
+.controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
     $scope.$parent.clearFabs();
     $timeout(function() {
         $scope.$parent.hideHeader();
     }, 0);
-    ionic.material.ink.displayEffect();
+    ionicMaterialInk.displayEffect();
 })
 
-.controller('FriendsCtrl', function($scope, $stateParams, $timeout) {
+.controller('FriendsCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
     // Set Header
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -105,13 +108,13 @@ angular.module('starter.controllers', [])
     }, 300);
 
     // Set Motion
-    ionic.material.motion.fadeSlideInRight();
+    ionicMaterialMotion.fadeSlideInRight();
 
     // Set Ink
-    ionic.material.ink.displayEffect();
+    ionicMaterialInk.displayEffect();
 })
 
-.controller('ProfileCtrl', function($scope, $stateParams, $timeout) {
+.controller('ProfileCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
     // Set Header
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -121,22 +124,22 @@ angular.module('starter.controllers', [])
 
     // Set Motion
     $timeout(function() {
-        ionic.material.motion.slideUp({
+        ionicMaterialMotion.slideUp({
             selector: '.slide-up'
         });
     }, 300);
 
     $timeout(function() {
-        ionic.material.motion.fadeSlideInRight({
+        ionicMaterialMotion.fadeSlideInRight({
             startVelocity: 3000
         });
     }, 700);
 
     // Set Ink
-    ionic.material.ink.displayEffect();
+    ionicMaterialInk.displayEffect();
 })
 
-.controller('ActivityCtrl', function($scope, $stateParams, $timeout) {
+.controller('ActivityCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
     $scope.isExpanded = true;
@@ -144,16 +147,16 @@ angular.module('starter.controllers', [])
     $scope.$parent.setHeaderFab('right');
 
     $timeout(function() {
-        ionic.material.motion.fadeSlideIn({
+        ionicMaterialMotion.fadeSlideIn({
             selector: '.animate-fade-slide-in .item'
         });
     }, 200);
 
     // Activate ink for controller
-    ionic.material.ink.displayEffect();
+    ionicMaterialInk.displayEffect();
 })
 
-.controller('GalleryCtrl', function($scope, $stateParams, $timeout) {
+.controller('GalleryCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
     $scope.isExpanded = true;
@@ -161,12 +164,12 @@ angular.module('starter.controllers', [])
     $scope.$parent.setHeaderFab(false);
 
     // Activate ink for controller
-    ionic.material.ink.displayEffect();
+    ionicMaterialInk.displayEffect();
 
-    ionic.material.motion.pushDown({
+    ionicMaterialMotion.pushDown({
         selector: '.push-down'
     });
-    ionic.material.motion.fadeSlideInRight({
+    ionicMaterialMotion.fadeSlideInRight({
         selector: '.animate-fade-slide-in .item'
     });
 
