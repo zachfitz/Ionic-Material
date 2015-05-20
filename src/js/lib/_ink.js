@@ -17,7 +17,7 @@ ionic.material = ionic.material || {};
 ionic.material.ink = (function() {
     'use strict';
 
-    var Ink = Ink || {};
+    var Waves = Waves || {};
 
     // all DOM nodes
     var $$;
@@ -341,7 +341,7 @@ ionic.material.ink = (function() {
         }
     };
 
-    Ink.displayEffect = function(options) {
+    Waves.displayEffect = function(options) {
         options = options || {};
 
         if ('duration' in options) {
@@ -365,6 +365,6 @@ ionic.material.ink = (function() {
         });
     };
 
-    return Ink;
+    return Waves;
 
 })();
