@@ -1,4 +1,5 @@
 /* jshint esnext: true, asi: true */
+const _ = require('lodash');
 const gulp = require('gulp');
 const minifycss = require('gulp-minify-css');
 const rename = require('gulp-rename');
@@ -7,7 +8,9 @@ const uglify = require('gulp-uglify');
 const livereload = require('gulp-livereload');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const webpack = require('gulp-webpack');
+const gulpWebpack = require('gulp-webpack');
+const webpack = require('webpack');
+
 var webpackConfig = require('./webpack.config.js');
 var connect = require('gulp-connect');
 
@@ -37,10 +40,30 @@ gulp.task('serve', function(){
 
 
 gulp.task('webpack', function(){
-    return gulp.src('src/entry.js')
-      .pipe(webpack(webpackConfig))
+    var output = gulp.src('src/ionic-material.js')
+      .pipe(gulpWebpack(webpackConfig))
       .pipe(gulp.dest(distPath))
       .pipe(rename('ionic.material.js'));
+
+    if(minify){
+        var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({});
+        var minifiedConfig = _.cloneDeep(webpackConfig);
+
+        if(!minifiedConfig.plugins || _.isEmpty(minifiedConfig.plugins)){
+            minifiedConfig.plugins = [];
+        }
+        minifiedConfig.plugins.push(uglifyPlugin);
+
+        minifiedConfig.output.filename = 'ionic.material.min.js';
+
+        output
+            .pipe(gulp.src('src/ionic-material.js'))
+            .pipe(gulpWebpack(minifiedConfig))
+            .pipe(gulp.dest(distPath))
+
+    }
+
+    return output;
 });
 
 gulp.task('styles', function () {
@@ -74,8 +97,8 @@ gulp.task('watch', function () {
 
 gulp.task('build', function () {
     minify = true;
-    return gulp.start(['js', 'styles']);
+    return gulp.start(['webpack', 'styles']);
 })
 
-gulp.task('default', ['js', 'styles', 'watch'], function () {
+gulp.task('default', ['webpack', 'styles', 'watch'], function () {
 });
