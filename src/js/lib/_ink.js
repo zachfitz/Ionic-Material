@@ -88,7 +88,7 @@ ionic.material.ink = (function() {
                 };
             };
 
-            $$ = bind(document.querySelectorAll, document);
+            $$ = bindPolyfill(document.querySelectorAll, document);
             /*jshint ignore:end */
     }
 
