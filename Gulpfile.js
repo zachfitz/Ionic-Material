@@ -40,7 +40,9 @@ gulp.task('serve', function(){
 
 gulp.task('webpack', function(){
     var webpackConfig = require('./webpack.config.js');
-    var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({});
+    var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
+        sourcemaps: true
+    });
 
     var minifiedConfig = _.cloneDeep(webpackConfig);
     if(!minifiedConfig.plugins || _.isEmpty(minifiedConfig.plugins)){
