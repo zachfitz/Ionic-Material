@@ -1,10 +1,10 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("angular"));
+		module.exports = factory((function webpackLoadOptionalExternalModule() { try { return require("angular"); } catch(e) {} }()));
 	else if(typeof define === 'function' && define.amd)
 		define(["angular"], factory);
 	else if(typeof exports === 'object')
-		exports["ionicMaterial"] = factory(require("angular"));
+		exports["ionicMaterial"] = factory((function webpackLoadOptionalExternalModule() { try { return require("angular"); } catch(e) {} }()));
 	else
 		root["ionicMaterial"] = factory(root["angular"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
@@ -65,9 +65,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 	
 	module.exports = (function(){
-	    // set up angular module
-	    var angular = __webpack_require__(1);
 	
+	    var angular;
+	
+	    try {
+	        angular = __webpack_require__(1);
+	    } catch(err){ }
+	
+	    if(!angular || !angular.version){
+	        /*global window: true*/
+	        angular = window.angular;
+	        /*global window: false*/
+	    }
+	
+	    if(!angular || !angular.version){
+	        throw new Error('ionic-material could not load angular module :(');
+	    }
+	
+	    // set up angular module
 	    var app = angular.module('ionic-material', ['ionic']);
 	
 	    // Import Dependencies
@@ -82,6 +97,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
+	if(typeof __WEBPACK_EXTERNAL_MODULE_1__ === 'undefined') {var e = new Error("Cannot find module \"angular\""); e.code = 'MODULE_NOT_FOUND'; throw e;}
 	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ },

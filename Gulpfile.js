@@ -86,8 +86,8 @@ gulp.task('styles', function () {
 
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch(['./*.js', '!./src/js/'], ['js']);
-    gulp.watch('./*.css', ['styles']);
+    gulp.watch(['./*.js', '!./src/js/'], ['webpack']);
+    gulp.watch('./*.scss', ['styles']);
 });
 
 gulp.task('build', function () {
