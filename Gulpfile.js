@@ -8,6 +8,7 @@ const livereload = require('gulp-livereload');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('gulp-webpack');
+var webpackConfig = require('./webpack.config.js');
 
 const distPath = './dist/';
 var minify = false;
@@ -33,8 +34,9 @@ gulp.task('js', function () {
 
 gulp.task('webpack', function(){
     return gulp.src('src/entry.js')
-      .pipe(webpack(require('./webpack.config.js')))
-      .pipe(gulp.dest('webpack/'));
+      .pipe(webpack(webpackConfig))
+      .pipe(gulp.dest(distPath))
+      .pipe(rename('ionic.material.js'));
 });
 
 gulp.task('styles', function () {

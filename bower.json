@@ -34,6 +34,6 @@
   ],
   "dependencies": {
     "ionic": "~1.0.0",
-    "waves": "0.7"
+    "waves": "0.6"
   }
 }
