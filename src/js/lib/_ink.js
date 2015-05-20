@@ -1,3 +1,5 @@
+'use strict';
+
 /*!
  * Fork by Zach Fitzgerald and other contributors of Ionic Material
  *
@@ -10,255 +12,255 @@
  * https://github.com/fians/Waves/blob/master/LICENSE
  *
  */
+module.exports = function (angularApp) {
 
-var ionic = ionic || {};
-ionic.material = ionic.material || {};
+    angularApp.factory('ionicMaterialInk', ink);
 
-ionic.material.ink = (function(window) {
-    'use strict';
+    function ink ($window){
+        /*global document*/
+        var Ink = Ink || {};
+        var $$ = document.querySelectorAll.bind(document);
 
-    var Waves = Waves || {};
-    var $$ = document.querySelectorAll.bind(document);
-
-    // Find exact position of element
-    function isWindow(obj) {
-        return obj !== null && obj === obj.window;
-    }
-
-    function getWindow(elem) {
-        return isWindow(elem) ? elem : elem.nodeType === 9 && elem.defaultView;
-    }
-
-    function offset(elem) {
-
-        var docElem, win,
-            box = {top: 0, left: 0},
-            doc = elem && elem.ownerDocument;
-
-        docElem = doc.documentElement;
-
-        if (typeof elem.getBoundingClientRect !== typeof undefined) {
-            box = elem.getBoundingClientRect();
-        }
-        win = getWindow(doc);
-        return {
-            top: box.top + win.pageYOffset - docElem.clientTop,
-            left: box.left + win.pageXOffset - docElem.clientLeft
-        };
-    }
-
-    function convertStyle(obj) {
-
-        var style = '';
-
-        for (var a in obj) {
-            if (obj.hasOwnProperty(a)) {
-                style += (a + ':' + obj[a] + ';');
-            }
+        // Find exact position of element
+        function isWindow(obj) {
+            return obj !== null && obj === obj.window;
         }
 
-        return style;
-    }
 
-    var Effect = {
+        function getWindow(elem) {
+            return isWindow(elem) ? elem : elem.nodeType === 9 && elem.defaultView;
+        }
 
-        // Effect delay
-        duration: 500,
+        function offset(elem) {
 
-        show: function(e) {
+            var docElem, win,
+                box = {
+                    top: 0,
+                    left: 0
+                },
+                doc = elem && elem.ownerDocument;
 
-            // Disable right click
-            if (e.button === 2) {
-                return false;
+            docElem = doc.documentElement;
+
+            if (typeof elem.getBoundingClientRect !== typeof undefined) {
+                box = elem.getBoundingClientRect();
             }
-
-            var el = this;
-
-            // Create ripple
-            var ripple = document.createElement('div');
-            ripple.className = 'waves-ripple';
-            el.appendChild(ripple);
-
-            // Get click coordinate and element witdh
-            var pos         = offset(el);
-            var relativeY   = (e.pageY - pos.top) - 45;
-            var relativeX   = (e.pageX - pos.left) - 45;
-            var scale       = 'scale('+((el.clientWidth / 100) * 2.5)+')';
-
-            // Attach data to element
-            ripple.setAttribute('data-hold', Date.now());
-            ripple.setAttribute('data-scale', scale);
-            ripple.setAttribute('data-x', relativeX);
-            ripple.setAttribute('data-y', relativeY);
-
-            // Set ripple position
-            var rippleStyle = {
-                'top': relativeY+'px',
-                'left': relativeX+'px'
+            win = getWindow(doc);
+            return {
+                top: box.top + win.pageYOffset - docElem.clientTop,
+                left: box.left + win.pageXOffset - docElem.clientLeft
             };
+        }
 
-            ripple.className = ripple.className + ' waves-notransition';
-            ripple.setAttribute('style', convertStyle(rippleStyle));
-            ripple.className = ripple.className.replace('waves-notransition', '');
+        function convertStyle(obj) {
 
-            // Scale the ripple
-            rippleStyle['-webkit-transform'] = scale;
-            rippleStyle['-moz-transform'] = scale;
-            rippleStyle['-ms-transform'] = scale;
-            rippleStyle['-o-transform'] = scale;
-            rippleStyle.transform = scale;
-            rippleStyle.opacity   = '1';
+            var style = '';
 
-            rippleStyle['-webkit-transition-duration'] = Effect.duration + 'ms';
-            rippleStyle['-moz-transition-duration']    = Effect.duration + 'ms';
-            rippleStyle['-o-transition-duration']      = Effect.duration + 'ms';
-            rippleStyle['transition-duration']         = Effect.duration + 'ms';
-
-            ripple.setAttribute('style', convertStyle(rippleStyle));
-
-        },
-
-        hide: function() {
-
-            var el = this;
-
-            var width = el.clientWidth * 1.4;
-
-            // Get first ripple
-            var ripple = null;
-
-            var childrenLength = el.children.length;
-
-            for (var a = 0; a < childrenLength; a++) {
-                if (el.children[a].className.indexOf('waves-ripple') !== -1) {
-                    ripple = el.children[a];
-                    continue;
+            for (var a in obj) {
+                if (obj.hasOwnProperty(a)) {
+                    style += (a + ':' + obj[a] + ';');
                 }
             }
 
-            if (!ripple) {
-                return false;
-            }
+            return style;
+        }
 
-            var relativeX   = ripple.getAttribute('data-x');
-            var relativeY   = ripple.getAttribute('data-y');
-            var scale       = ripple.getAttribute('data-scale');
+        var Effect = {
 
-            // Get delay beetween mousedown and mouse leave
-            var diff = Date.now() - Number(ripple.getAttribute('data-hold'));
-            var delay = 500 - diff;
+            // Effect delay
+            duration: 500,
 
-            if (delay < 0) {
-                delay = 0;
-            }
+            show: function (e) {
 
-            // Fade out ripple after delay
-            setTimeout(function() {
+                // Disable right click
+                if (e.button === 2) {
+                    return false;
+                }
 
-                var style = {
-                    'top': relativeY+'px',
-                    'left': relativeX+'px',
-                    'opacity': '0',
+                var el = this;
 
-                    // Duration
-                    '-webkit-transition-duration': Effect.duration + 'ms',
-                    '-moz-transition-duration': Effect.duration + 'ms',
-                    '-o-transition-duration': Effect.duration + 'ms',
-                    'transition-duration': Effect.duration + 'ms',
-                    '-webkit-transform': scale,
-                    '-moz-transform': scale,
-                    '-ms-transform': scale,
-                    '-o-transform': scale,
-                    'transform': scale,
+                // Create ripple
+                var ripple = document.createElement('div');
+                ripple.className = 'ink-ripple';
+                el.appendChild(ripple);
+
+                // Get click coordinate and element witdh
+                var pos = offset(el);
+                var relativeY = (e.pageY - pos.top) - 45;
+                var relativeX = (e.pageX - pos.left) - 45;
+                var scale = 'scale(' + ((el.clientWidth / 100) * 2.5) + ')';
+
+                // Attach data to element
+                ripple.setAttribute('data-hold', Date.now());
+                ripple.setAttribute('data-scale', scale);
+                ripple.setAttribute('data-x', relativeX);
+                ripple.setAttribute('data-y', relativeY);
+
+                // Set ripple position
+                var rippleStyle = {
+                    'top': relativeY + 'px',
+                    'left': relativeX + 'px'
                 };
 
-                ripple.setAttribute('style', convertStyle(style));
+                ripple.className = ripple.className + ' ink-notransition';
+                ripple.setAttribute('style', convertStyle(rippleStyle));
+                ripple.className = ripple.className.replace('ink-notransition', '');
 
-                setTimeout(function() {
+                // Scale the ripple
+                rippleStyle['-webkit-transform'] = scale;
+                rippleStyle['-moz-transform'] = scale;
+                rippleStyle['-ms-transform'] = scale;
+                rippleStyle['-o-transform'] = scale;
+                rippleStyle.transform = scale;
+                rippleStyle.opacity = '1';
 
-                    try {
-                        el.removeChild(ripple);
-                    } catch(e) {
-                        return false;
+                rippleStyle['-webkit-transition-duration'] = Effect.duration + 'ms';
+                rippleStyle['-moz-transition-duration'] = Effect.duration + 'ms';
+                rippleStyle['-o-transition-duration'] = Effect.duration + 'ms';
+                rippleStyle['transition-duration'] = Effect.duration + 'ms';
+
+                ripple.setAttribute('style', convertStyle(rippleStyle));
+
+            },
+
+            hide: function () {
+
+                var el = this;
+
+                var width = el.clientWidth * 1.4;
+
+                // Get first ripple
+                var ripple = null;
+
+                var childrenLength = el.children.length;
+
+                for (var a = 0; a < childrenLength; a++) {
+                    if (el.children[a].className.indexOf('ink-ripple') !== -1) {
+                        ripple = el.children[a];
+                        continue;
                     }
-
-
-                }, Effect.duration);
-
-            }, delay);
-
-        },
-
-        // Little hack to make <input> can perform waves effect
-        wrapInput: function(elements) {
-
-            for (var a = 0; a < elements.length; a++) {
-
-                var el = elements[a];
-
-                if (el.tagName.toLowerCase() === 'input') {
-
-                    var parent = el.parentNode;
-
-                    // If input already have parent just pass through
-                    if (parent.tagName.toLowerCase() === 'i' && parent.className.indexOf('waves-effect') !== -1) {
-                        return false;
-                    }
-
-                    // Put element class and style to the specified parent
-                    var wrapper = document.createElement('i');
-                    wrapper.className = el.className + ' waves-input-wrapper';
-
-                    var elementStyle = el.getAttribute('style');
-                    var dimensionStyle = 'width:'+el.offsetWidth+'px;height:'+el.clientHeight+'px;';
-
-                    if (!elementStyle) {
-                        elementStyle = '';
-                    }
-
-                    wrapper.setAttribute('style', dimensionStyle+elementStyle);
-
-                    el.className = 'waves-button-input';
-                    el.removeAttribute('style');
-
-                    // Put element as child
-                    parent.replaceChild(wrapper, el);
-                    wrapper.appendChild(el);
-
                 }
 
+                if (!ripple) {
+                    return false;
+                }
+
+                var relativeX = ripple.getAttribute('data-x');
+                var relativeY = ripple.getAttribute('data-y');
+                var scale = ripple.getAttribute('data-scale');
+
+                // Get delay beetween mousedown and mouse leave
+                var diff = Date.now() - Number(ripple.getAttribute('data-hold'));
+                var delay = 500 - diff;
+
+                if (delay < 0) {
+                    delay = 0;
+                }
+
+                // Fade out ripple after delay
+                setTimeout(function () {
+
+                    var style = {
+                        'top': relativeY + 'px',
+                        'left': relativeX + 'px',
+                        'opacity': '0',
+
+                        // Duration
+                        '-webkit-transition-duration': Effect.duration + 'ms',
+                        '-moz-transition-duration': Effect.duration + 'ms',
+                        '-o-transition-duration': Effect.duration + 'ms',
+                        'transition-duration': Effect.duration + 'ms',
+                        '-webkit-transform': scale,
+                        '-moz-transform': scale,
+                        '-ms-transform': scale,
+                        '-o-transform': scale,
+                        'transform': scale,
+                    };
+
+                    ripple.setAttribute('style', convertStyle(style));
+
+                    setTimeout(function () {
+
+                        try {
+                            el.removeChild(ripple);
+                        } catch (e) {
+                            return false;
+                        }
+
+
+                    }, Effect.duration);
+
+                }, delay);
+
+            },
+
+            // Little hack to make <input> can perform ink effect
+            wrapInput: function (elements) {
+
+                for (var a = 0; a < elements.length; a++) {
+
+                    var el = elements[a];
+
+                    if (el.tagName.toLowerCase() === 'input') {
+
+                        var parent = el.parentNode;
+
+                        // If input already have parent just pass through
+                        if (parent.tagName.toLowerCase() === 'i' && parent.className.indexOf('ink-effect') !== -1) {
+                            return false;
+                        }
+
+                        // Put element class and style to the specified parent
+                        var wrapper = document.createElement('i');
+                        wrapper.className = el.className + ' ink-input-wrapper';
+
+                        var elementStyle = el.getAttribute('style');
+                        var dimensionStyle = 'width:' + el.offsetWidth + 'px;height:' + el.clientHeight + 'px;';
+
+                        if (!elementStyle) {
+                            elementStyle = '';
+                        }
+
+                        wrapper.setAttribute('style', dimensionStyle + elementStyle);
+
+                        el.className = 'ink-button-input';
+                        el.removeAttribute('style');
+
+                        // Put element as child
+                        parent.replaceChild(wrapper, el);
+                        wrapper.appendChild(el);
+
+                    }
+
+                }
             }
-        }
-    };
+        };
 
-    Waves.displayEffect = function(options) {
+        Ink.displayEffect = function (options) {
 
-        options = options || {};
+            options = options || {};
 
-        if ('duration' in options) {
-            Effect.duration = options.duration;
-        }
+            if ('duration' in options) {
+                Effect.duration = options.duration;
+            }
 
-        //Wrap input inside <i> tag
-        Effect.wrapInput($$('.waves-effect'));
+            //Wrap input inside <i> tag
+            Effect.wrapInput($$('.ink-effect'));
 
-        Array.prototype.forEach.call($$('.waves-effect'), function(i) {
+            Array.prototype.forEach.call($$('.ink-effect'), function (i) {
 
-            i.addEventListener('mousedown', Effect.show, false);
-            i.addEventListener('mouseup', Effect.hide, false);
-            i.addEventListener('mouseleave', Effect.hide, false);
+                i.addEventListener('mousedown', Effect.show, false);
+                i.addEventListener('mouseup', Effect.hide, false);
+                i.addEventListener('mouseleave', Effect.hide, false);
 
-        });
+            });
 
-    };
+        };
 
-    window.Waves = Waves;
+        $window.Ink = Ink;
 
-})(window);
+        return Ink;
+    }
 
-
-module.exports = function(angularApp){
-    angularApp.factory('ionicMaterialInk', function(){
-        return ionic.material.ink;
-    });
+    ink.inject = ['document', '$window'];
 };

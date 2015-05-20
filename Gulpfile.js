@@ -9,6 +9,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('gulp-webpack');
 var webpackConfig = require('./webpack.config.js');
+var connect = require('gulp-connect');
 
 const distPath = './dist/';
 var minify = false;
@@ -30,6 +31,9 @@ gulp.task('js', function () {
     return js;
 });
 
+gulp.task('serve', function(){
+    return connect.server();
+});
 
 
 gulp.task('webpack', function(){
