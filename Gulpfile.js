@@ -13,8 +13,8 @@ var minify = false;
 
 gulp.task('js', function () {
     var src = [
-        './src/js/ionic.material.motion.js',
-        './src/js/ionic.material.ink.js'
+        './src/js/lib/_motion.js',
+        './src/js/lib/_ink.js'
     ];
     var js = gulp.src(src)
         .pipe(concat('ionic.material.js'))
