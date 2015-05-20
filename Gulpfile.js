@@ -11,7 +11,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 
-var webpackConfig = require('./webpack.config.js');
 var connect = require('gulp-connect');
 
 const distPath = './dist/';
@@ -40,30 +39,24 @@ gulp.task('serve', function(){
 
 
 gulp.task('webpack', function(){
-    var output = gulp.src('src/ionic-material.js')
+    var webpackConfig = require('./webpack.config.js');
+    var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({});
+
+    var minifiedConfig = _.cloneDeep(webpackConfig);
+    if(!minifiedConfig.plugins || _.isEmpty(minifiedConfig.plugins)){
+        minifiedConfig.plugins = [];
+    }
+    minifiedConfig.plugins.push(uglifyPlugin);
+    minifiedConfig.output.filename = 'ionic.material.min.js';
+
+    return gulp.src('src/ionic-material.js')
       .pipe(gulpWebpack(webpackConfig))
       .pipe(gulp.dest(distPath))
-      .pipe(rename('ionic.material.js'));
-
-    if(minify){
-        var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({});
-        var minifiedConfig = _.cloneDeep(webpackConfig);
-
-        if(!minifiedConfig.plugins || _.isEmpty(minifiedConfig.plugins)){
-            minifiedConfig.plugins = [];
-        }
-        minifiedConfig.plugins.push(uglifyPlugin);
-
-        minifiedConfig.output.filename = 'ionic.material.min.js';
-
-        output
-            .pipe(gulp.src('src/ionic-material.js'))
-            .pipe(gulpWebpack(minifiedConfig))
-            .pipe(gulp.dest(distPath))
-
-    }
-
-    return output;
+      .pipe(rename('ionic.material.js'))
+      .pipe(gulp.src('src/ionic-material.js')) // dunno if this is needed, just getting unminified src again
+      .pipe(gulpWebpack(minifiedConfig))
+      .pipe(gulp.dest(distPath))
+      .pipe(rename('ionic.material.min.js'));
 });
 
 gulp.task('styles', function () {
