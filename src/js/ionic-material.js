@@ -8,6 +8,15 @@
 
 'use strict';
 
-// Import Dependencies
-require('./lib/_ink');
-require('./lib/_motion');
+module.exports = (function(){
+    // set up angular module
+    var angular = require('angular');
+
+    var app = angular.module('ionic-material', ['ionic']);
+
+    // Import Dependencies
+    require('./lib/_ink')(app);
+    require('./lib/_motion')(app);
+
+    return 'ionic-material';
+})();

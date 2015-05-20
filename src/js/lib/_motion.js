@@ -461,3 +461,10 @@ ionic.material.motion = (function Motion() {
     return motion;
 
 })();
+
+
+module.exports = function(angularApp){
+    angularApp.factory('ionicMaterialMotion', function(){
+        return ionic.material.motion;
+    });
+};

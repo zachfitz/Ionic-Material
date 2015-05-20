@@ -255,3 +255,10 @@ ionic.material.ink = (function(window) {
     window.Waves = Waves;
 
 })(window);
+
+
+module.exports = function(angularApp){
+    angularApp.factory('ionicMaterialInk', function(){
+        return ionic.material.ink;
+    });
+};
