@@ -33,6 +33,7 @@
     "node_modules"
   ],
   "dependencies": {
-    "ionic": "~1.0.0"
+    "ionic": "~1.0.0",
+    "waves": "0.7"
   }
 }
