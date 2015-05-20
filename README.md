@@ -55,7 +55,25 @@ Add `ionic.material.min.css` and `ionic.material.min.js` to your `index.html`
     <script src="lib/ionic-material/ionic.material.min.js"></script>
 ```
 
+### Step 4: Inject Ionic & Ionic Material into your Ionic App 
+
+```javascript
+    var app = angular.module('YOUR_APP_NAME', ['ionic', 'ionic-material']);
+```
+
+### Step 5: Where appropriate, inject *ionicMaterialInk* and/or *ionicMaterialMotion*
+
+The angular services `ionicMaterialInk` and `ionicMaterialMotion` are used to activate animations.
+
 **You are all set to go!** :thumbsup:
+
+### Activating Animations
+
+**NB:** Make sure the relevant services are injected into your controllers.
+
+In your controllers: 
+- `ionicMaterialInk.displayEffect()` (will need to happen once on controller activation and then repeat every time the objects update)
+- `ionicMaterialMotion.ripple()` (etc.)
 
 ## Sample App
 Ionic demo app "Thronester" is found within './demo' - You can also run 'index.html' locally to view in a webkit browser on a computer.
@@ -68,7 +86,7 @@ Instructions:
 Look at `gulpfile.js` for how the process works.
 
 ## Development 
-TODO: Webpack builds
+This project uses [Webpack](http://webpack.github.io/)
 
 ## Contributing
 See our [CONTRIBUTING INSTRUCTIONS](./CONTRIBUTING.md)
