@@ -1,4 +1,4 @@
-/* global angular */
+/* global angular, document, window */
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout,  $location) {
@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
 
     var fab = document.getElementById('fab');
     fab.addEventListener('click', function() {
-        $location.href = 'https://twitter.com/ZachFitzgerald';
+        return window && window.alert ? window.alert('you clicked the FAB!') : undefined;
     });
 
     // .fromTemplate() method
