@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify');
 const livereload = require('gulp-livereload');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
+const webpack = require('gulp-webpack');
 
 const distPath = './dist/';
 var minify = false;
@@ -26,6 +27,14 @@ gulp.task('js', function () {
             .pipe(gulp.dest(distPath))
     }
     return js;
+});
+
+
+
+gulp.task('webpack', function(){
+    return gulp.src('src/entry.js')
+      .pipe(webpack(require('./webpack.config.js')))
+      .pipe(gulp.dest('webpack/'));
 });
 
 gulp.task('styles', function () {
