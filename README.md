@@ -1,4 +1,6 @@
 # Ionic Material
+
+[![Join the chat at https://gitter.im/zachsoft/Ionic-Material](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/zachsoft/Ionic-Material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Ionic Framework ♥ Material Design
 
 #### NB: all versions pre-1.0 are intended as a work in progress 'Alpha'
