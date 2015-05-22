@@ -41,7 +41,7 @@ gulp.task('serve', function(){
 gulp.task('webpack', function(){
     var webpackConfig = require('./webpack.config.js');
     var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
-        sourcemaps: true
+        sourcemaps: false
     });
 
     var minifiedConfig = _.cloneDeep(webpackConfig);
@@ -86,8 +86,8 @@ gulp.task('styles', function () {
 
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch(['./*.js', '!./src/js/'], ['js']);
-    gulp.watch('./*.css', ['styles']);
+    gulp.watch(['./*.js', '!./src/js/'], ['webpack']);
+    gulp.watch('./*.scss', ['styles']);
 });
 
 gulp.task('build', function () {
