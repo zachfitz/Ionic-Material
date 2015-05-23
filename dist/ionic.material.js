@@ -82,6 +82,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        throw new Error('ionic-material could not load angular module :(');
 	    }
 
+	    console.log('alalalalalallalala');
+
 	    // set up angular module
 	    var app = angular.module('ionic-material', ['ionic']);
 
