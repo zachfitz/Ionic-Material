@@ -9,9 +9,17 @@ Ionic Framework ♥ Material Design
 
 See our [releases](https://github.com/zachsoft/ionic-material/releases) and other [versions](https://github.com/zachsoft/ionic-material/tags)
 
-## Documentation and Demo App (in-browser simulation)
-[Documentation Application @ ionicmaterial.com](http://ionicmaterial.com/demo/) 
+## Demo and Documentation
+### Codepen
+- [Codepen by @raibutera](http://codepen.io/Rai/pen/rVjzoX?)
+
+### Documentation
+- [Documentation Application by @zachsoft @ ionicmaterial.com](http://ionicmaterial.com/demo/) 
 (Use the ☰ menu for Documentation sections)
+
+- [Ionic Material on Readme.io (REALLY WIP)](http://ionicmaterial.readme.io/v0.3)
+
+<small> **NB:** Note: It is recommended that when creating an issue, you demonstrate the problem by forking the codepen.</small>
 
 # Quick Start
 ## Step 1: Install using [Bower](http://bower.io) 
