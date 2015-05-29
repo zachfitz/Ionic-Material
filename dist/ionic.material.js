@@ -82,8 +82,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        throw new Error('ionic-material could not load angular module :(');
 	    }
 
-	    console.log('alalalalalallalala');
-
 	    // set up angular module
 	    var app = angular.module('ionic-material', ['ionic']);
 
@@ -138,12 +136,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    $$ = document.querySelectorAll.bind(document);
 
 	                } catch(e){}
-	            } else if (window && window.angular && window.angular.element) {
-	                // we can use angular.element instead
-	                $$ = window.angular.element;
-	            } else {
-
-
+	            } else{
 	                    /**
 	                     * mout.js 0.11.0 bind and slice polyfills (substitutes?)
 	                     * TODO: pull out mout.js bind and slice molyfills and inject into material.ink
