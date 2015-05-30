@@ -39,7 +39,7 @@
             <h1 class="title">Left Menu</h1>
           </ion-header-bar>
           <ion-content>
-            <ul class="list">
+            <ul class="list animate-rip">
               <!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
               <a href="#/event/check-in" class="item" menu-close>Check-in</a>
               <a href="#/event/attendees" class="item" menu-close>Attendees</a>
@@ -51,7 +51,7 @@
     </script>
 
     <script id="templates/home.html" type="text/ng-template">
-      <ion-view view-title="Welcome">
+      <ion-view view-title="Welcome" ng-cont>
         <ion-content class="padding">
           <p>Swipe to the right to reveal the left menu.</p>
           <p>(On desktop click and drag from left to right)</p>
@@ -62,7 +62,7 @@
     <script id="templates/check-in.html" type="text/ng-template">
       <ion-view view-title="Event Check-in">
         <ion-content>
-          <form class="list" ng-show="showForm">
+          <form class="list animate-ripple" ng-show="showForm">
             <div class="item item-divider">
               Attendee Info
             </div>
@@ -102,7 +102,7 @@
     <script id="templates/attendees.html" type="text/ng-template">
       <ion-view view-title="Event Attendees">
         <ion-content>
-          <div class="list">
+          <div class="list animate-rip">
             <ion-toggle ng-repeat="attendee in attendees | orderBy:'firstname' | orderBy:'lastname'"
                         ng-model="attendee.arrived"
                         ng-change="arrivedChange(attendee)">
