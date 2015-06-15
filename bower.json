@@ -7,9 +7,7 @@
   ],
   "description": "Ionic Material - Material Design for the Ionic Framework",
   "main": [
-    "./dist/ionic.material.css",
     "./dist/ionic.material.min.css",
-    "./dist/ionic.material.js",
     "./dist/ionic.material.min.js"
   ],
   "keywords": [
