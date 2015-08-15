@@ -95,14 +95,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	if(typeof __WEBPACK_EXTERNAL_MODULE_1__ === 'undefined') {var e = new Error("Cannot find module \"angular\""); e.code = 'MODULE_NOT_FOUND'; throw e;}
 	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ },
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	'use strict';
 
@@ -476,7 +476,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	module.exports = function(angularApp) {
 	    angularApp.factory('ionicMaterialMotion', Motion);
