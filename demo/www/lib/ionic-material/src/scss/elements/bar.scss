@@ -1,0 +1,41 @@
+
+/* Bar
+==================================*/
+// variables
+$base-bar-height: 46px;
+
+// rules
+.bar {
+    z-index: 2;
+    font-size: 1.3em;
+    width: 100%;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.bar .button {
+    min-width: 38px;
+    z-index: 3;
+}
+
+.bar .no-text span.back-text {
+    display: none;
+}
+
+.bar .title sup {
+    opacity: 0.7;
+}
+
+.bar.bar-header .button + .title {
+    text-align: left;
+    left: 35px;
+    line-height: $base-bar-height;
+}
+
+
+// .bar-double{
+//     height: $base-bar-height * 2;
+// }
+
+// .bar-triple{
+//     height: $base-bar-height * 3;
+// }

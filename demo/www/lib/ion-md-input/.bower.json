@@ -28,7 +28,6 @@
     "commit": "fd6c92f63a067cd7b725ad75e9304eb296357dc1"
   },
   "_source": "git://github.com/mhartington/ion-md-input.git",
-  "_target": "~0.0.2",
-  "_originalSource": "ion-md-input",
-  "_direct": true
+  "_target": "0.0.2",
+  "_originalSource": "ion-md-input"
 }

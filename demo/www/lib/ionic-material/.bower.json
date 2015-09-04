@@ -26,7 +26,7 @@
     "tests"
   ],
   "dependencies": {
-    "Ink": "https://github.com/fians/Ink.git#~0.5.5",
+    "waves": "0.6",
     "angular-animate": "1.2.12",
     "angular-sanitize": "1.2.12",
     "angular-ui-router": "0.2.7",

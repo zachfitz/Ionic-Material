@@ -1,0 +1,993 @@
+/* Ionic Overrides
+==================================*/
+* {
+    font-family: "RobotoDraft","Roboto","Helvetica Neue", "Segoe UI", sans-serif;
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+a { cursor: pointer; }
+
+.has-header.expanded {  /* Expanded modifier */
+  top: 76px;
+}
+
+
+/* Bar Overrides
+==================================*/
+.bar {
+    border-bottom: none;
+    padding: 0;
+}
+.bar .button {
+  min-height: 44px;
+  min-width: 44px;
+  max-width: 48px;
+  margin-bottom: 0;
+  max-height: 44px;
+  width: 48px;
+}
+.bar .title + .buttons.buttons-right {
+    right: 0;
+    top: 0;
+}
+
+
+/* Title Overrides
+==================================*/
+.title-left,
+.title.title-left {
+  left: 48px;
+}
+
+.title-right,
+.title.title-right {
+  left: 48px;
+}
+
+
+/* Background Colors
+==================================*/
+.positive-bg,
+.button-positive,
+.bar .button-positive,
+.header-positive,
+.button-bar-positive,
+.bar-positive,
+.positive-border,
+.positive-bg:hover,
+.bar .button-positive:hover,
+.button-positive:hover,
+.header-positive:hover,
+.button-bar-positive:hover,
+.bar-positive:hover,
+.positive-border:hover,
+.positive-bg:active,
+.bar .button-positive:active,
+.button-positive:active,
+.header-positive:active,
+.button-bar-positive:active,
+.bar-positive:active,
+.positive-border:active,
+.positive-bg.activated,
+.bar .button-positive.activated,
+.button-positive.activated,
+.header-positive.activated,
+.button-bar-positive.activated,
+.bar-positive.activated,
+.positive-border.activated {
+    background-color: #3F51B5;
+    color: #fff;
+}
+.positive-900-bg,
+.button-positive-900,
+.bar .button-positive-900,
+.header-positive-900,
+.button-bar-positive-900,
+.bar-positive-900,
+.positive-900-border,
+.positive-900-bg:hover,
+.button-positive-900:hover,
+.bar .button-positive-900:hover,
+.header-positive-900:hover,
+.button-bar-positive-900:hover,
+.bar-positive-900:hover,
+.positive-900-border:hover,
+.positive-900-bg:active,
+.bar .button-positive-900:active,
+.button-positive-900:active,
+.header-positive-900:active,
+.button-bar-positive-900:active,
+.bar-positive-900:active,
+.positive-900-border:active,
+.positive-900-bg.activated,
+.button-positive-900.activated,
+.bar .button-positive-900.activated,
+.header-positive-900.activated,
+.button-bar-positive-900.activated,
+.bar-positive-900.activated,
+.positive-900-border.activated {
+    background-color: #1A237E;
+    color: #fff;
+}
+.positive-100-bg,
+.button-positive-100,
+.bar .button-positive-100,
+.header-positive-100,
+.button-bar-positive-100,
+.bar-positive-100,
+.positive-100-border,
+.positive-100-bg:hover,
+.button-positive-100:hover,
+.bar .button-positive-100:hover,
+.header-positive-100:hover,
+.button-bar-positive-100:hover,
+.bar-positive-100:hover,
+.positive-100-border:hover,
+.positive-100-bg:active,
+.button-positive-100:active,
+.bar .button-positive-100:active,
+.header-positive-100:active,
+.button-bar-positive-100:active,
+.bar-positive-100:active,
+.positive-100-border:active,
+.positive-100-bg.activated,
+.button-positive-100.activated,
+.bar .button-positive-100.activated,
+.header-positive-100.activated,
+.button-bar-positive-100.activated,
+.bar-positive-100.activated,
+.positive-100-border.activated {
+    background-color: #C5CAE9;
+    color: #fff;
+}
+.calm-bg,
+.button-calm,
+.bar .button-calm,
+.header-calm,
+.button-bar-calm,
+.bar-calm,
+.calm-border,
+.calm-bg:hover,
+.button-calm:hover,
+.bar .button-calm:hover,
+.header-calm:hover,
+.button-bar-calm:hover,
+.bar-calm:hover,
+.calm-border:hover,
+.calm-bg:active,
+.button-calm:active,
+.bar .button-calm:active,
+.header-calm:active,
+.button-bar-calm:active,
+.bar-calm:active,
+.calm-border:active,
+.calm-bg.activated,
+.button-calm.activated,
+.bar .button-calm.activated,
+.header-calm.activated,
+.button-bar-calm.activated,
+.bar-calm.activated,
+.calm-border.activated {
+    background-color: #2196F3;
+    color: #fff;
+}
+.calm-900-bg,
+.button-calm-900,
+.bar .button-calm-900,
+.header-calm-900,
+.button-bar-calm-900,
+.bar-calm-900,
+.calm-900-border,
+.calm-900-bg:hover,
+.button-calm-900:hover,
+.bar .button-calm-900:hover,
+.header-calm-900:hover,
+.button-bar-calm-900:hover,
+.bar-calm-900:hover,
+.calm-900-border:hover,
+.calm-900-bg:active,
+.button-calm-900:active,
+.bar .button-calm-900:active,
+.header-calm-900:active,
+.button-bar-calm-900:active,
+.bar-calm-900:active,
+.calm-900-border:active,
+.calm-900-bg.activated,
+.button-calm-900.activated,
+.bar .button-calm-900.activated,
+.header-calm-900.activated,
+.button-bar-calm-900.activated,
+.bar-calm-900.activated,
+.calm-900-border.activated {
+    background-color: #0D47A1;
+    color: #fff;
+}
+.calm-100-bg,
+.button-calm-100,
+.bar .button-calm-100,
+.header-calm-100,
+.button-bar-calm-100,
+.bar-calm-100,
+.calm-100-border,
+.calm-100-bg:hover,
+.button-calm-100:hover,
+.bar .button-calm-100:hover,
+.header-calm-100:hover,
+.button-bar-calm-100:hover,
+.bar-calm-100:hover,
+.calm-100-border:hover,
+.calm-100-bg:active,
+.button-calm-100:active,
+.bar .button-calm-100:active,
+.header-calm-100:active,
+.button-bar-calm-100:active,
+.bar-calm-100:active,
+.calm-100-border:active,
+.calm-100-bg.activated,
+.button-calm-100.activated,
+.bar .button-calm-100.activated,
+.header-calm-100.activated,
+.button-bar-calm-100.activated,
+.bar-calm-100.activated,
+.calm-100-border.activated {
+    background-color: #BBDEFB;
+    color: #fff;
+}
+.royal-bg,
+.button-royal,
+.bar .button-royal,
+.header-royal,
+.button-bar-royal,
+.bar-royal,
+.royal-border,
+.royal-bg:hover,
+.button-royal:hover,
+.bar .button-royal:hover,
+.header-royal:hover,
+.button-bar-royal:hover,
+.bar-royal:hover,
+.royal-border:hover,
+.royal-bg:active,
+.button-royal:active,
+.bar .button-royal:active,
+.header-royal:active,
+.button-bar-royal:active,
+.bar-royal:active,
+.royal-border:active,
+.royal-bg.activated,
+.button-royal.activated,
+.bar .button-royal.activated,
+.header-royal.activated,
+.button-bar-royal.activated,
+.bar-royal.activated,
+.royal-border.activated {
+    background-color: #673AB7;
+    color: #fff;
+}
+.royal-900-bg,
+.button-royal-900,
+.bar .button-royal-900,
+.header-royal-900,
+.button-bar-royal-900,
+.bar-royal-900,
+.royal-900-border,
+.royal-900-bg:hover,
+.button-royal-900:hover,
+.bar .button-royal-900:hover,
+.header-royal-900:hover,
+.button-bar-royal-900:hover,
+.bar-royal-900:hover,
+.royal-900-border:hover,
+.royal-900-bg:active,
+.button-royal-900:active,
+.bar .button-royal-900:active,
+.header-royal-900:active,
+.button-bar-royal-900:active,
+.bar-royal-900:active,
+.royal-900-border:active,
+.royal-900-bg.activated,
+.button-royal-900.activated,
+.bar .button-royal-900.activated,
+.header-royal-900.activated,
+.button-bar-royal-900.activated,
+.bar-royal-900.activated,
+.royal-900-border.activated {
+    background-color: #311B92;
+    color: #fff;
+}
+.royal-100-bg,
+.button-royal-100,
+.bar .button-royal-100,
+.header-royal-100,
+.button-bar-royal-100,
+.bar-royal-100,
+.royal-100-border,
+.royal-100-bg:hover,
+.button-royal-100:hover,
+.bar .button-royal-100:hover,
+.header-royal-100:hover,
+.button-bar-royal-100:hover,
+.bar-royal-100:hover,
+.royal-100-border:hover,
+.royal-100-bg:active,
+.button-royal-100:active,
+.bar .button-royal-100:active,
+.header-royal-100:active,
+.button-bar-royal-100:active,
+.bar-royal-100:active,
+.royal-100-border:active,
+.royal-100-bg.activated,
+.button-royal-100.activated,
+.bar .button-royal-100.activated,
+.header-royal-100.activated,
+.button-bar-royal-100.activated,
+.bar-royal-100.activated,
+.royal-100-border.activated {
+    background-color: #D1C4E9;
+    color: #fff;
+}
+.balanced-bg,
+.button-balanced,
+.bar .button-balanced,
+.header-balanced,
+.button-bar-balanced,
+.bar-balanced,
+.balanced-border,
+.balanced-bg:hover,
+.button-balanced:hover,
+.bar .button-balanced:hover,
+.header-balanced:hover,
+.button-bar-balanced:hover,
+.bar-balanced:hover,
+.balanced-border:hover,
+.balanced-bg:active,
+.button-balanced:active,
+.bar .button-balanced:active,
+.header-balanced:active,
+.button-bar-balanced:active,
+.bar-balanced:active,
+.balanced-border:active,
+.balanced-bg.activated,
+.button-balanced.activated,
+.bar .button-balanced.activated,
+.header-balanced.activated,
+.button-bar-balanced.activated,
+.bar-balanced.activated,
+.balanced-border.activated {
+    background-color: #4CAF50;
+    color: #fff;
+}
+.balanced-900-bg,
+.button-balanced-900,
+.bar .button-balanced-900,
+.header-balanced-900,
+.button-bar-balanced-900,
+.bar-balanced-900,
+.balanced-900-border,
+.balanced-900-bg:hover,
+.button-balanced-900:hover,
+.bar .button-balanced-900:hover,
+.header-balanced-900:hover,
+.button-bar-balanced-900:hover,
+.bar-balanced-900:hover,
+.balanced-900-border:hover,
+.balanced-900-bg:active,
+.button-balanced-900:active,
+.bar .button-balanced-900:active,
+.header-balanced-900:active,
+.button-bar-balanced-900:active,
+.bar-balanced-900:active,
+.balanced-900-border:active,
+.balanced-900-bg.activated,
+.button-balanced-900.activated,
+.bar .button-balanced-900.activated,
+.header-balanced-900.activated,
+.button-bar-balanced-900.activated,
+.bar-balanced-900.activated,
+.balanced-900-border.activated {
+    background-color: #1B5E20;
+    color: #fff;
+}
+.balanced-100-bg,
+.button-balanced-100,
+.bar .button-balanced-100,
+.header-balanced-100,
+.button-bar-balanced-100,
+.bar-balanced-100,
+.balanced-100-border,
+.balanced-100-bg:hover,
+.button-balanced-100:hover,
+.bar .balanced-100-bg:hover,
+.header-balanced-100:hover,
+.button-bar-balanced-100:hover,
+.bar-balanced-100:hover,
+.balanced-100-border:hover,
+.balanced-100-bg:active,
+.button-balanced-100:active,
+.bar .button-balanced-100:active,
+.header-balanced-100:active,
+.button-bar-balanced-100:active,
+.bar-balanced-100:active,
+.balanced-100-border:active,
+.balanced-100-bg.activated,
+.button-balanced-100.activated,
+.bar .button-balanced-100.activated,
+.header-balanced-100.activated,
+.button-bar-balanced-100.activated,
+.bar-balanced-100.activated,
+.balanced-100-border.activated {
+    background-color: #C8E6C9;
+    color: #fff;
+}
+.energized-bg,
+.button-energized,
+.bar .button-energized,
+.header-energized,
+.button-bar-energized,
+.bar-energized,
+.energized-border,
+.energized-bg:hover,
+.button-energized:hover,
+.bar .button-energized:hover,
+.header-energized:hover,
+.button-bar-energized:hover,
+.bar-energized:hover,
+.energized-border:hover,
+.energized-bg:active,
+.button-energized:active,
+.bar .button-energized:active,
+.header-energized:active,
+.button-bar-energized:active,
+.bar-energized:active,
+.energized-border:active,
+.energized-bg.activated,
+.button-energized.activated,
+.bar .button-energized.activated,
+.header-energized.activated,
+.button-bar-energized.activated,
+.bar-energized.activated,
+.energized-border.activated {
+    background-color: #FF9800;
+    color: #fff;
+}
+.energized-900-bg,
+.button-energized-900,
+.bar .button-energized-900,
+.header-energized-900,
+.button-bar-energized-900,
+.bar-energized-900,
+.energized-900-border,
+.energized-900-bg:hover,
+.button-energized-900:hover,
+.bar .button-energized-900:hover,
+.header-energized-900:hover,
+.button-bar-energized-900:hover,
+.bar-energized-900:hover,
+.energized-900-border:hover,
+.energized-900-bg:active,
+.button-energized-900:active,
+.bar .button-energized-900:active,
+.header-energized-900:active,
+.button-bar-energized-900:active,
+.bar-energized-900:active,
+.energized-900-border:active,
+.energized-900-bg.activated,
+.button-energized-900.activated,
+.bar .button-energized-900.activated,
+.header-energized-900.activated,
+.button-bar-energized-900.activated,
+.bar-energized-900.activated,
+.energized-900-border.activated {
+    background-color: #E65100;
+    color: #fff;
+}
+.energized-100-bg,
+.button-energized-100,
+.bar .button-energized-100,
+.header-energized-100,
+.button-bar-energized-100,
+.bar-energized-100,
+.energized-100-border,
+.energized-100-bg:hover,
+.button-energized-100:hover,
+.bar .button-energized-100:hover,
+.header-energized-100:hover,
+.button-bar-energized-100:hover,
+.bar-energized-100:hover,
+.energized-100-border:hover,
+.energized-100-bg:active,
+.button-energized-100:active,
+.bar .button-energized-100:active,
+.header-energized-100:active,
+.button-bar-energized-100:active,
+.bar-energized-100:active,
+.energized-100-border:active,
+.energized-100-bg.activated,
+.button-energized-100.activated,
+.bar .button-energized-100.activated,
+.header-energized-100.activated,
+.button-bar-energized-100.activated,
+.bar-energized-100.activated,
+.energized-100-border.activated {
+    background-color: #FFE0B2;
+}
+.assertive-bg,
+.button-assertive,
+.bar .button-assertive,
+.header-assertive,
+.button-bar-assertive,
+.bar-assertive,
+.assertive-border,
+.assertive-bg:hover,
+.button-assertive:hover,
+.bar .button-assertive:hover,
+.header-assertive:hover,
+.button-bar-assertive:hover,
+.bar-assertive:hover,
+.assertive-border:hover,
+.assertive-bg:active,
+.button-assertive:active,
+.bar .button-assertive:active,
+.header-assertive:active,
+.button-bar-assertive:active,
+.bar-assertive:active,
+.assertive-border:active,
+.assertive-bg.activated,
+.button-assertive.activated,
+.bar .button-assertive.activated,
+.header-assertive.activated,
+.button-bar-assertive.activated,
+.bar-assertive.activated,
+.assertive-border.activated {
+    background-color: #F44336;
+    color: #fff;
+}
+.assertive-900-bg,
+.button-assertive-900,
+.bar .button-assertive-900,
+.header-assertive-900,
+.button-bar-assertive-900,
+.bar-assertive-900,
+.assertive-900-border,
+.assertive-900-bg:hover,
+.button-assertive-900:hover,
+.bar .button-assertive-900:hover,
+.header-assertive-900:hover,
+.button-bar-assertive-900:hover,
+.bar-assertive-900:hover,
+.assertive-900-border:hover,
+.assertive-900-bg:active,
+.button-assertive-900:active,
+.bar .button-assertive-900:active,
+.header-assertive-900:active,
+.button-bar-assertive-900:active,
+.bar-assertive-900:active,
+.assertive-900-border:active,
+.assertive-900-bg.activated,
+.button-assertive-900.activated,
+.bar .button-assertive-900.activated,
+.header-assertive-900.activated,
+.button-bar-assertive-900.activated,
+.bar-assertive-900.activated,
+.assertive-900-border.activated {
+    background-color: #B71C1C;
+    color: #fff;
+}
+.assertive-100-bg,
+.button-assertive-100,
+.bar .button-assertive-100,
+.header-assertive-100,
+.button-bar-assertive-100,
+.bar-assertive-100,
+.assertive-100-border,
+.assertive-100-bg:hover,
+.button-assertive-100:hover,
+.bar .button-assertive-100:hover,
+.header-assertive-100:hover,
+.button-bar-assertive-100:hover,
+.bar-assertive-100:hover,
+.assertive-100-border:hover,
+.assertive-100-bg:active,
+.button-assertive-100:active,
+.bar .button-assertive-100:active,
+.header-assertive-100:active,
+.button-bar-assertive-100:active,
+.bar-assertive-100:active,
+.assertive-100-border:active,
+.assertive-100-bg.activated,
+.bar .button-assertive-100.activated,
+.button-assertive-100.activated,
+.header-assertive-100.activated,
+.button-bar-assertive-100.activated,
+.bar-assertive-100.activated,
+.assertive-100-border.activated {
+    background-color: #FFCDD2;
+    color: #fff;
+}
+.stable-bg,
+.button-stable,
+.bar .button-stable,
+.header-stable,
+.button-bar-stable,
+.bar-stable,
+.stable-border,
+.stable-bg:hover,
+.button-stable:hover,
+.bar .button-stable:hover,
+.header-stable:hover,
+.button-bar-stable:hover,
+.bar-stable:hover,
+.stable-border:hover,
+.stable-bg:active,
+.button-stable:active,
+.bar .button-stable:active,
+.header-stable:active,
+.button-bar-stable:active,
+.bar-stable:active,
+.stable-border:active,
+.stable-bg.activated,
+.button-stable.activated,
+.bar .button-stable.activated,
+.header-stable.activated,
+.button-bar-stable.activated,
+.bar-stable.activated,
+.stable-border.activated {
+    background-color: #E0E0E0;
+    color: #fff;
+}
+
+/* Text Colors
+==================================*/
+.positive,
+.positive *,
+*.positive,
+.positive:hover,
+.positive:hover *,
+*.positive:hover,
+.positive:active,
+.positive:active *,
+*.positive:active {
+    color: #3F51B5;
+}
+.positive-900,
+.positive-900 *,
+*.positive-900,
+.positive-900:hover,
+.positive-900:hover *,
+*.positive-900:hover,
+.positive-900:active,
+.positive-900:active *,
+*.positive-900:active {
+    color: #3F51B5;
+}
+.positive-100,
+.positive-100 *,
+*.positive-100,
+.positive-100:hover,
+.positive-100:hover *,
+*.positive-100:hover,
+.positive-100:active,
+.positive-100:active *,
+*.positive-100:active {
+    color: #C5CAE9;
+}
+.calm-100,
+.calm-100 *,
+*.calm-100,
+.calm-100:hover,
+.calm-100:hover *,
+*.calm-100:hover,
+.calm-100:active,
+.calm-100:active *,
+*.calm-100:active {
+    color: #2196F3;
+}
+.calm-900,
+.calm-900 *,
+*.calm-900,
+.calm-900:hover,
+.calm-900:hover *,
+*.calm-900:hover,
+.calm-900:active,
+.calm-900:active *,
+*.calm-900:active {
+    color: #0D47A1;
+}
+.calm-100,
+.calm-100 *,
+*.calm-100,
+.calm-100:hover,
+.calm-100:hover *,
+*.calm-100:hover,
+.calm-100:active,
+.calm-100:active *,
+*.calm-100:active {
+    color: #BBDEFB;
+}
+.royal,
+.royal *,
+*.royal,
+.royal:hover,
+.royal:hover *,
+*.royal:hover,
+.royal:active,
+.royal:active *,
+*.royal:active {
+    color: #673AB7;
+}
+.royal-900,
+.royal-900 *,
+*.royal-900,
+.royal-900:hover,
+.royal-900:hover *,
+*.royal-900:hover,
+.royal-900:active,
+.royal-900:active *,
+*.royal-900:active {
+    color: #311B92;
+}
+.royal-100,
+.royal-100 *,
+*.royal-100,
+.royal-100:hover,
+.royal-100:hover *,
+*.royal-100:hover,
+.royal-100:active,
+.royal-100:active *,
+*.royal-100:active {
+    color: #D1C4E9;
+}
+.balanced,
+.balanced *,
+*.balanced,
+.balanced:hover,
+.balanced:hover *,
+*.balanced:hover,
+.balanced:active,
+.balanced:active *,
+*.balanced:active {
+    color: #4CAF50;
+}
+.balanced-900,
+.balanced-900 *,
+*.balanced-900,
+.balanced-900:hover,
+.balanced-900:hover *,
+*.balanced-900:hover,
+.balanced-900:active,
+.balanced-900:active *,
+*.balanced-900:active {
+    color: #1B5E20;
+}
+.balanced-100,
+.balanced-100 *,
+*.balanced-100,
+.balanced-100:hover,
+.balanced-100:hover *,
+*.balanced-100:hover,
+.balanced-100:active,
+.balanced-100:active *,
+*.balanced-100:active {
+    color: #C8E6C9;
+}
+.energized,
+.energized *,
+*.energized,
+.energized:hover,
+.energized:hover *,
+*.energized:hover,
+.energized:active,
+.energized:active *,
+*.energized:active {
+    color: #FF9800;
+}
+.energized-900,
+.energized-900 *,
+*.energized-900,
+.energized-900:hover,
+.energized-900:hover *,
+*.energized-900:hover,
+.energized-900:active,
+.energized-900:active *,
+*.energized-900:active {
+    color: #E65100;
+}
+.energized-100,
+.energized-100 *,
+*.energized-100,
+.energized-100:hover,
+.energized-100:hover *,
+*.energized-100:hover,
+.energized-100:active,
+.energized-100:active *,
+*.energized-100:active {
+    color: #FFE0B2;
+}
+.assertive,
+.assertive *,
+*.assertive,
+.assertive:hover,
+.assertive:hover *,
+*.assertive:hover,
+.assertive:active,
+.assertive:active *,
+*.assertive:active {
+    color: #F44336;
+}
+.assertive-900,
+.assertive-900 *,
+*.assertive-900,
+.assertive-900:hover,
+.assertive-900:hover *,
+*.assertive-900:hover,
+.assertive-900:active,
+.assertive-900:active *,
+*.assertive-900:active {
+    color: #B71C1C;
+}
+.assertive-100,
+.assertive-100 *,
+*.assertive-100,
+.assertive-100:hover,
+.assertive-100:hover *,
+*.assertive-100:hover,
+.assertive-100:active,
+.assertive-100:active *,
+*.assertive-100:active {
+    color: #FFCDD2;
+}
+.stable,
+.stable *,
+*.stable,
+.stable:hover,
+.stable:hover *,
+*.stable:hover,
+.stable:active,
+.stable:active *,
+*.stable:active {
+    color: #E0E0E0;
+}
+.light,
+.light *,
+*.light,
+.light:hover,
+.light:hover *,
+*.light:hover,
+.light:active,
+.light:active *,
+*.light:active {
+    color: #fff;
+}
+.dark,
+.dark *,
+*.dark,
+.dark:hover,
+.dark:hover *,
+*.dark:hover,
+.dark:active,
+.dark:active *,
+*.dark:active {
+    color: #444;
+}
+
+
+
+
+
+
+
+.light-border {
+    border-color: #ddd;
+}
+
+.navbar-default .navbar-nav > li > a {
+    margin: 0;
+    padding-right: 26px;
+    padding-left: 26px;
+    border-top: 3px solid transparent;
+    color: #BFD5C9;
+    opacity: 1;
+}
+
+
+
+/* Mid-Bar
+==================================*/
+.mid-bar {
+    padding: 16px;
+}
+
+.mid-bar h1,
+.mid-bar h2,
+.mid-bar h3,
+.mid-bar h4,
+.mid-bar h5,
+.mid-bar h6 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.mid-bar p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+}
+
+
+/* Item
+==================================*/
+.item-avatar,
+.item-avatar .item-content,
+.item-avatar-left,
+.item-avatar-left .item-content,
+.card > .item-avatar {
+    padding-left: 95px;
+}
+
+.item,
+.item-complex .item-content,
+.item-radio .item-content {
+    background-color: transparent;
+}
+
+.dark-bg h2,
+.item.dark-bg h2 {
+    color: #fff;
+}
+
+.tabs-striped .tabs {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.bar .button.button-clear {
+    color: #fff;
+}
+
+.bar .button.button-icon .icon:before,
+.bar .button.button-icon.icon-left:before,
+.bar .button.button-icon.icon-right:before,
+.bar .button.button-icon:before {
+    vertical-align: top;
+    font-size: 24px;
+}
+
+.menu {
+    background-color: transparent;
+}
+
+.button-icon.button.active,
+.button-icon.button.activated {
+    opacity: initial;
+}
+
+
+/* Popover
+==================================*/
+.popover {
+    opacity: 0;
+    position: absolute;
+    right: 8px;
+    transform: translate(50%, -50%) scale(0,0);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    top: 8px;
+}
+.popover.ng-enter {
+    opacity: 1;
+    transform: translate(0, -14px) scale(1,1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.popover.ng-leave {
+    opacity: 0;
+    transform: translate(50%, -50%) scale(0,0);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+/* Button
+==================================*/
+.button {
+    overflow: hidden !important;
+}

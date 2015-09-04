@@ -1,0 +1,236 @@
+/* Button : FAB
+==================================*/
+
+.button.button-fab,
+.bar .button.button-fab {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    z-index: 9999;
+    width: 56px;
+    height: 56px;
+    max-height: initial;
+    max-width: initial;
+    border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: 0.3s fade-in-out;
+    transition: 0.3s fade-in-out;
+    -webkit-transition-property: -webkit-transform, box-shadow;
+    transition-property: transform, box-shadow;
+}
+
+.button.button-fab.button-fab-bottom-right,
+.bar .button.button-fab.button-fab-bottom-right {
+    top: auto;
+    right: 16px;
+    bottom: 16px;
+    left: auto;
+    position: absolute;
+}
+
+.button.button-fab.button-fab-bottom-left,
+.bar .button.button-fab.button-fab-bottom-left {
+    top: auto;
+    right: auto;
+    bottom: 16px;
+    left: 16px;
+    position: absolute;
+}
+
+.button.button-fab.button-fab-top-right,
+.bar .button.button-fab.button-fab-top-right {
+    top: 32px;
+    right: 16px;
+    bottom: auto;
+    left: auto;
+    position: absolute;
+}
+
+.button.button-fab.button-fab-top-left,
+.bar .button.button-fab.button-fab-top-left {
+    top: 32px;
+    right: auto;
+    bottom: auto;
+    left: 16px;
+    position: absolute;
+}
+.button.button-fab.button-fab-top-left.expanded,
+.button.button-fab.button-fab-top-right.expanded,
+.bar .button.button-fab.button-fab-top-left.expanded,
+.bar .button.button-fab.button-fab-top-right.expanded {
+    top: 48px;
+}
+
+.button.button-fab i,
+.bar .button.button-fab i {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.button.button-fab.mini,
+.bar .button.button-fab.mini {
+    width: 40px;
+    height: 40px;
+}
+
+.button.button-fab.mini i,
+.bar .button.button-fab.mini i {
+    font-size: 2rem;
+}
+
+
+/* Motion */
+.motion {
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
+}
+
+
+
+
+
+
+
+.spin-back {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform: translateZ(0) rotate(360deg) scale(0) !important;
+    transform: translateZ(0) rotate(360deg) scale(0) !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
+}
+.spiral {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform: translateZ(0) rotate(-360deg) scale(0) translate(-120px) !important;
+    transform: translateZ(0) rotate(-360deg) scale(0) translate(-120px) !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
+}
+.spiral-back {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform: translateZ(0) rotate(360deg) scale(0) translate(120px) !important;
+    transform: translateZ(0) rotate(360deg) scale(0) translate(120px) !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
+}
+.menu-open .avatar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateZ(0) rotate(0) scale(1) !important;
+    transform: translateZ(0) rotate(0) scale(1) !important;
+    -webkit-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
+}
+
+.button.button-fab.button-fab-top-left.motion {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(-120px, 60px, 0);
+    transform: translate3d(-120px, 60px, 0);
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+.button.button-fab.button-fab-top-right.motion {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(120px, 60px, 0);
+    transform: translate3d(120px, 60px, 0);
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+.button.button-fab.button-fab-bottom-left.motion {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(-120px, 60px, 0);
+    transform: translate3d(-120px, 60px, 0);
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+.button.button-fab.button-fab-bottom-right.motion {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(120px, 60px, 0);
+    transform: translate3d(120px, 60px, 0);
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spin {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform: translateZ(0) rotate(0) scale(0) !important;
+    transform: translateZ(0) rotate(0) scale(0) !important;
+    -webkit-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
+}
+.spin.on {
+    -webkit-transform: translateZ(0) rotate(-360deg) scale(1) !important;
+    transform: translateZ(0) rotate(-360deg) scale(1) !important;
+}
+.flap {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform: translateZ(0) rotateX(0) scale(0) translate(-120px) !important;
+    transform: translateZ(0) rotateX(0) scale(0) translate(-120px) !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
+}
+.flap.on {
+    -webkit-transform: translateZ(0) rotateX(-720deg) scale(1) translate(0) !important;
+    transform: translateZ(0) rotateX(-720deg) scale(1) translate(0) !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
+}
+.drop {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform: translateZ(0) scale(3) !important;
+    transform: translateZ(0) scale(3) !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
+}
+.drop.on {
+    -webkit-transform: translateZ(0) scale(1) !important;
+    transform: translateZ(0) scale(1) !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
+}
+.flip {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform: translateZ(0) rotateY(0) scale(0) !important;
+    transform: translateZ(0) rotateY(0) scale(0) !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
+}
+.flip.on {
+    -webkit-transform: translateZ(0) rotateY(-720deg) scale(1) !important;
+    transform: translateZ(0) rotateY(-720deg) scale(1) !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
+}
