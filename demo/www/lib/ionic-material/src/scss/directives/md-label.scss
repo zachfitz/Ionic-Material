@@ -1,0 +1,92 @@
+
+/* Directives : MD Label
+==================================*/
+
+.item-md-label {
+    display: block;
+    background: transparent;
+    box-shadow: none;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 30px 0 0;
+}
+.item-md-label .input-label {
+    position: absolute;
+    padding: 5px 0 0;
+    z-index: 2;
+    -webkit-transform: translate3d(0, -30px, 0) scale(1);
+    transform: translate3d(0, -30px, 0) scale(1);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #fff;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+}
+.item-md-label input {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    color: #fff;
+    letter-spacing: 0.25rem;
+    padding: 20px 10px;
+    position: relative;
+    z-index: 1;
+}
+.item-md-label .highlight {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    z-index: 1;
+}
+.item-md-label .highlight-light {
+    background: #fff;
+}
+.item-md-label .highlight-stable {
+    background: #f8f8f8;
+}
+.item-md-label .highlight-positive {
+    background: #387ef5;
+}
+.item-md-label .highlight-calm {
+    background: #11c1f3;
+}
+.item-md-label .highlight-balanced {
+    background: #33cd5f;
+}
+.item-md-label .highlight-energized {
+    background: #ffc900;
+}
+.item-md-label .highlight-assertive {
+    background: #ef473a;
+}
+.item-md-label .highlight-royal {
+    background: #886aea;
+}
+.item-md-label .highlight-dark {
+    background: #444;
+}
+.item-md-label .input-label {
+    letter-spacing: 0.25rem;
+    padding: 0 10px;
+}
+.item-md-label input:focus ~ .input-label, .item-md-label input.used ~ .input-label {
+    font-weight: bold;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    padding: 0;
+    text-transform: uppercase;
+    -webkit-transform: translate3d(0, -60px, 0) scale(0.9);
+    transform: translate3d(0, -60px, 0) scale(0.9);
+}
+.item-md-label input:focus ~ .highlight {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}

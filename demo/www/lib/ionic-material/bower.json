@@ -1,0 +1,40 @@
+{
+  "name": "ionic-material",
+  "version": "0.4.2",
+  "authors": [
+    "Rai Butera",
+    "Zach Fitzgerald"
+  ],
+  "description": "Ionic Material - Material Design for the Ionic Framework",
+  "main": [
+    "./dist/ionic.material.css",
+    "./dist/ionic.material.min.css",
+    "./dist/ionic.material.js",
+    "./dist/ionic.material.min.js"
+  ],
+  "keywords": [
+    "Ionic",
+    "Material",
+    "Design",
+    "AngularJS",
+    "Framework",
+    "Hybrid",
+    "Apps",
+    "Mobile"
+  ],
+  "license": "MIT",
+  "homepage": "http://ionicmaterial.com",
+  "private": false,
+  "ignore": [
+    "bower_components",
+    "demo",
+    "docs",
+    "Gulpfile.js",
+    "index.html",
+    "node_modules"
+  ],
+  "dependencies": {
+    "ionic": "~1.0.0",
+    "waves": "0.6"
+  }
+}
