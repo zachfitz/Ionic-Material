@@ -41,7 +41,8 @@ module.exports = function(angularApp) {
                 if(element.classList){
                     element.classList.remove(className);
                 } else {
-                    element.className = element.className.replace(' '+className, '');
+                    element.className = element.className.replace(className, '');
+                    element.className = element.className.replace(/\s\s/g, '');
                 }
             }
         }
