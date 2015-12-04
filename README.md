@@ -29,27 +29,24 @@ See our [releases](https://github.com/zachsoft/ionic-material/releases) and othe
  bower install ionic-material
 ```
 
-### Step 2: Add `RobotoDraft` font (by **Google**)
+### Step 2: Add `Roboto` font (by **Google**)
 #### Via CDN:
 ```html
- <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic' rel='stylesheet' type='text/css'>
 ```
 
 #### via Bower 
-Check out [RobotoDraft by RaiButera on Github](https://github.com/raibutera/robotodraft) 
+Check out [Roboto fontface by choffmeister on Github](https://github.com/choffmeister/roboto-fontface-bower) 
 
 ```shell
-bower install robotodraft 
+bower install roboto-fontface --save
 ```
 
-**using Sass?** instructions for [raibutera/robotodraft](https://github.com/raibutera/robotodraft) + scss:
+**using Sass?** :
 
 ```scss
-$RobotoDraftFontPath: "../fonts"; // REMINDER: edit as appropriate!
-$RobotoDraftFontName: "RobotoDraft";
-$RobotoDraftFontVersion: "1.0.0";
 
-@import "/PATH/TO/YOUR/PROJECT/bower_components/robotodraft/sass/robotodraft.scss";    // REMINDER: edit as appropriate!
+@import "/PATH/TO/YOUR/PROJECT/bower_components/roboto-fontface/css/roboto-fontface.scss";    // REMINDER: edit as appropriate!
 ```
 **NB**: the above assumes you are using [Bower](http://bower.io)
 
