@@ -159,3 +159,6 @@ test/temp
 
 *.sublime-project
 ####################################
+/nbproject/private/
+/node_modules/.bin/gulp
+/nbproject
