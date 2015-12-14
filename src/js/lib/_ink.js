@@ -349,6 +349,7 @@ module.exports = function (angularApp) {
                 Effect.wrapInput($$(selectors));
 
                 Array.prototype.forEach.call($$(selectors), function(i) {
+                    if (i.className.indexOf('no-ink') !== -1) return;
                     if ('ontouchstart' in window) {
                         i.addEventListener('touchstart', Effect.show, false);
                         i.addEventListener('touchend', Effect.hide, false);
