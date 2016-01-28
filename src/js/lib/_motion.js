@@ -143,7 +143,7 @@ module.exports = function(angularApp) {
                 var delay = parseFloat(offset / speed).toFixed(2);
                 child.style.webkitTransitionDelay = delay + "s";
                 child.style.transitionDelay = delay + "s";
-                addClass(child, 'in')
+                addClass(child, 'in');
                 //child.className += ' in';
             }
 

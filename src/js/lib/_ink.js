@@ -30,7 +30,12 @@ module.exports = function (angularApp) {
                     $$ = document.querySelectorAll.bind(document);
 
                 } catch(e){}
-            } else{
+            } else if (window && window.angular && window.angular.element) {
+                // we can use angular.element instead
+                $$ = window.angular.element;
+            } else {
+
+
                     /**
                      * mout.js 0.11.0 bind and slice polyfills (substitutes?)
                      * TODO: pull out mout.js bind and slice molyfills and inject into material.ink
@@ -316,17 +321,16 @@ module.exports = function (angularApp) {
 
                             // Put element class and style to the specified parent
                             var wrapper = document.createElement('i');
-                            wrapper.className = el.className + ' ink-input-wrapper';
-
+                            addClass(wrapper, el.className);
+                            addClass(wrapper, 'ink-input-wrapper');
+                            
                             var elementStyle = el.getAttribute('style');
-
                             if (!elementStyle) {
                                 elementStyle = '';
                             }
 
                             wrapper.setAttribute('style', elementStyle);
-
-                            el.className = 'ink-button-input';
+                            addClass(el, 'ink-button-input');
                             el.removeAttribute('style');
 
                             // Put element as child
