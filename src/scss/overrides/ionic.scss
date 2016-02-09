@@ -102,7 +102,7 @@ a { cursor: pointer; }
         .bar-positive.activated,
         .positive-border.activated {
         background-color: $positive;
-        color: $white;
+        color: $light;
     }
     .positive-900-bg,
     .button-positive-900,
@@ -132,8 +132,8 @@ a { cursor: pointer; }
         .button-bar-positive-900.activated,
         .bar-positive-900.activated,
         .positive-900-border.activated {
-        background-color: $dark-primary-color;
-        color: $white;
+        background-color: $material-positive900;
+        color: $light;
     }
     .positive-100-bg,
     .button-positive-100,
@@ -164,7 +164,7 @@ a { cursor: pointer; }
         .bar-positive-100.activated,
         .positive-100-border.activated {
         background-color: $positive;
-        color: $white;
+        color: $light;
     }
     .calm-bg,
     .button-calm,
@@ -195,7 +195,7 @@ a { cursor: pointer; }
         .bar-calm.activated,
         .calm-border.activated {
         background-color: $calm;
-        color: $white;
+        color: $light;
     }
     .calm-900-bg,
     .button-calm-900,
@@ -957,7 +957,7 @@ a { cursor: pointer; }
 
     .dark-bg h2,
     .item.dark-bg h2 {
-        color: $white;
+        color: $light;
     }
 
     .tabs-striped .tabs {
@@ -965,7 +965,7 @@ a { cursor: pointer; }
     }
 
     .bar .button.button-clear {
-        color: $white;
+        color: $light;
         
     }
 

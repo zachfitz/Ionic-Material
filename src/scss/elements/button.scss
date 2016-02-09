@@ -35,8 +35,8 @@
 .bar .button.button-large:disabled,
 .bar .button.button-large:disabled,
 .bar .button.button-floating:disabled {
-    color: lighten($black, 0.26);
-    background-color: lighten($black, 0.12);
+    color: lighten($dark, 0.26);
+    background-color: lighten($dark, 0.12);
     box-shadow: none;
     cursor: not-allowed;
 }
@@ -57,8 +57,8 @@
 .bar .button.button-large:disabled:hover,
 .bar .button.button-large:disabled:hover,
 .bar .button.button-floating:disabled:hover {
-    background-color: lighten($black, 0.12);
-    color: lighten($black, 0.26);
+    background-color: lighten($dark, 0.12);
+    color: lighten($dark, 0.26);
     @include z-depth(3);
 }
 

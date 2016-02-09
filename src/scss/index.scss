@@ -4,7 +4,9 @@
 // scss version
 
 @import
-    "overrides/ionic-colors.scss",
+    "helpers/colors.scss",
+    "helpers/ionic-colors.scss",
+    "helpers/ionic-variables.scss",
     // 3d party
     "../../bower_components/material-shadows/material-shadows",
         
