@@ -1,0 +1,8 @@
+version: v1.5.0
+ignore: {}
+patch:
+  'npm:minimatch:20160620':
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2016-06-27T09:10:54.876Z'
+    - gulp > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2016-06-27T09:10:54.876Z'
