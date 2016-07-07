@@ -926,14 +926,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return false;
 	            }
 
-	            var animateSlideUpDom = document.querySelectorAll(options.selector);
-	            var elementAnimationCount = animateSlideUpDom.length;
-	            for (var i = 0; i < elementAnimationCount; i++) {
-	                var element = animateSlideUpDom[i];
-	                var classNameToRemove = options.selector.split('.')[1];
-	                var indexOfClassNameToRemove = element.className.lastIndexOf(classNameToRemove);
-	                element.className = element.className.substr(0, indexOfClassNameToRemove);
-	            }
+	            var animateSlideUpDom = angular.element(document.querySelectorAll(options.selector));
+	            var classNameToRemove = options.selector.split('.')[1];
+	            animateSlideUpDom.removeClass(classNameToRemove);
 	        }
 
 	        /* Export object
