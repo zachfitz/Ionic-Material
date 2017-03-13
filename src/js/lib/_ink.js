@@ -345,7 +345,7 @@ module.exports = function (angularApp) {
                 }
 
                 //Wrap input inside <i> tag
-                var selectors = '.ink,.tab-item,.button-fab,.button-raised,.button-flat,.button-clear,a.item,.popup .button';
+                var selectors = options.selector || '.ink,.tab-item,.button-fab,.button-raised,.button-flat,.button-clear,a.item,.popup .button';
                 Effect.wrapInput($$(selectors));
 
                 Array.prototype.forEach.call($$(selectors), function(i) {
