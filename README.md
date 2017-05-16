@@ -1,3 +1,7 @@
+# This project / repository is retired
+This project will not have updates for AngularJS/Ionic 1.
+Please contact the author (zachfitz) if you have ability and interest in resurrecting it, or (preferrably) porting it to Ionic 2/Angular.
+
 # Ionic Material
 
 [![Join the chat at https://gitter.im/zachsoft/Ionic-Material](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/zachsoft/Ionic-Material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
