@@ -136,7 +136,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    $$ = document.querySelectorAll.bind(document);
 
 	                } catch(e){}
-	            } else{
+	            } else if (window && window.angular && window.angular.element) {
+	                // we can use angular.element instead
+	                $$ = window.angular.element;
+	            } else {
+
+
 	                    /**
 	                     * mout.js 0.11.0 bind and slice polyfills (substitutes?)
 	                     * TODO: pull out mout.js bind and slice molyfills and inject into material.ink
@@ -422,17 +427,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	                            // Put element class and style to the specified parent
 	                            var wrapper = document.createElement('i');
-	                            wrapper.className = el.className + ' ink-input-wrapper';
-
+	                            addClass(wrapper, el.className);
+	                            addClass(wrapper, 'ink-input-wrapper');
+	                            
 	                            var elementStyle = el.getAttribute('style');
-
 	                            if (!elementStyle) {
 	                                elementStyle = '';
 	                            }
 
 	                            wrapper.setAttribute('style', elementStyle);
-
-	                            el.className = 'ink-button-input';
+	                            addClass(el, 'ink-button-input');
 	                            el.removeAttribute('style');
 
 	                            // Put element as child
@@ -492,7 +496,41 @@ return /******/ (function(modules) { // webpackBootstrap
 	        /   Abstract common lookups and manipulations in case better alternatives
 	        /   arise or future cross-platform differences warrant separate handling
 	        /=============================================================================*/
-
+	        
+	        // function to check if there is already existing class 
+	        // to prevent duplication, i would use classList, 
+	        // but it's not supported in Android 4.x without crosswalk
+	        function hasClass(element, className) {
+	            if(element.classList){
+	                return element.classList.contains(className);
+	            }
+	            else{
+	                var classes = element.className; 
+	                return classes.indexOf(className) !== -1;
+	            }
+	        }
+	        
+	        function addClass(element, className) {
+	            if(hasClass(element, className)){
+	                if(element.classList){
+	                    element.classList.add(className);
+	                } else {
+	                    element.className += ' ' + className;
+	                }
+	            }
+	        }
+	        
+	        function removeClass(element, className) {
+	            if(hasClass(element, className)){
+	                if(element.classList){
+	                    element.classList.remove(className);
+	                } else {
+	                    element.className = element.className.replace(className, '');
+	                    element.className = element.className.replace(/\s\s/g, '');
+	                }
+	            }
+	        }
+	        
 	        function getViewportHeight() {
 	            return window.innerHeight;
 	        }
@@ -505,8 +543,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // Load the elements without effect
 	            for (var i = 0; i < total; i++) {
 	                var child = elements[i];
-	                child.className += ' in';
-	                child.className += ' done';
+	                addClass(child, 'in');
+	                addClass(child, 'done');
 	            }
 	        }
 
@@ -589,7 +627,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var delay = parseFloat(offset / speed).toFixed(2);
 	                child.style.webkitTransitionDelay = delay + "s";
 	                child.style.transitionDelay = delay + "s";
-	                child.className += ' in';
+	                addClass(child, 'in');
+	                //child.className += ' in';
 	            }
 
 	            // When we're done animating, switch the class to 'done'
@@ -602,7 +641,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    //child.querySelector('img').style.webkitTransitionDelay = delay + "s";
 	                    //child.querySelector('img').style.transitionDelay = delay + "s";
 	                    //child.querySelector('img').className += ' in';
-	                    animateBlindsDom[i].className += ' done';
+	                    addClass(animateBlindsDom[i], 'done');
+	                    //animateBlindsDom[i].className += ' done';
 	                }
 
 	            }, speed * options.finishSpeedPercent);
@@ -672,7 +712,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var delay = parseFloat(offset / speed).toFixed(2);
 	                child.style.webkitTransitionDelay = delay + "s";
 	                child.style.transitionDelay = delay + "s";
-	                child.className += ' in';
+	                addClass(child, 'in');
+	                //child.className += ' in';
 	            }
 
 	            // When we're done animating, switch the class to 'done'
@@ -684,7 +725,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    var delayValue = offset / speed / options.finishDelayThrottle;
 	                    var delay = parseFloat(delayValue).toFixed(2);
 	                }
-	                animateFadeSlideInDom[0].className += ' done';
+	                addClass(animateFadeSlideInDom[0], 'done');
+	                //animateFadeSlideInDom[0].className += ' done';
 
 	            }, speed * options.finishSpeedPercent);
 
@@ -753,7 +795,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var delay = parseFloat(offset / speed).toFixed(2);
 	                child.style.webkitTransitionDelay = delay + "s";
 	                child.style.transitionDelay = delay + "s";
-	                child.className += ' in';
+	                addClass(child, 'in');
+	                //child.className += ' in';
 	            }
 
 	            // When we're done animating, switch the class to 'done'
@@ -765,7 +808,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    var delayValue = offset / speed / options.finishDelayThrottle;
 	                    var delay = parseFloat(delayValue).toFixed(2);
 	                }
-	                animateSlideInRightDom[0].className += ' done';
+
+	                var animateSlide = animateSlideInRightDom[0];
+
+	                if(animateSlide) {
+	                    addClass(animateSlide, 'done');
+	                    //animateSlide.className += ' done';
+	                }
 
 	            }, speed * options.finishSpeedPercent);
 
@@ -835,7 +884,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var delay = parseFloat(offset / speed).toFixed(2);
 	                child.style.webkitTransitionDelay = delay + "s";
 	                child.style.transitionDelay = delay + "s";
-	                child.className += ' in';
+	                addClass(child, 'in');
+	                //child.className += ' in';
 	            }
 
 	            // When we're done animating, switch the class to 'done'
@@ -847,7 +897,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    var delayValue = offset / speed / options.finishDelayThrottle;
 	                    var delay = parseFloat(delayValue).toFixed(2);
 	                }
-	                animateRippleDom[0].className += ' done';
+	                addClass(animateRippleDom[0], 'done');
+	                //animateRippleDom[0].className += ' done';
 
 	            }, speed * options.finishSpeedPercent);
 

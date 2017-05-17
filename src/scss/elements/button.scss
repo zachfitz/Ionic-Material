@@ -10,8 +10,8 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     display: inline-block;
     height: 36px;
-    padding: 0 2rem;
-    border-radius: 2px;
+    padding: 0 16px;
+    border-radius: 3px;
     background-clip: padding-box;
     text-transform: uppercase;
     border: none;
@@ -35,9 +35,10 @@
 .bar .button.button-large:disabled,
 .bar .button.button-large:disabled,
 .bar .button.button-floating:disabled {
-    background-color: #DFDFDF;
+    color: lighten($dark, 0.26);
+    background-color: lighten($dark, 0.12);
     box-shadow: none;
-    color: #9F9F9F;
+    cursor: not-allowed;
 }
 
 .button.disabled:hover,
@@ -56,8 +57,9 @@
 .bar .button.button-large:disabled:hover,
 .bar .button.button-large:disabled:hover,
 .bar .button.button-floating:disabled:hover {
-    background-color: #DFDFDF;
-    color: #9F9F9F;
+    background-color: lighten($dark, 0.12);
+    color: lighten($dark, 0.26);
+    @include z-depth(3);
 }
 
 .button i,

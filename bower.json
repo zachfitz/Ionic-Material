@@ -33,6 +33,7 @@
   ],
   "dependencies": {
     "ionic": "~1.0.0",
-    "waves": "0.6"
+    "waves": "0.6",
+    "material-shadows": "~2.0.2"
   }
 }
